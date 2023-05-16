@@ -77,7 +77,7 @@ const AddStory = () => {
             setTimeout(() => {
                 setError('')
 
-            }, 15000)
+            }, 7000)
             setError(error.response.data.error)
 
         }

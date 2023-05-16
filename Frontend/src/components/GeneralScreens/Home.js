@@ -17,7 +17,28 @@ const Home = () => {
   const navigate = useNavigate()
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
+  const [categories, setCategories] = useState([])
 
+  const postType = [    
+    { value: "usefullinks", label: "Useful Links" },
+    { value: "livecoding", label: "Live coding" },
+    { value: "exercises", label: "Exercises" },
+  ]
+  const thema = [
+    { value: "html", label: "HTML" },
+    { value: "css", label: "CSS" },
+    { value: "bootstrap", label: "Bootstrap" },
+    { value: "tailwind", label: "Tailwind" },
+    { value: "sass", label: "Sass" },
+    { value: "javascript", label: "Javascript" },
+    { value: "react", label: "React" },
+    { value: "nodejs", label: "NodeJS" },
+    { value: "git/github", label: "Git/Github" },
+    { value: "express", label: "Express" },
+    { value: "mongodb", label: "MongoDB" },        
+    { value: "mysql", label: "MySQL" },
+    { value: "ubuntu", label: "Ubuntu" },
+  ];
 
   useEffect(() => {
     const getStories = async () => {
@@ -61,11 +82,22 @@ const Home = () => {
 
   return (
     <div className="Inclusive-home-page">
+      <div>
+        <span >         
+            <button>"Useful Links"</button>        
+        </span>
+        <span >         
+            <button>"Live coding"</button>        
+        </span>
+        <span >         
+            <button>"Exercises"</button>        
+        </span>
+        </div>
       {loading ?
 
         <div className="skeleton_emp">
           {
-            [...Array(6)].map(() => {
+            [...Array(9)].map(() => {
               return (
                 // theme dark :> default : light
                 <SkeletonStory key={uuidv4()} />

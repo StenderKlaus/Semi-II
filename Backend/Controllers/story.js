@@ -138,11 +138,12 @@ const editStoryPage  =asyncErrorWrapper(async(req,res,next)=>{
 
 const editStory  =asyncErrorWrapper(async(req,res,next)=>{
     const {slug } = req.params ; 
-    const {title ,content ,image ,previousImage } = req.body;
+    const {title ,categorie ,content ,image ,previousImage } = req.body;
 
     const story = await Story.findOne({slug : slug })
 
     story.title = title ;
+    story.categorie = categorie ;
     story.content = content ;
     story.image =   req.savedStoryImage ;
 
