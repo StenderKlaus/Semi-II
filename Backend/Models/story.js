@@ -17,6 +17,10 @@ const StorySchema = new mongoose.Schema({
         unique: true,
         minlength: [4, "Please provide a title least 4 characters "],
     },
+    categorie: {
+        type: String,
+        required: [true, "Please provide a categorie"],
+    },
     content: {
         type: String,
         required: [true, "Please a provide a content "],
