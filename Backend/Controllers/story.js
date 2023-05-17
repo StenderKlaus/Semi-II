@@ -64,6 +64,28 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
 })
 
+const getAllPostCat = asyncErrorWrapper( async (req,res,next) =>{
+
+    let query = Story.find();
+    query =searchHelper("categorie",query,req)
+    const paginationResult =await paginateHelper(Story , query ,req)
+    query = paginationResult.query  ;
+    query = query.sort("-likeCount -commentCount -createdAt")
+    const stories = await query    
+    return res.status(200).json(
+        {
+            success:true,
+            count : stories.length,
+            data : stories ,
+            page : paginationResult.page ,
+            pages : paginationResult.pages
+        })
+
+})
+
+
+
+
 const detailStory =asyncErrorWrapper(async(req,res,next)=>{
 
     const {slug}=req.params ;
@@ -190,6 +212,7 @@ const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
 module.exports ={
     addStory,
     getAllStories,
+    getAllPostCat,
     detailStory,
     likeStory,
     editStoryPage,

@@ -147,10 +147,6 @@ console.log(story.categorie?.split(","));
       })
 
       setStoryReadListStatus(data.status)
-
-      // document.getElementById("readListLength").textContent = data.user.readListLength
-      // const listItems = story.categorie.split(',')
-      // console.log(listItems) 
     }
     catch (error) {
       console.log(error)
@@ -233,19 +229,13 @@ console.log(story.categorie?.split(","));
                 />
 
               </div>
-                  <div className="story-categories-section">
-                    <ul className="categorie-item-list">
-                      {/* {                    
-                          // <h6 className="story-categories">
-                          //   {story.categorie}
-                          // </h6>} */}
-                  
-                       {story?.categorie.split(",").map((category) => (
-                       <li>{category}</li>
-                      
+                  <div className="story-categories-section">                    
+                      <span>Categories:   </span>
+                      <span className="categorieSpan">
+                      {story?.categorie.split(",").map((category) => (
+                       <button>{category}</button>                      
                       ))} 
-                      
-                    </ul>
+                      </span>                    
                   </div>
               <div className='story-content' >
 

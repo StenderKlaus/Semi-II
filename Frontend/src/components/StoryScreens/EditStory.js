@@ -23,7 +23,7 @@ const EditStory = () => {
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
     const navigate = useNavigate()
-
+    
     const [categories, setCategories] = useState([])
 
     const categoriesZwei = [
@@ -55,7 +55,7 @@ const EditStory = () => {
                 setStory(data.data)
                 setTitle(data.data.title)
                 setContent(data.data.content)
-                setCategories(data.data.categorie)
+                // setCategories(data.data.categorie)
                 setImage(data.data.image)
                 setPreviousImage(data.data.image)
                 setLoading(false)
@@ -69,9 +69,10 @@ const EditStory = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         const formdata = new FormData()
         formdata.append("title", title)
-        formdata.append("categorie", categories.map((category) => ` ${category.value}`))
+        formdata.append("categorie", categories?.map((category) => ` ${category.value}`))
         formdata.append("content", content)
         formdata.append("image", image)
         formdata.append("previousImage", previousImage)
@@ -87,6 +88,12 @@ const EditStory = () => {
 
         }
         catch (error) {
+
+            if (!categories) {
+                setError("Please select at least one post category");
+            return;
+              }
+
             setTimeout(() => {
                 setError('')
             }, 4500)
@@ -119,8 +126,9 @@ const EditStory = () => {
                                 onChange={(e) => setTitle(e.target.value)}
                                 value={title}
                             />
+                            <h6>Please reselect the relevant categories for this Post</h6>
                 <label>
-                    <span>Project Category:</span>
+                    <span>Post Category:</span>
                     <Select isSearchable={true} 
                         options={categoriesZwei}
                         onChange={(option) => setCategories(option)}

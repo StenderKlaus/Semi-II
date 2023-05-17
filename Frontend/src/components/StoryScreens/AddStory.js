@@ -107,9 +107,9 @@ const AddStory = () => {
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
                 />
-
+                <h6>Please select the relevant categories for this Post</h6>
                 <label>
-                    <span>Project Category:</span>
+                    <span>Post Category:</span>
                     <Select isSearchable={true} 
                         options={categoriesZwei}
                         onChange={(option) => setCategories(option)}

@@ -6,6 +6,7 @@ import SkeletonStory from "../Skeletons/SkeletonStory";
 import CardStory from "../StoryScreens/CardStory";
 import NoStories from "../StoryScreens/NoStories";
 import Pagination from "./Pagination";
+import Select from 'react-select';
 import "../../Css/Home.css"
 
 import { useNavigate } from "react-router-dom"
@@ -19,11 +20,7 @@ const Home = () => {
   const [pages, setPages] = useState(1);
   const [categories, setCategories] = useState([])
 
-  const postType = [    
-    { value: "usefullinks", label: "Useful Links" },
-    { value: "livecoding", label: "Live coding" },
-    { value: "exercises", label: "Exercises" },
-  ]
+
   const thema = [
     { value: "html", label: "HTML" },
     { value: "css", label: "CSS" },
@@ -38,6 +35,9 @@ const Home = () => {
     { value: "mongodb", label: "MongoDB" },        
     { value: "mysql", label: "MySQL" },
     { value: "ubuntu", label: "Ubuntu" },
+    { value: "usefullinks", label: "Useful Links" },
+    { value: "livecoding", label: "Live coding" },
+    { value: "exercises", label: "Exercises" },
   ];
 
   useEffect(() => {
@@ -53,14 +53,11 @@ const Home = () => {
             pathname: '/',
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
           });
-        }
-        else {
+        } else {
           navigate({
             pathname: '/',
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
-
-
         }
         setStories(data.data)
         setPages(data.pages)
@@ -80,19 +77,56 @@ const Home = () => {
   }, [searchKey])
 
 
+
+  useEffect(() => {
+
+    const getPostsByCat = async () => {
+      setLoading(true)
+      try {
+        const { data } = await axios.get(`/story/getAllPostCat?search=${categories[0].value || ""}&page=${page}`)
+        if (categories) {
+          navigate({
+            pathname: '/',
+            search: `?search=${categories}${page > 1 ? `&page=${page}` : ""}`,
+          });
+        } else {
+          navigate({
+            pathname: '/',
+            search: `${page > 1 ? `page=${page}` : ""}`,
+          });
+        }
+        setStories(data.data)
+        setPages(data.pages)
+        setLoading(false)
+      }
+      catch (error) {
+        setLoading(true)
+      }
+    }
+    getPostsByCat()
+  }, [categories, page])
+
+
+  useEffect(() => {
+    setPage(1)
+  }, [categories])
+
+
+// console.log(categories);
+
   return (
     <div className="Inclusive-home-page">
       <div>
-        <span >         
-            <button>"Useful Links"</button>        
-        </span>
-        <span >         
-            <button>"Live coding"</button>        
-        </span>
-        <span >         
-            <button>"Exercises"</button>        
-        </span>
-        </div>
+      <h6>Search Posts in the relevant categories: </h6>
+                <label>
+                    <span>Post Category:</span>
+                    <Select isSearchable={true} 
+                        options={thema}
+                        onChange={(option) => setCategories(option)}
+                        isMulti
+                    />
+                </label>
+      </div>
       {loading ?
 
         <div className="skeleton_emp">
