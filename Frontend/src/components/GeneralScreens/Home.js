@@ -104,6 +104,9 @@ const Home = () => {
       }
     }
     getPostsByCat()
+
+    return () => getPostsByCat()
+    
   }, [categories, page])
 
 
