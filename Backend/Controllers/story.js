@@ -5,7 +5,7 @@ const {searchHelper, paginateHelper} =require("../Helpers/query/queryHelpers")
 
 const addStory = asyncErrorWrapper(async  (req,res,next)=> {
 
-    const {title,content} = req.body 
+    const {title,content, categorie} = req.body 
 
     var wordCount = content.trim().split(/\s+/).length ; 
    
@@ -16,6 +16,7 @@ const addStory = asyncErrorWrapper(async  (req,res,next)=> {
         const newStory = await Story.create({
             title,
             content,
+            categorie,
             author :req.user._id ,
             image : req.savedStoryImage,
             readtime
@@ -62,6 +63,28 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
         })
 
 })
+
+const getAllPostCat = asyncErrorWrapper( async (req,res,next) =>{
+
+    let query = Story.find();
+    query =searchHelper("categorie",query,req)
+    const paginationResult =await paginateHelper(Story , query ,req)
+    query = paginationResult.query  ;
+    query = query.sort("-likeCount -commentCount -createdAt")
+    const stories = await query    
+    return res.status(200).json(
+        {
+            success:true,
+            count : stories.length,
+            data : stories ,
+            page : paginationResult.page ,
+            pages : paginationResult.pages
+        })
+
+})
+
+
+
 
 const detailStory =asyncErrorWrapper(async(req,res,next)=>{
 
@@ -137,11 +160,12 @@ const editStoryPage  =asyncErrorWrapper(async(req,res,next)=>{
 
 const editStory  =asyncErrorWrapper(async(req,res,next)=>{
     const {slug } = req.params ; 
-    const {title ,content ,image ,previousImage } = req.body;
+    const {title ,categorie ,content ,image ,previousImage } = req.body;
 
     const story = await Story.findOne({slug : slug })
 
     story.title = title ;
+    story.categorie = categorie ;
     story.content = content ;
     story.image =   req.savedStoryImage ;
 
@@ -188,6 +212,7 @@ const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
 module.exports ={
     addStory,
     getAllStories,
+    getAllPostCat,
     detailStory,
     likeStory,
     editStoryPage,

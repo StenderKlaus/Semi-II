@@ -21,7 +21,7 @@ const DetailStory = () => {
   const slug = useParams().slug
   const [storyReadListStatus, setStoryReadListStatus] = useState(false)
   const navigate = useNavigate()
-
+console.log(story.categorie?.split(","));
   useEffect(() => {
 
     const getDetailStory = async () => {
@@ -50,7 +50,7 @@ const DetailStory = () => {
         setLikeCount(data.data.likeCount)
         setStoryLikeUser(data.data.likes)
         setLoading(false)
-
+         
         const story_id = data.data._id;
 
         if (activeUser.readList) {
@@ -147,13 +147,12 @@ const DetailStory = () => {
       })
 
       setStoryReadListStatus(data.status)
-
-      document.getElementById("readListLength").textContent = data.user.readListLength
     }
     catch (error) {
       console.log(error)
     }
   }
+
 
   return (
     <>
@@ -230,7 +229,14 @@ const DetailStory = () => {
                 />
 
               </div>
-
+                  <div className="story-categories-section">                    
+                      <span>Categories:   </span>
+                      <span className="categorieSpan">
+                      {story?.categorie.split(",").map((category) => (
+                       <button>{category}</button>                      
+                      ))} 
+                      </span>                    
+                  </div>
               <div className='story-content' >
 
                 <div className="story-banner-img">

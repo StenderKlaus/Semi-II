@@ -8,6 +8,8 @@ import { AuthContext } from "../../Context/AuthContext";
 import { AiOutlineUpload } from 'react-icons/ai'
 import '../../Css/EditStory.css'
 
+import Select from 'react-select';
+
 const EditStory = () => {
     const { config } = useContext(AuthContext)
     const slug = useParams().slug
@@ -21,6 +23,28 @@ const EditStory = () => {
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
     const navigate = useNavigate()
+    
+    const [categories, setCategories] = useState([])
+
+    const categoriesZwei = [
+        { value: "html", label: "HTML" },
+        { value: "css", label: "CSS" },
+        { value: "bootstrap", label: "Bootstrap" },
+        { value: "tailwind", label: "Tailwind" },
+        { value: "sass", label: "Sass" },
+        { value: "javascript", label: "Javascript" },
+        { value: "react", label: "React" },
+        { value: "nodejs", label: "NodeJS" },
+        { value: "git/github", label: "Git/Github" },
+        { value: "express", label: "Express" },
+        { value: "mongodb", label: "MongoDB" },        
+        { value: "mysql", label: "MySQL" },
+        { value: "ubuntu", label: "Ubuntu" },
+        { value: "empty", label: "" },
+        { value: "usefullinks", label: "Useful Links" },
+        { value: "livecoding", label: "Live coding" },
+        { value: "exercises", label: "Exercises" },
+      ];
 
     useEffect(() => {
 
@@ -31,6 +55,7 @@ const EditStory = () => {
                 setStory(data.data)
                 setTitle(data.data.title)
                 setContent(data.data.content)
+                // setCategories(data.data.categorie)
                 setImage(data.data.image)
                 setPreviousImage(data.data.image)
                 setLoading(false)
@@ -44,8 +69,10 @@ const EditStory = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         const formdata = new FormData()
         formdata.append("title", title)
+        formdata.append("categorie", categories?.map((category) => ` ${category.value}`))
         formdata.append("content", content)
         formdata.append("image", image)
         formdata.append("previousImage", previousImage)
@@ -61,6 +88,12 @@ const EditStory = () => {
 
         }
         catch (error) {
+
+            if (!categories) {
+                setError("Please select at least one post category");
+            return;
+              }
+
             setTimeout(() => {
                 setError('')
             }, 4500)
@@ -93,7 +126,15 @@ const EditStory = () => {
                                 onChange={(e) => setTitle(e.target.value)}
                                 value={title}
                             />
-
+                            <h6>Please reselect the relevant categories for this Post</h6>
+                <label>
+                    <span>Post Category:</span>
+                    <Select isSearchable={true} 
+                        options={categoriesZwei}
+                        onChange={(option) => setCategories(option)}
+                        isMulti
+                    />
+                </label>
                             <CKEditor
                                 editor={ClassicEditor}
                                 onChange={(e, editor) => {

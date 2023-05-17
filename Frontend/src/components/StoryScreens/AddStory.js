@@ -1,13 +1,14 @@
-import React, { useRef, useContext } from 'react'
-import { useState } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import React, { useRef, useContext } from 'react';
+import { useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { AuthContext } from "../../Context/AuthContext";
-import { AiOutlineUpload } from 'react-icons/ai'
-import { FiArrowLeft } from 'react-icons/fi'
-import '../../Css/AddStory.css'
+import { AiOutlineUpload } from 'react-icons/ai';
+import { FiArrowLeft } from 'react-icons/fi';
+import '../../Css/AddStory.css';
+import Select from 'react-select';
 
 const AddStory = () => {
 
@@ -19,33 +20,60 @@ const AddStory = () => {
     const [content, setContent] = useState('')
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
-
+    const [categories, setCategories] = useState([])
     const clearInputs = () => {
         setTitle('')
+        setCategories([])
         setContent('')
         setImage('')
         editorEl.current.editor.setData('')
         imageEl.current.value = ""
     }
 
+    const categoriesZwei = [
+        { value: "html", label: "HTML" },
+        { value: "css", label: "CSS" },
+        { value: "bootstrap", label: "Bootstrap" },
+        { value: "tailwind", label: "Tailwind" },
+        { value: "sass", label: "Sass" },
+        { value: "javascript", label: "Javascript" },
+        { value: "react", label: "React" },
+        { value: "nodejs", label: "NodeJS" },
+        { value: "git/github", label: "Git/Github" },
+        { value: "express", label: "Express" },
+        { value: "mongodb", label: "MongoDB" },        
+        { value: "mysql", label: "MySQL" },
+        { value: "ubuntu", label: "Ubuntu" },
+        { value: "empty", label: "" },
+        { value: "usefullinks", label: "Useful Links" },
+        { value: "livecoding", label: "Live coding" },
+        { value: "exercises", label: "Exercises" },
+      ];
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(categories.map((category) => category.value));
         const formdata = new FormData()
         formdata.append("title", title)
+        formdata.append("categorie", categories.map((category) => ` ${category.value}`))
         formdata.append("image", image)
         formdata.append("content", content)
 
         try {
             const { data } = await axios.post("/story/addstory", formdata, config)
             setSuccess('Add story successfully ')
-
             clearInputs()
+            setCategories([])
             setTimeout(() => {
                 setSuccess('')
             }, 7000)
 
         }
         catch (error) {
+            if (!categories) {
+                setError("Please select at least one post category");
+            return;
+              }
             setTimeout(() => {
                 setError('')
 
@@ -79,6 +107,15 @@ const AddStory = () => {
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
                 />
+                <h6>Please select the relevant categories for this Post</h6>
+                <label>
+                    <span>Post Category:</span>
+                    <Select isSearchable={true} 
+                        options={categoriesZwei}
+                        onChange={(option) => setCategories(option)}
+                        isMulti
+                    />
+                </label>
 
                 <CKEditor
                     editor={ClassicEditor}

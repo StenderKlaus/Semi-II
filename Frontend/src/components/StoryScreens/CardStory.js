@@ -35,7 +35,9 @@ const Story = ({ story }) => {
                     
                     }
                     </h5>
-
+                    <h6 className="story-categories">
+                        {story.categorie}
+                    </h6>
 
                     <p className="story-text"dangerouslySetInnerHTML={{__html : truncateContent( story.content) +"..."}}>
                         </p>
