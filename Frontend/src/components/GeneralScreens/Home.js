@@ -106,7 +106,7 @@ const Home = () => {
     getPostsByCat()
 
     return () => getPostsByCat()
-    
+
   }, [categories, page])
 
 
@@ -126,7 +126,7 @@ const Home = () => {
                     <Select isSearchable={true} 
                         options={thema}
                         onChange={(option) => setCategories(option)}
-                        isMulti
+                        
                     />
                 </label>
       </div>
