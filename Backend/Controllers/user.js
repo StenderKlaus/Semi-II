@@ -4,6 +4,45 @@ const Story = require("../Models/story");
 const CustomError = require("../Helpers/error/CustomError");
 const { comparePassword, validateUserInput } = require("../Helpers/input/inputHelpers");
 
+const multer = require("multer");
+
+
+const cloudinary = require("../Helpers/Libraries/cloudinary");
+
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+
+
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary, 
+    params: {
+        folder: "userProfilePhoto",
+        format: async (req, file) => {
+            let format;
+            switch (file.mimetype) {
+              case "image/jpeg":
+                format = "jpg";
+                break;
+              case "image/png":
+                format = "png";
+                break;
+            //   case "image/gif":
+            //     format = "gif";
+            //     break;
+              default:
+                format = "jpg";
+                break;
+            }
+            return format;
+          }, // Set desired file format here,
+        public_id: (req, file) =>file.originalname
+    }
+ })
+
+const parser = multer({
+    storage: storage,
+})
+
+
 const profile = asyncErrorWrapper(async (req, res, next) => {
 
     return res.status(200).json({
@@ -14,26 +53,43 @@ const profile = asyncErrorWrapper(async (req, res, next) => {
 })
 
 
-const editProfile = asyncErrorWrapper(async (req, res, next) => {
+const editProfile = [parser.single("photo"), async (req, res, next) => {
+    console.log(" pawüeüqoüe")
+    // const { email, username } = req.body
 
-    const { email, username } = req.body
+    // const user = await User.findByIdAndUpdate(req.user.id, {
+    //     email, username,
+    //     photo: req.savedUserPhoto
+    // },
+    //     {
+    //         new: true,
+    //         runValidators: true
+    //     })
 
-    const user = await User.findByIdAndUpdate(req.user.id, {
-        email, username,
-        photo: req.savedUserPhoto
-    },
-        {
-            new: true,
-            runValidators: true
-        })
+    console.log(req.params.id)
 
-    return res.status(200).json({
-        success: true,
-        data: user
+    const user = await User.findById(req.params.id)
+    console.log(user)
+    console.log(user.username)
+    console.log(user.email)
+    console.log(req.file)
+    
+    user.username = req.body.username || user.username;
+    user.email = req.body.email || user.email;
+    if (req.file) {
+      user.photo = req.file.path;
+    }
+    await user.save();
 
-    })
+    res.send({ message: 'User updated successfully', user });
 
-})
+    // return res.status(200).json({
+    //     success: true,
+    //     data: user
+
+    // })
+
+}]
 
 
 const changePassword = asyncErrorWrapper(async (req, res, next) => {

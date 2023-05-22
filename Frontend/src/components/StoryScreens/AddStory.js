@@ -50,24 +50,45 @@ const AddStory = () => {
         { value: "exercises", label: "Exercises" },
       ];
 
+      console.log(title)
+      console.log(content)
+      console.log(content)
+
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(categories.map((category) => category.value));
+        // console.log(categories.map((category) => category.value));
+        // const formdata = {
+        //     "title": title,
+        //     "content": content,
+        //     "image": image,
+        //     "categorie": categories.map((category) => ` ${category.value}`)
+        // }
         const formdata = new FormData()
         formdata.append("title", title)
-        formdata.append("categorie", categories.map((category) => ` ${category.value}`))
+        formdata.append("categorie", categories.map((category) => category.value).join(','));
         formdata.append("image", image)
         formdata.append("content", content)
-
+    
+    
+    
         try {
-            const { data } = await axios.post("/story/addstory", formdata, config)
+            const response = await axios.post("/story/addstory", formdata, {
+                ...config,
+                headers: {
+                  ...config.headers,
+                  "Content-Type": "multipart/form-data"
+                }
+              });
+            console.log(response.data)
+
             setSuccess('Add story successfully ')
             clearInputs()
             setCategories([])
             setTimeout(() => {
                 setSuccess('')
             }, 7000)
-
         }
         catch (error) {
             if (!categories) {
@@ -78,7 +99,7 @@ const AddStory = () => {
                 setError('')
 
             }, 7000)
-            setError(error.response.data.error)
+            setError(error.message)
 
         }
 

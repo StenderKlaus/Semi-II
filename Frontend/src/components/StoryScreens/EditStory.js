@@ -72,36 +72,43 @@ const EditStory = () => {
         
         const formdata = new FormData()
         formdata.append("title", title)
-        formdata.append("categorie", categories?.map((category) => ` ${category.value}`))
+         formdata.append("categorie", categories.map((category) => category.value).join(','));
         formdata.append("content", content)
         formdata.append("image", image)
         formdata.append("previousImage", previousImage)
-
+        
         try {
-            const { data } = await axios.put(`/story/${slug}/edit`, formdata, config)
-
+            const response = await axios.put(`/story/${slug}/edit`, formdata, {
+                ...config,
+                headers: {
+                    ...config.headers,
+                    "Content-Type": "multipart/form-data"
+                }
+            })
+            console.log(response.data)
+            
             setSuccess('Edit Story successfully ')
-
+            
             setTimeout(() => {
                 navigate('/')
             }, 2500)
-
+            
         }
         catch (error) {
-
+            
             if (!categories) {
                 setError("Please select at least one post category");
-            return;
-              }
-
+                return;
+            }
+            
             setTimeout(() => {
                 setError('')
             }, 4500)
             setError(error.response.data.error)
         }
     }
-
-
+    
+    
 
     return (
         <>

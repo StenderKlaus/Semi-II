@@ -11,7 +11,7 @@ const getAccessToRoute = asyncErrorWrapper(async(req,res,next) =>{
 
     if(!isTokenIncluded(req)) {
 
-        return next(new CustomError("You are not authorized to access this route ", 401))
+        return next(new CustomError("1You are not authorized to access this route ", 401))
     }
 
     const accessToken = getAccessTokenFromHeader(req)
@@ -21,7 +21,7 @@ const getAccessToRoute = asyncErrorWrapper(async(req,res,next) =>{
     const user = await User.findById(decoded.id)
    
     if(!user) {
-        return next(new CustomError("You are not authorized to access this route ", 401))
+        return next(new CustomError("2You are not authorized to access this route ", 401))
     }
 
     req.user = user ; 

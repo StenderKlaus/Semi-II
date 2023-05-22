@@ -25,9 +25,9 @@ const EditProfile = () => {
         formdata.append("username", username)
         formdata.append("email", email)
         formdata.append("photo", photo)
-
+        console.log(activeUser)
         try {
-            const { data } = await axios.post("/user/editProfile", formdata, config)
+            const { data } = await axios.post(`/user/${activeUser._id}/editProfile`, formdata, config)
 
             setSuccess('Edit Profile successfully ')
             setTimeout(() => {
@@ -84,7 +84,7 @@ const EditProfile = () => {
 
                             </div>
 
-                            <div className="profile-ımg-upld-wrapper">
+                            <div className="profile-img-upld-wrapper">
 
                                 <div class="ProfilePhotoField">
                                     <FaUserAlt />

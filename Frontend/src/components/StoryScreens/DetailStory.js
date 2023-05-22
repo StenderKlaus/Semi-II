@@ -21,7 +21,7 @@ const DetailStory = () => {
   const slug = useParams().slug
   const [storyReadListStatus, setStoryReadListStatus] = useState(false)
   const navigate = useNavigate()
-console.log(story.categorie?.split(","));
+// console.log(story.categorie?.split(","));
   useEffect(() => {
 
     const getDetailStory = async () => {
@@ -34,6 +34,7 @@ console.log(story.categorie?.split(","));
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
+        console.log(slug)
         activeUser = data.user
 
         setActiveUser(activeUser)
@@ -52,6 +53,7 @@ console.log(story.categorie?.split(","));
         setLoading(false)
          
         const story_id = data.data._id;
+        console.log(data)
 
         if (activeUser.readList) {
 
@@ -73,7 +75,7 @@ console.log(story.categorie?.split(","));
 
     }
     getDetailStory();
-
+ return ()=> getDetailStory();
   }, [slug, setLoading])
 
 
@@ -232,7 +234,7 @@ console.log(story.categorie?.split(","));
                   <div className="story-categories-section">                    
                       <span>Categories:   </span>
                       <span className="categorieSpan">
-                      {story?.categorie.split(",").map((category) => (
+                      {story?.categorie.map((category) => (
                        <button>{category}</button>                      
                       ))} 
                       </span>                    
@@ -240,7 +242,7 @@ console.log(story.categorie?.split(","));
               <div className='story-content' >
 
                 <div className="story-banner-img">
-                  <img src={`/storyImages/${story.image}`} alt={story.title} />
+                  <img src={`${story.image}`} alt={story.title} />
 
                 </div>
 
