@@ -6,7 +6,6 @@ const { comparePassword, validateUserInput } = require("../Helpers/input/inputHe
 
 const multer = require("multer");
 
-
 const cloudinary = require("../Helpers/Libraries/cloudinary");
 
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
@@ -34,7 +33,10 @@ const storage = new CloudinaryStorage({
             }
             return format;
           }, // Set desired file format here,
-        public_id: (req, file) =>file.originalname
+        // public_id: (req, file) =>file.originalname
+        public_id: (req, user) =>req.user._id
+        
+        
     }
  })
 
@@ -52,46 +54,25 @@ const profile = asyncErrorWrapper(async (req, res, next) => {
 
 })
 
-
+// In dieser Function wird dem User sein User-Photo zugeordnet
 const editProfile = [parser.single("photo"), async (req, res, next) => {
-    console.log(" pawüeüqoüe")
-    // const { email, username } = req.body
-
-    // const user = await User.findByIdAndUpdate(req.user.id, {
-    //     email, username,
-    //     photo: req.savedUserPhoto
-    // },
-    //     {
-    //         new: true,
-    //         runValidators: true
-    //     })
-
-    console.log(req.params.id)
 
     const user = await User.findById(req.params.id)
-    console.log(user)
-    console.log(user.username)
-    console.log(user.email)
-    console.log(req.file)
     
     user.username = req.body.username || user.username;
     user.email = req.body.email || user.email;
     if (req.file) {
-      user.photo = req.file.path;
+        
+        await cloudinary.uploader.destroy(`userProfilePicture/${user.id}`);
+        user.photo = req.file.path;
     }
     await user.save();
 
     res.send({ message: 'User updated successfully', user });
 
-    // return res.status(200).json({
-    //     success: true,
-    //     data: user
-
-    // })
-
 }]
 
-
+// Mit dieser Function wird ein Password neu erstellt für einen existierenden User
 const changePassword = asyncErrorWrapper(async (req, res, next) => {
 
     const { newPassword, oldPassword } = req.body
@@ -122,7 +103,7 @@ const changePassword = asyncErrorWrapper(async (req, res, next) => {
 
 })
 
-
+// Mit dieser Function wird ein Post zur Liste hinzugefügt
 const addStoryToReadList = asyncErrorWrapper(async (req, res, next) => {
 
     const { slug } = req.params
@@ -156,7 +137,7 @@ const addStoryToReadList = asyncErrorWrapper(async (req, res, next) => {
     })
 
 })
-
+// Mit dieser Function wird eine Liste erstellt von meinen Favoriten-Posts für ALLE User
 const readListPage = asyncErrorWrapper(async (req, res, next) => {
 
     const user = await User.findById(req.user.id)

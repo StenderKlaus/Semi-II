@@ -28,6 +28,8 @@ In the first terminal
 $ cd Frontend
 $ npm install (to install frontend-side dependencies)
 $ npm run  start (to start the frontend)
+$ or
+$ nodemon start (to start the frontend)
 ```
 
 In the second terminal
@@ -61,6 +63,8 @@ EMAIL_PASS = your_password
 
 $ npm install (to install backend-side dependencies)
 $ npm start (to start the backend)
+$ or
+$ nodemon start (to start the backend)
 ```
 
 ##  Key Features

@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { AuthContext } from "../../Context/AuthContext";
@@ -54,7 +54,7 @@ const AddStory = () => {
       console.log(content)
       console.log(content)
 
-
+      const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -88,7 +88,8 @@ const AddStory = () => {
             setCategories([])
             setTimeout(() => {
                 setSuccess('')
-            }, 7000)
+                navigate("/")
+            }, 4000)
         }
         catch (error) {
             if (!categories) {
@@ -117,7 +118,8 @@ const AddStory = () => {
                     <span>
                         {success}
                     </span>
-                    <Link to="/">Go home</Link>
+
+                 !   You will be redirected in 4 seconds
                 </div>}
 
                 <input

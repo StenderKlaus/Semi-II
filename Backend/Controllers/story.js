@@ -24,16 +24,13 @@ const storage = new CloudinaryStorage({
               case "image/png":
                 format = "png";
                 break;
-            //   case "image/gif":
-            //     format = "gif";
-            //     break;
               default:
                 format = "jpg";
                 break;
             }
             return format;
           }, // Set desired file format here,
-        public_id: (req, file) =>file.originalname
+        // public_id: (req, story) =>req.story._id
     }
  })
 
@@ -43,32 +40,29 @@ const parser = multer({
 
 
 const addStory = [parser.single("image"), async  (req,res,next)=> {
-    console.log(req.body.content)
-    console.log(req.body.title)
 
     const {title, content} = req.body;
     let categorie = req.body.categorie.split(',');
 
-
     let wordCount = content.split(/\s+/).length ; 
    
     let readtime = Math.floor(wordCount /200)   ;
-
-
-
-
+    const newStory = await Story.create({
+        title,
+        content,
+        categorie,
+        author :req.user._id ,
+        image : req.file.path,
+        readtime
+    })
     try {
-        const newStory = await Story.create({
-            title,
-            content,
-            categorie,
-            author :req.user._id ,
-            image : req.file.path,
-            readtime
-        })
 
+        
         await newStory.save();
-
+        const result = await cloudinary.uploader.upload(req.file.path, {
+            public_id : `storyPhoto/${newStory.author}/story`
+        })
+        await newStory.save();
         res.send({ message: 'story added successfully', newStory });
 
         // return res.status(200).json({
@@ -110,8 +104,10 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
             page : paginationResult.page ,
             pages : paginationResult.pages
         })
-
+    
 })
+
+
 
 const getAllPostCat = asyncErrorWrapper( async (req,res,next) =>{
 
@@ -223,10 +219,11 @@ const editStory  =asyncErrorWrapper(async(req,res,next)=>{
         story.image = image
     }
     else {
+        await cloudinary.uploader.destroy(`storyPhoto/${newStory.author}`);
         // if the image sent
         // old image locatıon delete
     //    deleteImageFile(req,previousImage)
-    await cloudinary.uploader.destroy(`storyPhoto${image}`)
+    // await cloudinary.uploader.destroy(`storyPhoto${image}`)
     }
 
     await story.save()  ;
@@ -244,7 +241,7 @@ const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
     const {slug} = req.params  ;
 
     const story = await Story.findOne({slug : slug })
-    await cloudinary.uploader.destroy(`storyPhoto${image}`)
+    await cloudinary.uploader.destroy(`storyPhoto/${story.id}`);
     // deleteImageFile(req,story.image) ; 
 
     await story.remove()
