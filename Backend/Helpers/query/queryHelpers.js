@@ -1,5 +1,5 @@
 const searchHelper = (searchKey, query, req) => {
-
+console.log("search in searchhelper" , req.query);
     if (req.query.search) {
 
         const searchObject = {};

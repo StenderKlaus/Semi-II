@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import "../../Css/DetailStory.css"
 import Loader from '../GeneralScreens/Loader';
@@ -9,6 +9,7 @@ import { FiEdit, FiArrowLeft } from 'react-icons/fi'
 import { FaRegComment } from 'react-icons/fa'
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from 'react-icons/bs'
 import CommentSidebar from '../CommentScreens/CommentSidebar';
+import { AuthContext } from "../../Context/AuthContext";
 
 const DetailStory = () => {
   const [likeStatus, setLikeStatus] = useState(false)
@@ -21,6 +22,7 @@ const DetailStory = () => {
   const slug = useParams().slug
   const [storyReadListStatus, setStoryReadListStatus] = useState(false)
   const navigate = useNavigate()
+  // const {categories, setCategories} = useContext(AuthContext);
 // console.log(story.categorie?.split(","));
   useEffect(() => {
 
@@ -155,6 +157,13 @@ const DetailStory = () => {
     }
   }
 
+  // const klickCategorie=(e, category) => {
+  //   e.preventDefault();
+  //   navigate(`/`);
+  //   setCategories([{value: category}])
+    
+    
+  // };
 
   return (
     <>
@@ -234,8 +243,9 @@ const DetailStory = () => {
                   <div className="story-categories-section">                    
                       <span>Categories:   </span>
                       <span className="categorieSpan">
-                      {story?.categorie.map((category) => (
-                       <button>{category}</button>                      
+                      {story?.categorie?.map((category) => (
+                       <button >{category}</button>  
+                      //  onClick={(e) => klickCategorie(e, category)}       
                       ))} 
                       </span>                    
                   </div>

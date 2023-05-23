@@ -1,6 +1,6 @@
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import SkeletonStory from "../Skeletons/SkeletonStory";
 import CardStory from "../StoryScreens/CardStory";
@@ -10,6 +10,8 @@ import Select from 'react-select';
 import "../../Css/Home.css"
 
 import { useNavigate } from "react-router-dom"
+import { AuthContext } from "../../Context/AuthContext";
+
 const Home = () => {
   const search = useLocation().search
   const searchKey = new URLSearchParams(search).get('search')
@@ -18,8 +20,8 @@ const Home = () => {
   const navigate = useNavigate()
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
-  const [categories, setCategories] = useState([])
-
+  // const {categories, setCategories} = useContext(AuthContext);
+  const [categories, setCategories] = useState([]);
 
   const thema = [
     { value: "html", label: "HTML" },
@@ -79,7 +81,7 @@ const Home = () => {
 
 
   useEffect(() => {
-
+console.log(categories);
     const getPostsByCat = async () => {
       setLoading(true)
       try {
@@ -107,7 +109,7 @@ const Home = () => {
 
     return () => getPostsByCat()
     
-  }, [categories, page])
+  }, [setLoading, categories, page, navigate])
 
 
   useEffect(() => {
