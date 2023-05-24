@@ -35,9 +35,11 @@ const Story = ({ story }) => {
                     
                     }
                     </h5>
-                    <h6 className="story-categories">
-                        {story.categorie}
-                    </h6>
+                    <span className="story-categories">
+                        {story.categorie.map((category)=>(
+                            <span>{`${category} `}</span>
+                        ))}
+                    </span>
 
                     <p className="story-text"dangerouslySetInnerHTML={{__html : truncateContent( story.content) +"..."}}>
                         </p>

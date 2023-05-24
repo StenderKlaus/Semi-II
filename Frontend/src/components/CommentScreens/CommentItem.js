@@ -45,7 +45,7 @@ const CommentItem = ({ comment, activeUser }) => {
 
 
     const handleCommentLike = async () => {
-        console.log("like comment ıtem ın  basıldı ")
+      
 
         const comment_id = comment._id
 
@@ -73,7 +73,7 @@ const CommentItem = ({ comment, activeUser }) => {
             <div className="comment-top-block">
 
                 <section>
-                    <img src={`/userPhotos/${comment.author.photo}`} alt={comment.author.username} width="35" />
+                    <img src={`${comment.author.photo}`} alt={comment.author.username} width="35" />
 
                     <div>
                         <span className='comment-author-username' >{comment.author.username}</span>
