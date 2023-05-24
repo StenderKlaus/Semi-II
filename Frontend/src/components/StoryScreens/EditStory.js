@@ -91,7 +91,7 @@ const EditStory = () => {
             
             setTimeout(() => {
                 navigate('/')
-            }, 2500)
+            }, 15000)
             
         }
         catch (error) {
@@ -103,7 +103,7 @@ const EditStory = () => {
             
             setTimeout(() => {
                 setError('')
-            }, 4500)
+            }, 15000)
             setError(error.response.data.error)
         }
     }

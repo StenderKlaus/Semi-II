@@ -28,7 +28,7 @@ const StorySchema = new mongoose.Schema({
     },
     image: {
         type: String,
-        default: "default.jpg"
+
     },
     readtime: {
         type: Number,

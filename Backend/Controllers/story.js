@@ -2,7 +2,7 @@ const asyncErrorWrapper = require("express-async-handler")
 const Story = require("../Models/story");
 // const deleteImageFile = require("../Helpers/Libraries/deleteImageFile");
 const {searchHelper, paginateHelper} =require("../Helpers/query/queryHelpers")
-
+const {slugify} = require("slugify");
 const multer = require("multer");
 
 
@@ -203,38 +203,43 @@ const editStoryPage  =asyncErrorWrapper(async(req,res,next)=>{
 })
 
 
-const editStory  =asyncErrorWrapper(async(req,res,next)=>{
+const editStory  =[parser.single("image"),async(req,res,next)=>{    
     const {slug } = req.params ; 
+
     const {title ,categorie ,content ,image ,previousImage } = req.body;
+    console.log(previousImage);
+    console.log(image);
+    const newImage = req.file
+    try {        
+        console.log(req.body);
+        const story = await Story.findOne({slug : slug})
+        console.log(story);
+            story.title = title;
+            story.categorie = categorie;
+            story.content = content;
+            if(previousImage) { 
+                    await cloudinary.uploader.destroy(previousImage);
+                }
+                const result = await cloudinary.uploader.upload(req.file.path, {
+                public_id: `storyPhoto/${story.author}`
+                })
 
-    const story = await Story.findOne({slug : slug })
+            story.image =  newImage  ;          
 
-    story.title = title ;
-    story.categorie = categorie ;
-    story.content = content ;
-    story.image =   req.savedStoryImage ;
-
-    if( !req.savedStoryImage) {
-        // if the image is not sent
-        story.image = image
-    }
-    else {
-        await cloudinary.uploader.destroy(`storyPhoto/${newStory.author}`);
-        // if the image sent
-        // old image locatıon delete
-    //    deleteImageFile(req,previousImage)
-    // await cloudinary.uploader.destroy(`storyPhoto${image}`)
-    }
-
-    await story.save()  ;
-
-    return res.status(200).
-        json({
+            await story.save();
+            return res.status(200).
+            json({
             success:true,
             data :story
-    })
-
-})
+            })
+            } catch (error) {
+                return res.status(500).json({
+                    success: false,
+                    message: 'An error occurred',
+                    error: error.message,
+                });
+        }
+    }];
 
 const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
 
