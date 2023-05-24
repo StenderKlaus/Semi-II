@@ -209,9 +209,8 @@ const editStory  =[parser.single("image"),async(req,res,next)=>{
     const {title ,categorie ,content ,image ,previousImage } = req.body;
     console.log(previousImage);
     console.log(image);
-    const newImage = req.file
-    try {        
-        console.log(req.body);
+    console.log(req.body);
+    try {                
         const story = await Story.findOne({slug : slug})
         console.log(story);
             story.title = title;
@@ -223,9 +222,7 @@ const editStory  =[parser.single("image"),async(req,res,next)=>{
                 const result = await cloudinary.uploader.upload(req.file.path, {
                 public_id: `storyPhoto/${story.author}`
                 })
-
-            story.image =  newImage  ;          
-
+            story.image =  result.url  ;          
             await story.save();
             return res.status(200).
             json({
