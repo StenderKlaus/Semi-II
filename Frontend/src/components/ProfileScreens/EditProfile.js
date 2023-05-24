@@ -85,9 +85,15 @@ const EditProfile = () => {
                             </div>
 
                             <div className="profile-img-upld-wrapper">
-
+                            <div class="currentImage">
+                                    <div class="absolute">
+                                        Currently Image
+                                    </div>
+                                    <img src={`${previousPhoto}`} alt="userPhoto" />
+                                </div>
                                 <div class="ProfilePhotoField">
                                     <FaUserAlt />
+                                    
                                     <div class="txt">
 
                                         {photo === previousPhoto ?
@@ -115,12 +121,7 @@ const EditProfile = () => {
                                 </div>
 
 
-                                <div class="currentImage">
-                                    <div class="absolute">
-                                        Currently Image
-                                    </div>
-                                    <img src={`http://localhost:5000/userPhotos/${previousPhoto}`} alt="userPhoto" />
-                                </div>
+                                
 
                             </div>
 
