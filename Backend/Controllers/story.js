@@ -248,7 +248,8 @@ const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
     const {slug} = req.params  ;
 
     const story = await Story.findOne({slug : slug })
-    await cloudinary.uploader.destroy(`storyPhoto/${story.id}`);
+    await cloudinary.uploader.destroy(`storyPhoto/${story.author}/story`
+    );
     // deleteImageFile(req,story.image) ; 
 
     await story.remove()
