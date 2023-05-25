@@ -16,7 +16,7 @@ const EditStory = () => {
     const imageEl = useRef(null)
     const [loading, setLoading] = useState(true)
     const [story, setStory] = useState({})
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState(null)
     const [previousImage, setPreviousImage] = useState('')
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
@@ -77,6 +77,8 @@ const EditStory = () => {
         formdata.append("image", image)
         formdata.append("previousImage", previousImage)
         
+        console.log(previousImage)
+
         try {
             const response = await axios.put(`/story/${slug}/edit`, formdata, {
                 ...config,
