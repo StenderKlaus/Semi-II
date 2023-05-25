@@ -223,7 +223,7 @@ const editStory  =[parser.single("image"),async(req,res,next)=>{
                     await cloudinary.uploader.destroy(previousImage);
                 }
                 const result = await cloudinary.uploader.upload(req.file.path, {
-                public_id: `storyPhoto/${story.author}`
+                public_id: `storyPhoto/${story.author}/story`
                 })
             story.image =  result.url  ;          
 
