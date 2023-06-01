@@ -85,20 +85,29 @@ console.log(categories);
     const getPostsByCat = async () => {
       setLoading(true)
       try {
-        const { data } = await axios.get(`/story/getAllPostCat?search=${categories[0].value || ""}&page=${page}`)
-        if (categories) {
+        
+        // console.log("data in useEffect",data)
+        if (categories.length > 0) {
+          console.log("here fired if")
+
+          const { data } = await axios.get(`/story/getAllPostCat?search=${categories[0].value}&page=${page}`)
+          setStories(data.data)
+          setPages(data.pages)
           navigate({
             pathname: '/',
-            search: `?search=${categories}${page > 1 ? `&page=${page}` : ""}`,
+            // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
           });
         } else {
+          console.log("here fired else")
+          const { data } = await axios.get(`/story/getAllStories?search=${searchKey || ""}&page=${page}`)
+          setStories(data.data)
+          setPages(data.pages)
           navigate({
             pathname: '/',
-            search: `${page > 1 ? `page=${page}` : ""}`,
+            // search: `?search=""${page > 1 ? `&page=${page}` : ""}`,
           });
         }
-        setStories(data.data)
-        setPages(data.pages)
+        
         setLoading(false)
       }
       catch (error) {
@@ -106,8 +115,7 @@ console.log(categories);
       }
     }
     getPostsByCat()
-
-    return () => getPostsByCat()
+    
     
   }, [setLoading, categories, page, navigate])
 
@@ -122,12 +130,13 @@ console.log(categories);
   return (
     <div className="Inclusive-home-page">
       <div>
-      <h6>Search Posts in the relevant categories: </h6>
+      <h6>Search Posts by a relevant category: </h6>
                 <label>
                     <span>Post Category:</span>
                     <Select isSearchable={true} 
                         options={thema}
-                        onChange={(option) => setCategories(option)}
+                      onChange={(option) => setCategories(option)}
+
                         isMulti
                     />
                 </label>

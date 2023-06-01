@@ -110,7 +110,7 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
 
 const getAllPostCat = asyncErrorWrapper( async (req,res,next) =>{
-
+console.log("getAllPostCat fired")
     let query = Story.find();
     query =searchHelper("categorie",query,req)
     const paginationResult =await paginateHelper(Story , query ,req)
