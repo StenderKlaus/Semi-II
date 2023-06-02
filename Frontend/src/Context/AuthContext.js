@@ -4,7 +4,7 @@ import axios from "axios";
 export const AuthContext = React.createContext();
 
 const AuthContextProvider = props => {
-  // const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([])
   const [activeUser, setActiveUser] = useState({})
   const [config, setConfig] = useState({
     headers: {
@@ -33,7 +33,7 @@ const AuthContextProvider = props => {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ activeUser, setActiveUser, config, setConfig}}>
+    <AuthContext.Provider value={{ activeUser, setActiveUser, config, setConfig, categories, setCategories}}>
       {props.children}
     </AuthContext.Provider>
   );

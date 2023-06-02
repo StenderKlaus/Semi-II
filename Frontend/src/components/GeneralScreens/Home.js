@@ -20,8 +20,8 @@ const Home = () => {
   const navigate = useNavigate()
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
-  // const {categories, setCategories} = useContext(AuthContext);
-  const [categories, setCategories] = useState([]);
+  const {categories, setCategories} = useContext(AuthContext);
+  // const [categories, setCategories] = useState([]);
 
   const thema = [
     { value: "html", label: "HTML" },

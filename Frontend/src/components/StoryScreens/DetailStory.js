@@ -22,7 +22,7 @@ const DetailStory = () => {
   const slug = useParams().slug
   const [storyReadListStatus, setStoryReadListStatus] = useState(false)
   const navigate = useNavigate()
-  // const {categories, setCategories} = useContext(AuthContext);
+  const {categories, setCategories} = useContext(AuthContext);
 // console.log(story.categorie?.split(","));
   useEffect(() => {
 
@@ -157,13 +157,11 @@ const DetailStory = () => {
     }
   }
 
-  // const klickCategorie=(e, category) => {
-  //   e.preventDefault();
-  //   navigate(`/`);
-  //   setCategories([{value: category}])
-    
-    
-  // };
+  const klickCategorie=(e, category) => {
+  e.preventDefault();
+  navigate(`/`);
+  setCategories([{value: category}])
+  };
 
   return (
     <>
@@ -244,8 +242,8 @@ const DetailStory = () => {
                       <span>Categories:   </span>
                       <span className="categorieSpan">
                       {story?.categorie?.map((category) => (
-                       <button >{category}</button>  
-                      //  onClick={(e) => klickCategorie(e, category)}       
+                       <button   
+                      onClick={(e) => klickCategorie(e, category)}>{category}</button>       
                       ))} 
                       </span>                    
                   </div>
