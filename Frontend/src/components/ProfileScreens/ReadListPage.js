@@ -79,9 +79,9 @@ const ReadListPage = () => {
 
                         </div>
 
-                        <i className='BsThreeDots-icon'>
+                        {/* <i className='BsThreeDots-icon'>
                             < BsThreeDots />
-                        </i>
+                        </i> */}
 
                     </div>
 

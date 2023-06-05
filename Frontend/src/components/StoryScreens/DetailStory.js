@@ -303,7 +303,7 @@ const DetailStory = () => {
                       </i>
                     </li>
 
-                    <li className='BsThreeDots_opt'>
+                    {/* <li className='BsThreeDots_opt'>
                       <i  >
                         <BsThreeDots />
                       </i>
@@ -320,7 +320,7 @@ const DetailStory = () => {
                         </div> : null
                       }
 
-                    </li>
+                    </li> */}
 
                   </ul>
 

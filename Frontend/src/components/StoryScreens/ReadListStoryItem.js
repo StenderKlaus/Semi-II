@@ -39,7 +39,7 @@ const ReadListStoryItem = ({ story, editDate }) => {
                     </div>
                     <div className="readList-story-content">
 
-                        <span dangerouslySetInnerHTML={{ __html: truncateContent(story.content) + "..." }}></span>
+                        <span dangerouslySetInnerHTML={{ __html: truncateContent(story.content) + "" }}></span>
 
                     </div>
 
@@ -63,9 +63,9 @@ const ReadListStoryItem = ({ story, editDate }) => {
                         <i>
                             <BsBookmarkFill />
                         </i>
-                        <i>
+                        {/* <i>
                             < BsThreeDots />
-                        </i>
+                        </i> */}
 
                     </div>
                 </div>
