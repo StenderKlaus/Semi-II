@@ -41,91 +41,61 @@ const Home = () => {
     { value: "livecoding", label: "Live coding" },
     { value: "exercises", label: "Exercises" },
   ];
-
   useEffect(() => {
     const getStories = async () => {
 
       setLoading(true)
       try {
+        if(searchKey){
 
-        const { data } = await axios.get(`/story/getAllStories?search=${searchKey || ""}&page=${page}`)
-
-        if (searchKey) {
+        const { data } = await axios.get(`/story/getAllStories?search=${searchKey}&page=${page}`)
+        setStories(data.data)
+        setPages(data.pages)
           navigate({
             pathname: '/',
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
           });
-        } else {
+         
+        } else if(categories.length >0){  
+          const { data } = await axios.get(`/story/getAllPostCat?search=${categories[0].value}&page=${page}`)
+        setStories(data.data)
+        setPages(data.pages)
+        navigate({
+          pathname: '/',
+          // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
+        });
+      } else {
+        console.log("here fired else")
+
+        const { data } = await axios.get(`/story/getAllStories?search=${searchKey || ""}&page=${page}`)
+        setStories(data.data)
+        setPages(data.pages)
           navigate({
             pathname: '/',
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
+          
         }
-        setStories(data.data)
-        setPages(data.pages)
-
+        console.log("Home rerendered");
         setLoading(false)
+       
       }
       catch (error) {
         setLoading(true)
       }
     }
     getStories()
-  }, [setLoading, search, page, navigate])
+    console.log("input search fired")
+
+  }, [setLoading, categories, search, page, navigate])
 
 
   useEffect(() => {
     setPage(1)
-  }, [searchKey])
+  }, [searchKey,categories])
 
 
 
-  useEffect(() => {
-console.log(categories);
-    const getPostsByCat = async () => {
-      setLoading(true)
-      try {
-        
-        // console.log("data in useEffect",data)
-        if (categories.length > 0) {
-          console.log("here fired if")
-
-          const { data } = await axios.get(`/story/getAllPostCat?search=${categories[0].value}&page=${page}`)
-          setStories(data.data)
-          setPages(data.pages)
-          navigate({
-            pathname: '/',
-            // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
-          });
-        } else {
-          console.log("here fired else")
-          const { data } = await axios.get(`/story/getAllStories?search=${searchKey || ""}&page=${page}`)
-          setStories(data.data)
-          setPages(data.pages)
-          navigate({
-            pathname: '/',
-            // search: `?search=""${page > 1 ? `&page=${page}` : ""}`,
-          });
-        }
-        
-        setLoading(false)
-      }
-      catch (error) {
-        setLoading(true)
-      }
-    }
-    getPostsByCat()
-    
-    
-  }, [setLoading, categories, page, navigate])
-
-
-  useEffect(() => {
-    setPage(1)
-  }, [categories])
-
-
-// console.log(categories);
 
   return (
     <div className="Inclusive-home-page">
@@ -133,13 +103,16 @@ console.log(categories);
       <h6>Search Posts by a relevant category: </h6>
                 <label>
                     <span>Post Category:</span>
-                    <Select isSearchable={true} 
+                    <Select 
+                    isSearchable={true} 
                         options={thema}
                       onChange={(option) => setCategories(option)}
+                      value={categories}
 
                         isMulti
                     />
                 </label>
+                <button onClick={()=> {setCategories([]);navigate("/")}} >click here to go back to Homepage / all posts</button>
       </div>
       {loading ?
 

@@ -77,7 +77,7 @@ const DetailStory = () => {
 
     }
     getDetailStory();
- return ()=> getDetailStory();
+//  return ()=> getDetailStory();
   }, [slug, setLoading])
 
 
@@ -160,7 +160,7 @@ const DetailStory = () => {
   const klickCategorie=(e, category) => {
   e.preventDefault();
   navigate(`/`);
-  setCategories([{value: category}])
+  setCategories([{label: category.toUpperCase() , value: category}])
   };
 
   return (

@@ -7,6 +7,7 @@ const SearchForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault() ; 
+        console.log(searchTerm)
         if(searchTerm){
             navigate(`/?search=${searchTerm}`)
         }

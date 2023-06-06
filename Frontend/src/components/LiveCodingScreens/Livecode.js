@@ -4,26 +4,33 @@ import "./styles.css"
 
 const Livecode = ({codeId}) => {
   const [sandboxOutputVisible, setSandboxOutputVisible] = useState(false);
-  const [sandboxOutput, setSandboxOutput] = useState('');
 
-  const toggleOutputVisibility = () => {
-    setSandboxOutputVisible(!sandboxOutputVisible);
-  };
-
-  const executeCode = () => {
+  const toggleExecution = () => {
     const codeElement = document.getElementById('code-' + codeId);
-    // 'code-+${codeId}'
-    const code = codeElement.innerText;
+    const sandboxOutput = document.getElementById('sandbox-output-' + codeId);
 
-    setSandboxOutput(
-      <iframe
-        title={`sandbox-${codeId}`}
-        style={{ width: '70%', height: '150px', border: '1px solid #ccc' }}
-        srcDoc={code}
-      />
-    );
+    if (sandboxOutput.style.display === 'block') {
+      sandboxOutput.style.display = 'none';
+    } else {
+      const code = codeElement.innerText;
 
-    setSandboxOutputVisible(true);
+      const sandboxIframe = document.createElement('iframe');
+      sandboxIframe.style.width = '70%';
+      sandboxIframe.style.height = '150px';
+      sandboxIframe.style.border = '1px solid #ccc';
+
+      sandboxOutput.innerHTML = '';
+      sandboxOutput.appendChild(sandboxIframe);
+
+      const sandboxDocument = sandboxIframe.contentDocument || sandboxIframe.contentWindow.document;
+      sandboxDocument.open();
+      sandboxDocument.write(code);
+      sandboxDocument.close();
+
+      sandboxOutput.style.display = 'block';
+    }
+
+    setSandboxOutputVisible(!sandboxOutputVisible);
   };
   
   
@@ -56,8 +63,8 @@ const Livecode = ({codeId}) => {
       <code id="code-1">
         &lt;!DOCTYPE html&gt;
       </code>
-      <button class="sandbox-button" onclick={toggleOutputVisibility(1)}>Try It</button>
-      <div id="sandbox-output-1" className="sandbox-output"></div>
+      <button class="sandbox-button" onclick={toggleExecution}>Try It</button>
+      <div id="sandbox-output-1" class="sandbox-output"></div>
     </div>
     <h2>HTML Element (&lt;html&gt;)</h2>
     <p>The <code>&lt;html&gt;</code> element is the root element of an HTML document. It contains all the other elements on the page.</p>
@@ -73,7 +80,6 @@ const Livecode = ({codeId}) => {
     &nbsp;&nbsp;&lt;/body&gt;<br />
     &lt;/html&gt;<br />
         </code>
-
     </div>
   </main>
   
