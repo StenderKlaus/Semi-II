@@ -16,6 +16,7 @@ import ChangePassword from './components/ProfileScreens/ChangePassword';
 import NotFound from './components/GeneralScreens/NotFound';
 import EditStory from './components/StoryScreens/EditStory';
 import ReadListPage from './components/ProfileScreens/ReadListPage';
+import LiveCode from './components/LiveCodingScreens/Livecode';
 
 const App = () => {
 
@@ -79,6 +80,9 @@ const App = () => {
 
                               <Route exact path="/resetpassword" element={<ResetPasswordScreen />} />
 
+                              <Route exact path="/livecode" element={<LiveCode />} />
+
+                              
 
                         </Routes>
 

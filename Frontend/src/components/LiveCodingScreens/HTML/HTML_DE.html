@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Tags and Functions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navigation">
+    <ul>
+      <li><a href="#basic-html">Basic HTML</a></li>
+      <li><a href="#forms-input">Forms and Input</a></li>
+      <li><a href="#frames">Frames and iframes</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#audio-video">Audio / Video</a></li>
+      <li><a href="#links">Links</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#styles-semantics">Styles and Semantics</a></li>
+      <li><a href="#meta">Meta Info</a></li>
+      <li><a href="#programming">Programming</a></li>
+      <li><a href="#formatting">Formatting</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    
+    <h1>HTML Tags and Functions</h1>
+    <h1 class="headline" id="basic-html">Basic HTML</h1>
+    <h2>DOCTYPE Declaration (&lt;!DOCTYPE&gt;)</h2>
+    <h4>Hiermit wird der Dokumenten-Typ "html" festgelegt</h4>
+    <p>Hier wird mit "en" die verwendete Sprache der Webseite beschrieben ("en" = Englisch, oder "de" = Deutsch).
+      Ausserdem beginnt hier für Browser der mit HTML-Code definierte Bereich.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-1">
+        &lt;!DOCTYPE html&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(1)">Try It</button>
+      <div id="sandbox-output-1" class="sandbox-output"></div>
+    </div>
+
+    <h2>HTML Element (&lt;html&gt;)</h2>
+    <p>Der <code>&lt;html&gt;</code> element is the root element of an HTML document. It contains all the other elements on the page.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-2">
+        &lt;html&gt;<br>
+        &nbsp;&nbsp;&lt;head&gt;<br>
+        &nbsp;&nbsp;&lt;/head&gt;<br>
+        &nbsp;&nbsp;&lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, World!&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&lt;/body&gt;<br>
+        &lt;/html&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(2)">Try It</button>
+      <div id="sandbox-output-2" class="sandbox-output"></div>
+    </div>
+
+    <h2>Head Element (&lt;head&gt;)</h2>
+    <p><code>&lt;head&gt;</code> Im sogenannten "Kopf-Bereich" werden für diese Seite alle allgemein gültigen Links, Scripte, der
+      Seiten-Titel usw. festgelegt. Alle hier hinterlegten Vorgaben sind auf der Webseite nicht zu sehen..</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-3">
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&lt;title&gt;Document Title&lt;/title&gt;<br>
+        &lt;/head&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(3)">Try It</button>
+      <div id="sandbox-output-3" class="sandbox-output"></div>
+    </div>
+
+    <h2>Title Element (&lt;title&gt;)</h2>
+    <p><code>&lt;title&gt;</code> In jedem Browser kann ganz oben der "Seitentitel" angezeigt werden. Dieser Titel wird hier definiert</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-4">
+        &lt;title&gt;Document Title&lt;/title&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(4)">Try It</button>
+      <div id="sandbox-output-4" class="sandbox-output"></div>
+    </div>
+
+    <h2>Body Element (&lt;body&gt;)</h2>
+    <p><code>&lt;body&gt;</code> Der "Content-Bereich" beginnt hier. Alles was ab hier eingegeben wird, kann auf den Ausgabemedien
+      dargestellt werden.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-5">
+        &lt;body&gt;<br>
+        &nbsp;&nbsp;&lt;h1&gt;Hallo, Welt!&lt;/h1&gt;<br>
+        &lt;/body&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(5)">Try It</button>
+      <div id="sandbox-output-5" class="sandbox-output"></div>
+    </div>
+
+    <h2>Heading Tags (&lt;h1&gt; to &lt;h6&gt;)</h2>
+    <p>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt; erzeugen Überschriften in
+      HTML-Seiten. &lt;h1&gt; steht für die wichtigste Überschrift, gefolgt von &lt;h2&gt;, &lt;h3&gt; usw.. Ohne
+      CSS stellen die &lt;h1&gt;- bis &lt;h6&gt;-Header einen Text in abgestufen Größen dar, wobei &lt;h1&gt; die
+      größte und &lt;h6&gt; die kleinste Schrift benutzt.</p>
+    <p>Die Überschriften bilden hierarchische Bereiche und strukturieren die Seite – für den Leser, die
+      Suchmaschinen und Screenreader.</p>
+    <p>Inhalt logisch strukturieren:</p>
+    <p>Mit den alten HTML-Versionen waren Überschriften das einzige Mittel, um den Inhalt von Webseiten logisch zu
+      strukturieren.</p>
+    <p> Für den Leser soll die Struktur des Inhalts durch Größe und Farbe der Überschriften klar erkennbar sein;
+      für Screenreader und Suchmaschinen anhand der Hierarchie der &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;-Tags.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-6">
+        &lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+        &lt;h2&gt;Subheading&lt;/h2&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(6)">Try It</button>
+      <div id="sandbox-output-6" class="sandbox-output"></div>
+    </div>
+
+    <h2>Paragraphs (&lt;p&gt;)</h2>
+    <p>Das HTML- Element &lt;p&gt; repräsentiert einen Absatz. Absätze werden in visuellen Medien normalerweise
+      als Textblöcke dargestellt, die durch Leerzeilen und/oder Einrückung in der ersten Zeile von benachbarten
+      Blöcken getrennt sind, aber HTML-Absätze können jede strukturelle Gruppierung verwandter Inhalte sein, wie
+      z. B. Bilder oder Formularfelder. </p>
+    <p>Absätze sind Elemente auf Blockebene und werden insbesondere automatisch geschlossen, wenn ein anderes
+      Element auf Blockebene vor dem schließenden &lt;/p&gt; -Tag geparst wird.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-7">
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(7)">Try It</button>
+      <div id="sandbox-output-7" class="sandbox-output"></div>
+    </div>
+
+    <h2>Line Break (&lt;br&gt;)</h2>
+    <p>HTML &lt;br&gt; erzwingt einen Zeilenumbruch oder -vorschub und ist äquivalent zu einem Linefeed
+      (Zeilenvorschub, in Textverarbeitungsprogrammen meist durch Shift-Return bzw. Umschalt+Eingabetaste). Anders
+      als das Beenden und Öffnen eines neuen p-Tags führt das &lt;br&gt;-Tag nicht zu einer Änderung des
+      Absatzformats.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-8">
+        This is the first line.&lt;br&gt;This is the second line.
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(8)">Try It</button>
+      <div id="sandbox-output-8" class="sandbox-output"></div>
+    </div>
+
+    <h2>Horizontal Line (&lt;hr&gt;)</h2>
+    <p>Die Browser stellen &lt;hr&gt; mit 100% Breite, 2 Pixel Höhe als schwarze Linie und einem leichten
+      3D-Effekt dar. Der Dokumentenfluss wird unterbrochen, denn das &lt;hr&gt;-Tag erzeugt einen Zeilenumbruch.
+      Der Linie folgt erneut ein Zeilenumbruch und der Dokumentenfluss wird wieder aufgenommen.
+      Die hr-Linie wirkt einen Hauch eingedrückt, ist schlicht und grau und läuft ohne spezielles CSS über die
+      gesamte Breite der umfassenden Box. Der exakte Abstand zwischen dem Text oder den Bildern von der Linie
+      hängt vom jeweiligen Browser ab oder wird vom CSS gesteuert.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-9">
+        &lt;p&gt;This is some text.&lt;/p&gt;<br>
+        &lt;hr&gt;<br>
+        &lt;p&gt;This is some more text.&lt;/p&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(9)">Try It</button>
+      <div id="sandbox-output-9" class="sandbox-output"></div>
+    </div>
+
+    <h2>Comment (&lt;!--...--&gt;)</h2>
+    <p>Kommentare werden verwendet, um dem HTML-Code Anmerkungen oder Erklärungen hinzuzufügen. Sie werden nicht auf der Webseite angezeigt und werden vom Browser ignoriert.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-10">
+        &lt;!-- This is a comment --&gt;<br>
+        &lt;p&gt;This is some text.&lt;/p&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(10)">Try It</button>
+      <div id="sandbox-output-10" class="sandbox-output"></div>
+    </div>
+
+    <h1 class="headline" id="forms-input">Forms and Input</h1>
+
+    <h2>Textarea</h2>
+    <p>Der <code>&lt;textarea&gt;</code> Tag wird verwendet, um einen mehrzeiligen Texteingabebereich zu erstellen.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-11">
+        &lt;textarea rows="4" cols="50"&gt;Enter text here...&lt;/textarea&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(11)">Try It</button>
+      <div id="sandbox-output-11" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Button</h2>
+    <p>Das &lt;Button&gt; HTML-Element ist ein interaktives Element, das von einem Benutzer mit einer Maus, einer Tastatur,
+      Finger, Sprachbefehl oder einer anderen Hilfstechnologie aktiviert wird. Sobald es aktiviert ist, führt es eine programmierbare
+      Aktion aus, wie zum Beispiel das Absenden eines Formulars oder das Öffnen eines Dialogs.
+      Standardmäßig werden HTML-Schaltflächen in einem Stil dargestellt, der der Plattform ähnelt, auf der der User Agent läuft.
+      Sie können jedoch das Aussehen der Schaltflächen mit CSS ändern.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-12">
+        &lt;button type="button"&gt;Click Me&lt;/button&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(12)">Try It</button>
+      <div id="sandbox-output-12" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Select</h2>
+    <p>Das HTML &lt;select&gt;-Element erzeugt eine Drop-Down-Liste in einem Formular. </p>
+    <p>Per Vorgabe erzeugt &lt;select&gt; ein Fenster mit ausklappenden Optionen. Ein &lt;select&gt; spart Platz im Formular und zeigt erst bei einem Klick die Liste der Optionen an und beschränkt die Anwahl auf die angebotenen Begriffe.</p>
+    <p>Optional zeigt das &lt;select&gt;-Element auch mehrere Zeilen / Optionen gleichzeitig an. Wenn der Besucher das &lt;select&gt;-Element anklickt, öffnet sich die Liste und klappt alle Auswahlmöglichkeiten auf. Der Besucher wählt einen Eintrag durch einen Klick mit der Maus oder mit einem Fingertippen auf Touchscreens. Optional kann der Besucher auch mehrere Auswahlen treffen.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-13">
+        &lt;select name="cars"&gt;
+          &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+          &lt;option value="bmw"&gt;BMW&lt;/option&gt;
+          &lt;option value="audi"&gt;Audi&lt;/option&gt;
+        &lt;/select&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(13)">Try It</button>
+      <div id="sandbox-output-13" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Optgroup</h2>
+    <p>Der <code>&lt;optgroup&gt;</code> Tag wird verwendet, um verwandte Optionen in einer Dropdown-Liste zu gruppieren.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-14">
+        &lt;select name="cars"&gt;
+          &lt;optgroup label="Swedish Cars"&gt;
+            &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+            &lt;option value="saab"&gt;Saab&lt;/option&gt;
+          &lt;/optgroup&gt;
+          &lt;optgroup label="German Cars"&gt;
+            &lt;option value="audi"&gt;Audi&lt;/option&gt;
+            &lt;option value="bmw"&gt;BMW&lt;/option&gt;
+          &lt;/optgroup&gt;
+        &lt;/select&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(14)">Try It</button>
+      <div id="sandbox-output-14" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Option</h2>
+    <p>Der <code>&lt;option&gt;</code> Tag wird verwendet, um eine Option in einer Dropdown-Liste zu definieren.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-15">
+        &lt;select name="cars"&gt;
+          &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+          &lt;option value="bmw" selected&gt;BMW&lt;/option&gt;
+          &lt;option value="audi"&gt;Audi&lt;/option&gt;
+        &lt;/select&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(15)">Try It</button>
+      <div id="sandbox-output-15" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Label</h2>
+    <p>HTML &lt;label&gt; verknüpft Eingabefelder, Button und Checkboxen eines Formulars mit der Beschriftung des Eingabefelds. Das &lt;for&gt;-Attribut im &lt;label&gt; muss mit der id des Eingabefelds übereinstimmen. </p>
+    <p>  &lt;label&gt; reduziert das Markup, verbessert die Barrierefreiheit des Formulars und lässt sich mit CSS stylen.</p>
+    <p>&lt;label&gt; for verbindet das &lt;label&gt;-Tag mit einem Eingabeelement des Formulars. Das &lt;for&gt;-Attribut des &lt;label&gt;-Tags muss denselben Wert wie das id-Attribut des Eingabefelds (&lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;) aufweisen.</p>  
+    <p>Jedes Eingabefeld kann nur ein &lt;label&gt;-Tag haben.</p>                
+    <p>Wenn der Text für die Beschreibung des Eingabefeldes – z.B. "Ihr Name" – in ein &lt;label&gt;-Tag gesetzt wird, entstehen keine sichtbaren Änderungen. Ohne CSS-Stile hat das &lt;label&gt;-Tag keinen Einfluss auf die Gestaltung.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-16">
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name"&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(16)">Try It</button>
+      <div id="sandbox-output-16" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Fieldset</h2>
+    <p>Der <code>&lt;fieldset&gt;</code> Tag wird verwendet, um verwandte Formularelemente zusammenzufassen.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-17">
+        &lt;fieldset&gt;
+          &lt;legend&gt;Contact Information&lt;/legend&gt;
+          &lt;label for="name"&gt;Name:&lt;/label&gt;
+          &lt;input type="text" id="name" name="name"&gt;
+          &lt;label for="email"&gt;Email:&lt;/label&gt;
+          &lt;input type="email" id="email" name="email"&gt;
+        &lt;/fieldset&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(17)">Try It</button>
+      <div id="sandbox-output-17" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Legend</h2>
+    <p>Der <code>&lt;legend&gt;</code> Tag wird genutzt um ein Element im <code>&lt;fieldset&gt;</code> zu definieren.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-18">
+        &lt;fieldset&gt;
+          &lt;legend&gt;Contact Information&lt;/legend&gt;
+          &lt;label for="name"&gt;Name:&lt;/label&gt;
+          &lt;input type="text" id="name" name="name"&gt;
+          &lt;label for="email"&gt;Email:&lt;/label&gt;
+          &lt;input type="email" id="email" name="email"&gt;
+        &lt;/fieldset&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(18)">Try It</button>
+      <div id="sandbox-output-18" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Datalist</h2>
+    <p>Der <code>&lt;datalist&gt;</code> Tag wird verwendet, um eine vordefinierte Liste von Optionen für ein Eingabeelement bereitzustellen.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-19">
+        &lt;input list="browsers"&gt;
+        &lt;datalist id="browsers"&gt;
+          &lt;option value="Chrome"&gt;
+          &lt;option value="Firefox"&gt;
+          &lt;option value="Safari"&gt;
+          &lt;option value="Opera"&gt;
+          &lt;option value="Edge"&gt;
+        &lt;/datalist&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(19)">Try It</button>
+      <div id="sandbox-output-19" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Output</h2>
+    <p>Der <code>&lt;output&gt;</code> Tag wird verwendet, um das Ergebnis einer Berechnung oder einer Benutzeraktion anzuzeigen.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-20">
+        &lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+          &lt;input type="number" id="a" name="a"&gt; +
+          &lt;input type="number" id="b" name="b"&gt; =
+          &lt;output name="result" for="a b"&gt;&lt;/output&gt;
+          &lt;input type="submit" value="Calculate"&gt;
+        &lt;/form&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(20)">Try It</button>
+      <div id="sandbox-output-20" class="sandbox-output"></div>
+    </div>
+
+    <h1 class="headline" id="frames">Frames and iframes</h1>
+    <p>Der <code>&lt;frame&gt;</code> Tag definiert einen individuellen Rahmen in einem "Übergeordneten Rahmen". Er wird benutzt in Verbindung mit <code>&lt;frameset&gt;</code> und <code>&lt;noframes&gt;</code> Tags.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-21">
+        &lt;frameset cols="25%,75%"&gt;
+          &lt;frame src="menu.html"&gt;
+          &lt;frame src="content.html"&gt;
+          &lt;noframes&gt;
+            &lt;p&gt;This page requires a frames-enabled browser.&lt;/p&gt;
+          &lt;/noframes&gt;
+        &lt;/frameset&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(21)">Try It</button>
+      <div id="sandbox-output-21" class="sandbox-output"></div>
+    </div>
+  
+    <p>Der <code>&lt;iframe&gt;</code> Tag wird verwendet, um ein anderes HTML-Dokument in das aktuelle Dokument einzubetten. Es ermöglicht Ihnen, Inhalte aus einer anderen Quelle anzuzeigen.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-22">
+        &lt;iframe src="https://youtu.be/Htq2EUgcrKE"&gt;&lt;/iframe&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(22)">Try It</button>
+      <div id="sandbox-output-22" class="sandbox-output"></div>
+    </div>
+
+    <h1 class="headline" id="images">Images</h1>
+    <p>Das Tag &lt;img&gt; wird in HTML für die Beschreibung von Bildern verwendet. Das Bild selbst wird im
+      Dokument nicht direkt platziert, der Browser lädt es aus seiner Quelle, die im Tag &lt;img&gt; eingegeben
+      ist. Für die Eingabe der Quelle wird das Attribut src verwendet.
+      Es gibt zwei erforderliche Attribute für das Element &lt;img&gt;: src, das zur Anzeige der Bildquelle
+      verwendet wird, und alt, das einen alternativen Text für das Bild definiert.
+      Um HTML-Bilder klickbar zu machen, sollen Sie das Tag &lt;img&gt; im Tag &lt;a&gt; platzieren. Das Tag
+      &lt;a&gt; wird zum Einfügen von Links verwendet.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-23">
+        &lt;img src="image.jpg" alt="Description of the image"&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(23)">Try It</button>
+      <div id="sandbox-output-23" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Image Map</h2>
+    <p>HTML &lt;area&gt; und &lt;map&gt; teilen ein Bild in eine Area Map oder Image Map. Area Maps bestehen aus Bildern, über denen maus-sensitive Bereiche liegen. Diese Bereiche verzweigen mit Links zu anderen Seiten oder lösen ein Script aus, um die Area Map zu animieren.
+
+      HTML Area Maps oder Image Maps waren Knüller, als kleine GIF-Animationen die frühen Internetnutzer noch begeisterten. Die Image-Map ist ein Bild, das an mehreren Stellen auf Aktionen des Benutzers antwortet.
+      Das &lt;map&gt;-Tag verweist auf ein Bild und die darunter liegenden &lt;area&gt;-Tags unterteilt das Bild in Regionen, die von der Maus oder durch ein Touch angesprochen werden.
+
+      Die &lt;area&gt;-Elemente innerhalb des &lt;map&gt;-Tags legen die Bereiche durch Formen (shape) fest.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-24">
+        &lt;img src="image.jpg" alt="Image Map" usemap="#image-map"&gt;
+        &lt;map name="image-map"&gt;
+          &lt;area shape="rect" coords="0,0,100,100" href="page1.html" alt="Area 1"&gt;
+          &lt;area shape="circle" coords="150,150,50" href="page2.html" alt="Area 2"&gt;
+        &lt;/map&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(24)">Try It</button>
+      <div id="sandbox-output-24" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Canvas</h2>
+    <p>Das englische Wort Canvas bedeutet auf deutsch Leinwand und ist ziemlich genau das: Eine Leinwand, auf die
+      man mit Javascript dynamisch Bitmap-Grafiken malen kann. Erfunden wurde das Element vom Webkit-Team und
+      später sind auch Mozilla und Opera auf den &lt;canvas&gt;-Zug aufgesprungen. Damit ist das das Element
+      heutzutage in alle anständigen Browser implementiert (für den IE gibt es einen Trick – dazu später mehr) und
+      Teil des werdenden HTML5-Standards.
+      Die Möglichkeiten von &lt;canvas&gt; sind relativ weit gefasst. Wann immer man man dynamisch Grafiken
+      erzeugen möchte, kann man das mit &lt;canvas&gt; machen. Beispiele sind z.B. die bekannte
+      Image-Replace-Technik "Typeface.js"</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-25">
+        &lt;canvas id="myCanvas" width="200" height="200"&gt;&lt;/canvas&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(25)">Try It</button>
+      <div id="sandbox-output-25" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Figure and Figcaption</h2>
+    <p>Bis HTML5 gab es kein besonderes Markup für Abbildungen und die Unterschriften von Bildern oder Grafiken.
+      Während in Zeitschriften oder Büchern kaum ein Bild oder eine Abbildung ohne Unterschrift eingesetzt wird,
+      gab es für die Bildunterschrift in HTML kein semantisches Markup im Standard. </p>
+    <p>HTML &lt;figure&gt; umschließt eine oder mehrere Abbildungen im weitesten Sinne. Das &lt;figure&gt;-Tag ist
+      keinesfalls auf Bilder oder Grafiken beschränkt. Es kann ebensogut SVG- oder Math-Objekte, Tabellen oder
+      Videos enthalten – am besten lässt sich der Einsatz mit Abbildungen in Fachbüchern vergleichen. Dabei soll
+      aber nicht jedes Bild in ein &lt;figure&gt;-Tag – beim Logo einer Seite z.B. macht ein &lt;figure&gt;-Tag
+      keinen Sinn.</p>
+    <p>&lt;figure&gt; ersetzt das allgegenwärtige div-Tag als Gruppe von zusammengehörenden Elementen, die als
+      Ergänzung der Seite hervorgehoben werden und nicht an einer bestimmten Stelle im Textfluss liegen müssen –
+      zu vergleichen mit einem Abbildungskasten in einem Fachbuch.</p>
+    <div class="code-example">
+      <p><strong>Example:</strong></p>
+      <code id="code-26">
+        &lt;figure&gt;
+          &lt;img src="image.jpg" alt="Description of the image"&gt;
+          &lt;figcaption&gt;Caption for the image&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      </code>
+      <button class="sandbox-button" onclick="toggleCodeExecution(26)">Try It</button>
+      <div id="sandbox-output-26" class="sandbox-output"></div>
+    </div>
+  
+    <h2>Pictures and Source Sets</h2>
+    <p>Das HTML &lt;picture&gt;-Element liefert zusammen mit srcset und media verschiedene Dateiformate und Seitenverhältnisse an den Browser des Benutzers, z.B. ein quadratisches Bild für kleine Monitore im Hochformat und 16:9 für Desktop-Monitore. Als Konditionen kommen die Auflösung des Monitors, die Größe des Viewports oder die Ausrichtung des Geräts in Frage. </p>
+    <p>Diese Technik wird auch als Art Direction bezeichnet.</p>
+    <div class="code-example">  
+<p><strong>Example:</strong></p>
+<code id="code-27">
+  &lt;picture&gt;
+    &lt;source media="(min-width: 768px)" srcset="large-image.jpg"&gt;
+    &lt;source media="(min-width: 480px)" srcset="medium-image.jpg"&gt;
+    &lt;img src="small-image.jpg" alt="Description of the image"&gt;
+  &lt;/picture&gt;
+</code>
+<button class="sandbox-button" onclick="toggleCodeExecution(27)">Try It</button>
+<div id="sandbox-output-27" class="sandbox-output"></div>
+</div>
+
+<h2>SVG</h2>
+<p>Der <code>&lt;svg&gt;</code> Tag wird verwendet, um skalierbare Vektorgrafiken in eine HTML-Seite einzubetten.</p>
+<div class="code-example">
+<p><strong>Example:</strong></p>
+<code id="code-28">
+  &lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+  &lt;/svg&gt;
+</code>
+<button class="sandbox-button" onclick="toggleCodeExecution(28)">Try It</button>
+<div id="sandbox-output-28" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="audio-video">Audio / Video</h1>
+<p>Hiermit können Audio Streams oder Sound genutzt werden. </p>
+<p>Das HTML <audio> Element hat 7 Attribute</p>
+<p>src = Der Pfad und Dateiname des Sounds angegeben werden</p>
+<p>autoplay = Wenn der Wert “autoplay” eingetragen ist, dann startet die Sound Datei nach dem laden der Datei
+</p>
+<p>controls = Bei eingetragenen Wert “controls” werden die Steuerelemente angezeigt</p>
+<p>loop = Wenn der Parameter “loop” eingetragen ist, dann wird die Musik endlos wiederholt</p>
+<p>preload = Wenn “preload” eingetragen wird, dann wird der Sound Datei zusammen mit der Webseite geladen.
+  Dies funktioniert nur, wenn das Attribut autoplay nicht genutzt wird!</p>
+<p>muted = Schaltet die Wiedergabe auf Lautlos </p>
+<p>crossorigin = Festlegen, wie das Steuerelement ursprungsfremde Anfragen behandelt</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-29">
+    &lt;audio src="audio.mp3" controls&gt;
+    &lt;/audio&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(29)">Try It</button>
+  <div id="sandbox-output-29" class="sandbox-output"></div>
+</div>
+
+<h2>Source</h2>
+<p>Das Tag &lt;source&gt; bestimmt einige multimediale Dateien in verschiedenen Formaten wie Audio und Video.
+  Es ist für die Eigenschaft Cross-Browser notwendig: Der Browser kann aus zugänglichen Varianten das Format,
+  das er unterstützt und ohne Probleme Audio- oder Videodateien abspielt, wählen.
+  In einem Dokument kann das Element &lt;source&gt; mehrmals für die Eingabe von alternativen Audio- und
+  Videodateinen und die Eingabe von einigen Formaten verwendet werden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-30">
+    &lt;audio controls&gt;
+      &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+      &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    &lt;/audio&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(30)">Try It</button>
+  <div id="sandbox-output-30" class="sandbox-output"></div>
+</div>
+
+<h2>Track</h2>
+<p>Der <code>&lt;track&gt;</code> Tag wird als sogenanntes "Child" des <code>&lt;audio&gt;</code> Tags oder <code>&lt;video&gt;</code> Tag um zeitgesteuerte Textspuren, wie z. B. Bildunterschriften oder Untertitel, anzugeben.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-31">
+    &lt;video controls&gt;
+      &lt;source src="video.mp4" type="video/mp4"&gt;
+      &lt;track src="captions.vtt" kind="captions" label="English" srclang="en"&gt;
+    &lt;/video&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(31)">Try It</button>
+  <div id="sandbox-output-31" class="sandbox-output"></div>
+</div>
+
+<h2>Video</h2>
+<p>Mit HTML5 können Sie Filme ohne Plugins oder Add-Ons wiedergeben. Dabei referenziert das video-Element als
+  Container-Element auf eine (oder mehrere) Videodateien.Stellen Sie sich ein Videoformat als ZIP-Datei vor,
+  die den codierten Video-Stream, die Tonspur und evtl. noch Untertitel enthält. </p>
+<p>Bis jetzt existieren immer noch verschiedene Video- und Audio-Kodierungen. Obwohl die meisten Kameras und
+  Mobiltelefone Filme im MP4-Format (mit H264-Codec) aufnehmen, gab es Vorbehalte, da der dort verwendete
+  H264-Video-Codec unter Umständen zu Lizenzzahlungen verpflichtete. Aus diesen Gründen wurden für den Einsatz
+  im Netz die freien Formate Ogg und WebM entwickelt. Mittlerweile hat sich WebM durchgesetzt und wird von
+  allen Browser außer den IE9-11 unterstützt. Youtube, das ja zum Google-Konzern gehört, verwendet für alle
+  Videos das webm-Format.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-32">
+    &lt;video src="video.mp4" controls&gt;
+    &lt;/video&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(32)">Try It</button>
+  <div id="sandbox-output-32" class="sandbox-output"></div>
+</div>
+  
+<h1 class="headline" id="links">Links</h1>
+<h2>Anchor (Link)</h2>
+<p>Der HTML &lt;a&gt;-Tag ist ist gültig als Anker oder Hyperlink: Was zwischen öffnendem und schließendem
+  a-Tag sitzt, wird zu einem klickbaren Link. </p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-33">
+    &lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(33)">Try It</button>
+  <div id="sandbox-output-33" class="sandbox-output"></div>
+</div>
+
+<h2>Link</h2>
+<p>Das Tag &lt;link&gt; verbindet das HTML-Dokument mit externer Quelle. In der Regel wird es für die
+  Einschaltung des externen Files, wo CSS-Stile und Schrifte eingegeben werden, verwendet.
+  Das Tag &lt;link&gt; wird ungepaart verwendet, es enthält nur Attribute und wird immer innerhalb des Tages
+  &lt;head&gt; (in der Regel vor dem Endtag &lt;/head&gt;) platziert, dabei kann es mehrmals verwendet werden.
+</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-34">
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(34)">Try It</button>
+  <div id="sandbox-output-34" class="sandbox-output"></div>
+</div>
+
+<h2>Navigation (Nav)</h2>
+<p>Das &lt;nav&gt;-Tag ist für Links zu anderen Seiten und zu Bereichen innerhalb derselben Seite reserviert.
+  Das &lt;nav&gt;-Element soll nur für die Haupt-Navigation der Seite benutzt werden und nicht für beiläufige
+  Links einer Seite.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-35">
+    &lt;nav&gt;
+      &lt;a href="home.html"&gt;Home&lt;/a&gt;
+      &lt;a href="about.html"&gt;About&lt;/a&gt;
+      &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(35)">Try It</button>
+  <div id="sandbox-output-35" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="lists">Lists</h1>
+<h2>Unordered List (ul)</h2>
+<p>Der <code>&lt;ul&gt;</code> Tag wird verwendet, um eine ungeordnete Liste zu erstellen, in der die Listenelemente mit Aufzählungspunkten dargestellt werden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-36">
+    &lt;ul&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(36)">Try It</button>
+  <div id="sandbox-output-36" class="sandbox-output"></div>
+</div>
+
+<h2>Ordered List (ol)</h2>
+<p>Der <code>&lt;ol&gt;</code> Tag wird verwendet, um eine geordnete Liste zu erstellen, in der die Listenelemente mit Nummern oder anderen geordneten Markierungen angezeigt werden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-37">
+    &lt;ol&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(37)">Try It</button>
+  <div id="sandbox-output-37" class="sandbox-output"></div>
+</div>
+
+<h2>List Item (li)</h2>
+<p>Der <code>&lt;li&gt;</code> Tag wird verwendet, um ein Listenelement innerhalb einer ungeordneten oder geordneten Liste zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-38">
+    &lt;ul&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(38)">Try It</button>
+  <div id="sandbox-output-38" class="sandbox-output"></div>
+</div>
+
+<h2>Directory (dir)</h2>
+<p>Der <code>&lt;dir&gt;</code> Tag ist ein nicht standardisierter HTML-Tag, der zur Erstellung einer Verzeichnisliste verwendet wird, die eine spezielle Art von ungeordneter Liste ist.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-39">
+    &lt;dir&gt;
+      &lt;li&gt;File 1&lt;/li&gt;
+      &lt;li&gt;File 2&lt;/li&gt;
+      &lt;li&gt;File 3&lt;/li&gt;
+    &lt;/dir&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(39)">Try It</button>
+  <div id="sandbox-output-39" class="sandbox-output"></div>
+</div>
+<h2>Definition List (dl)</h2>
+<p>Das HTML- Element &lt;dl&gt; repräsentiert eine Beschreibungsliste. Das Element umschließt eine Liste von
+  Begriffsgruppen (angegeben durch das &lt;dt&gt; -Element) und Beschreibungen (bereitgestellt durch
+  &lt;dd&gt; -Elemente). Dieses Element wird häufig verwendet, um ein Glossar zu implementieren oder Metadaten
+  (eine Liste von Schlüssel-Wert-Paaren) anzuzeigen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-40">
+    &lt;dl&gt;
+      &lt;dt&gt;Term 1&lt;/dt&gt;
+      &lt;dd&gt;Definition 1&lt;/dd&gt;
+      &lt;dt&gt;Term 2&lt;/dt&gt;
+      &lt;dd&gt;Definition 2&lt;/dd&gt;
+    &lt;/dl&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(40)">Try It</button>
+  <div id="sandbox-output-40" class="sandbox-output"></div>
+</div>
+
+<h2>Definition Term (dt)</h2>
+<p>Der <code>&lt;dt&gt;</code> Tag wird verwendet, um einen Begriff innerhalb einer Definitionsliste zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-41">
+    &lt;dl&gt;
+      &lt;dt&gt;Term 1&lt;/dt&gt;
+      &lt;dd&gt;Definition 1&lt;/dd&gt;
+      &lt;dt&gt;Term 2&lt;/dt&gt;
+      &lt;dd&gt;Definition 2&lt;/dd&gt;
+    &lt;/dl&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(41)">Try It</button>
+  <div id="sandbox-output-41" class="sandbox-output"></div>
+</div>
+
+<h2>Definition Description (dd)</h2>
+<p>Der <code>&lt;dd&gt;</code> Tag wird verwendet, um die Beschreibung oder Definition eines Begriffs innerhalb einer Definitionsliste festzulegen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-42">
+    &lt;dl&gt;
+      &lt;dt&gt;Term 1&lt;/dt&gt;
+      &lt;dd&gt;Definition 1&lt;/dd&gt;
+      &lt;dt&gt;Term 2&lt;/dt&gt;
+      &lt;dd&gt;Definition 2&lt;/dd&gt;
+    &lt;/dl&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(42)">Try It</button>
+  <div id="sandbox-output-42" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="tables">Tables</h1>
+<h2>Table (table)</h2>
+<p>Das Tabellenmodell von HTML gestattet Autoren die Anordnung von Daten – Text, vorformatierter Text, Bilder,
+  Links, Formulare, Formularfelder, andere Tabellen und so weiter – in Zellen, die in Zeilen und Spalten
+  angeordnet sind. </p>
+<p>Jeder Tabelle kann eine Beschriftung zugewiesen werden (siehe das Element CAPTION), die eine kurze
+  Beschreibung der Intention der Tabelle enthält. Zum Nutzen der Leute, die sprach- oder braille-basierte
+  Benutzerprogramme verwenden, kann auch eine längere Beschreibung angegeben werden (über das Attribut
+  summary).</p>
+<p>Tabellenzeilen können in Kopf-, Fuß- und Rumpfbereiche geordnet werden (über die Elemente &lt;THEAD&gt;,
+  &lt;TFOOT&gt; bzw. &lt;TBODY&gt;). Zeilengruppen vermitteln zusätzliche Strukturinformationen und können von
+  Benutzerprogrammen auf eine Weise dargestellt werden, die diese Struktur unterstützt. Benutzerprogramme
+  können die Bereiche Kopf, Rumpf und Fuß ausnutzen, um das von den Kopf- und Fußbereichen unabhängige
+  Scrollen von Rumpf-Bereichen zu unterstützen. Werden lange Tabellen gedruckt, können die Kopf- und
+  Fußinformationen auf jeder Seite, die Tabellendaten enthält, wiederholt werden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-43">
+    &lt;table&gt;
+      <!-- table content goes here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(43)">Try It</button>
+  <div id="sandbox-output-43" class="sandbox-output"></div>
+</div>
+
+<h2>Caption (caption)</h2>
+<p>Der <code>&lt;caption&gt;</code> ag wird verwendet, um eine Beschriftung oder einen Titel für eine HTML-Tabelle anzugeben.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-44">
+    &lt;table&gt;
+      &lt;caption&gt;Table Caption&lt;/caption&gt;
+      <!-- table content goes here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(44)">Try It</button>
+  <div id="sandbox-output-44" class="sandbox-output"></div>
+</div>
+
+<h2>Table Header Cell (th)</h2>
+<p>Der <code>&lt;th&gt;</code> Tag wird verwendet, um Kopfzellen in einer HTML-Tabelle zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-45">
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+      &lt;/tr&gt;
+      <!-- table content goes here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(45)">Try It</button>
+  <div id="sandbox-output-45" class="sandbox-output"></div>
+</div>
+
+<h2>Table Row (tr)</h2>
+<p>Der <code>&lt;tr&gt;</code> Tag wird verwendet, um Zeilen in einer HTML-Tabelle zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-46">
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+      &lt;/tr&gt;
+      <!-- additional table rows go here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(46)">Try It</button>
+  <div id="sandbox-output-46" class="sandbox-output"></div>
+</div>
+
+<h2>Table Data Cell (td)</h2>
+<p>Der <code>&lt;td&gt;</code> Tag wird verwendet, um Datenzellen in einer HTML-Tabelle zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-47">
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(47)">Try It</button>
+  <div id="sandbox-output-47" class="sandbox-output"></div>
+</div>
+
+<h2>Table Head (thead)</h2>
+<p>Der <code>&lt;thead&gt;</code> Tag wird verwendet, um den Kopfzeileninhalt in einer HTML-Tabelle zu gruppieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-48">
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Header 1&lt;/th&gt;
+          &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      <!-- table body and footer go here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(48)">Try It</button>
+  <div id="sandbox-output-48" class="sandbox-output"></div>
+</div>
+
+<h2>Table Body (tbody)</h2>
+<p>Der <code>&lt;tbody&gt;</code> Tag wird verwendet, um den Hauptinhalt in einer HTML-Tabelle zu gruppieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-49">
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+          &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+          &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+      <!-- table header and footer go here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(49)">Try It</button>
+  <div id="sandbox-output-49" class="sandbox-output"></div>
+</div>
+
+<h2>Table Footer (tfoot)</h2>
+<p>&lt;tfoot&gt; -Tag für die Kombination von Fußzeile Inhalt HTML-Tabelle.
+  &lt;tfoot&gt; -Element sollte sein &lt;thead&gt; und &lt;tbody&gt; jedes Teil (Footer, Header, Body)
+  Elemente in Kombination verwendet , um die Tabelle zu definieren.
+  Durch die Verwendung dieser Elemente, so dass der Browser die Fähigkeit hat, unabhängig von der Tabellenkopf
+  und dem Tabellenfuß Tabelle Körperrolle zu unterstützen. Wenn enthalten mehrere sind lange Tabellen Seiten
+  gedruckt, können die Tabelle Kopf- und Fußzeilen auf jeder Seite gedruckt werden, die Tabellendaten enthält.
+  &lt;tfoot&gt; Tag muss in den folgenden Situationen verwendet werden: a &lt;table&gt; Kind-Elemente,
+  erscheint nach dem &lt;caption&gt;, &lt;colgroup&gt; und &lt;thead&gt; -Element, bevor &lt;tbody&gt; und
+  &lt;tr&gt; -Element.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-50">
+    &lt;table&gt;
+      &lt;tfoot&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Footer 1&lt;/td&gt;
+          &lt;td&gt;Footer 2&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tfoot&gt;
+      <!-- table header and body go here -->
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(50)">Try It</button>
+  <div id="sandbox-output-50" class="sandbox-output"></div>
+</div>
+
+<h2>Table Column (col)</h2>
+<p>Das Tag &lt;col&gt; bestimmt die Eigenschaften einer oder mehreren Spalten in der HTML-Tabelle, die mit dem
+  Tag &lt;table&gt; bestimmt wird. Das Tag &lt;col&gt; wird häufig mit dem Tag &lt;colgroup&gt;, das eine
+  Gruppe mit den Gesamteigenschaften bestimmt, verwendet.
+  Das Tag &lt;col&gt; wird ungepaart verwendet, ergo ist kein Endtag notwendig. In XHTML aber muss das Tag
+  &lt;col&gt; mit dem Endtag (&lt;/col&gt;) geschlossen werden.
+  Das Tag &lt;col&gt; wird innerhalb des Tages &lt;table&gt;, vor den Tags &lt;thead&gt;, &lt;tbody&gt;,
+  &lt;tfoot&gt; und &lt;tr&gt;; und nach dem Tag &lt;caption&gt; platziert, wenn es verwendet wird (im Tag
+  &lt;caption&gt; fügen wir den Namen der Tabelle ein).</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-51">
+    &lt;table&gt;
+      &lt;colgroup&gt;
+        &lt;col span="2" style="background-color: #f2f2f2;"&gt;
+      &lt;/colgroup&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(51)">Try It</button>
+  <div id="sandbox-output-51" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="styles-semantics">Styles and Semantics</h1>
+<h2>Style (style)</h2>
+<p>Der <code>&lt;style&gt;</code> Tag wird verwendet, um Inline-CSS-Stile zu definieren oder externe CSS-Dateien einzubinden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-52">
+    &lt;style&gt;
+      h1 {
+        color: blue;
+        font-size: 24px;
+      }
+    &lt;/style&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(52)">Try It</button>
+  <div id="sandbox-output-52" class="sandbox-output"></div>
+</div>
+
+<h2>Div (div)</h2>
+<p>Die zwei HTML-Befehle &lt;div&gt; und &lt;span&gt; werden erst durch CSS extrem nützlich. Der HTML-Befehl
+  &lt;div&gt; steht für das englische „division“ in der Bedeutung „Bereich“ und ist ein Block-Element (zur
+  Erinnerung – Block-Elemente nutzen die komplette Browserfensterbreite). Lustigerweise hat der HTML-Befehl
+  &lt;span&gt; im englischen auch die Bedeutung von „Bereich“, ist aber ein Inline-Element. </p>
+<p>Beide Elemente werden primär zum Begrenzen von Bereichen genutzt. Über die Attribute der Elemente, kann
+  dann Design in die umschlossenen Bereiche gebracht werden. Dabei können die Elemente geschachtelt werden.
+</p>
+<p>Wichtig ist zu verstehen, was der Unterschied zwischen &lt;div&gt; und &lt;span&gt; ist:</p>
+<p>&lt;div&gt; ist ein Block-Element. Ein &lt;div&gt; nimmt die komplette Breite ein, sofern nichts anderes in
+  CSS umdefiniert wurde.
+  &lt;span&gt; dagegen kann innerhalb eines Bereiches angewendet werden – &lt;span&gt; ist ein Inline-Element.
+</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-53">
+    &lt;div&gt;
+      &lt;p&gt;This is a div container.&lt;/p&gt;
+      &lt;p&gt;It can contain other elements.&lt;/p&gt;
+    &lt;/div&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(53)">Try It</button>
+  <div id="sandbox-output-53" class="sandbox-output"></div>
+</div>
+
+<h2>Span (span)</h2>
+<p>HTML &lt;span&gt; separiert Inline-Elemente wie Textabschnitte, Eingabefelder oder Bilder für CSS oder Javascript. &lt;span&gt; ist nur ein Behälter ohne semantische Bedeutung und hat ohne CSS keine Auswirkung auf die Darstellung.</p>  
+<p>In dieser Hinsicht ist das &lt;span&gt;-Element das Gegenstück zum &lt;div&gt;-Element, das ein Blockelement bildet (CSS div führt zu einem Zeilenumbruch). Beide Elemente nehmen eine Reihe von weiteren Elementen auf, um Attribute oder CSS-Stile auf sie anzuwenden, ohne selber eine Formatierung einzubringen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-54">
+    &lt;p&gt;This is a &lt;span style="color: blue;"&gt;blue&lt;/span&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(54)">Try It</button>
+  <div id="sandbox-output-54" class="sandbox-output"></div>
+</div>
+
+<h2>Header (header)</h2>
+<p>Ein Header (deutsch: Kopf) ist der sichtbare Bereich im obersten Teil einer Webseite. Er ist ein fester
+  Bestandteil im Website-Aufbau und bietet dem Nutzer grundlegende, wichtige Informationen. In der Regel
+  enthält er neben dem Logo der Seite wichtige und häufig benutzte Navigationspunkte und -elemente wie „Login“
+  oder „Hilfe“. Ein Header ist domainübergreifend für alle Seiten gleich gestaltet. Er befindet sich über dem
+  eigentlichen Hauptmenü oder schließt dieses mit ein.
+  Aber wozu dient der Header einer Website? Eine wichtige Funktion dieses Websiteelements ist es, dem Besucher
+  die Navigation, Orientierung und Interaktion innerhalb der Seite zu erleichtern. Übrigens: Der Header ist
+  als Kopfzeile das Gegenstück zum Footer. So wird die Fußzeile bezeichnet, die sich ganz am Ende der Webseite
+  befindet.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-55">
+    &lt;header&gt;
+      &lt;h1&gt;Welcome to our website!&lt;/h1&gt;
+      &lt;p&gt;This is the header section.&lt;/p&gt;
+    &lt;/header&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(55)">Try It</button>
+  <div id="sandbox-output-55" class="sandbox-output"></div>
+</div>
+
+<h2>Footer (footer)</h2>
+<p>&lt;footer&gt;-Tags können unter einzelnen Bereichen der Seite sitzen und den Abschluß der Webseite bilden, anders
+  als das main-Element können footer-Elemente mehrfach innerhalb der Webseite verwendet werden. </p>
+&lt;footer&gt; – am Ende ist nicht Schluß
+Das &lt;footer&gt;-Element steht nicht nur für den endgültigen Fuß der Seite, sondern kann ebenso auch den
+Abschluss von Beiträgen in einer Blog-Seite bilden und zusätzliche Informationen zum Beitrag aufnehmen. Das
+können sowohl Copyright-Informationen als auch Informationen zum Autor oder Links zu weiteren Quellen sein.
+Typische Elemente, die mit einem &lt;footer&gt;-Element abgeschlossen werden können, sind z.B.
+&lt;article&gt;, &lt;section&gt; und &lt;figure&gt;. In einem &lt;footer&gt;-Element können beliebige Elemente
+(Text, Bilder und natürlich Links) liegen, nicht aber &lt;footer&gt;, &lt;main&gt; und &lt;header&gt;. Auf der
+anderen Seite sollte in &lt;header&gt;- und &lt;address&gt;-Elementen keine &lt;footer&gt;-Elemente liegen.
+</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-56">
+    &lt;footer&gt;
+      &lt;p&gt;This is the footer of the document.&lt;/p&gt;
+    &lt;/footer&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(56)">Try It</button>
+  <div id="sandbox-output-56" class="sandbox-output"></div>
+</div>
+
+
+      <h2>Main (main)</h2>
+      <p>&lt;main&gt; stellt den Hauptinhalt der Webseite dar und sitzt dort, wo früher &lt;div id="main"&gt;,
+        &lt;div id="page"&gt; o.ä. saß. Das &lt;main&gt;-Element soll nur einmal im Dokument vorkommen und weder
+        innerhalb eines &lt;header&gt;, &lt;footer&gt; oder &lt;article&gt;-Tags noch eines &lt;section&gt;-Tags
+        sitzen.</p>
+      <p>Sectioning Tags – Gliederung der Webseite: </p>
+      <p>&lt;main&gt; gehört zu den Tags, die das Markup des Dokuments strukturieren: &lt;article&gt;,
+        &lt;section&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt; und &lt;aside&gt;. Auch &lt;main&gt; wirkt
+        gegen die Schwemme von &lt;div&gt;-Tags mit langen Listen von CSS-Klassen, die das Markup vor HTML5 in ein
+        wildes und wirres Knäuel verwandelten.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-57">
+    &lt;main&gt;
+      &lt;h1&gt;Main Content&lt;/h1&gt;
+      &lt;p&gt;This is the main section of the page.&lt;/p&gt;
+    &lt;/main&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(57)">Try It</button>
+  <div id="sandbox-output-57" class="sandbox-output"></div>
+</div>
+
+<h2>Section (section)</h2>
+<p>Der Bereich, in dem die einzelnen Artikel untereinander angezeigt werden, wird in ein &lt;div&gt; gepackt.
+  Hier gehört es auch hin, denn ein &lt;div&gt; ist ein neutrales Container-Element ohne spezielle Aufgabe,
+  mit dem man mehrere Elemente zusammenfassen kann.
+  Der Unterschied zwischen &lt;article&gt;, &lt;div&gt; und &lt;section&gt;
+  In HTML5 gibt es noch ein Tag, das dem &lt;article&gt;-Element ähnelt. Dieses Tag heisst &lt;section&gt;.
+  Einige Autoren verwenden nun &lt;section&gt; anstatt eines &lt;div&gt;, um mehrere &lt;article&gt;-Elemente
+  auf einer Blog-Homepage zusammenzufassen.
+  Das ist nicht ganz korrekt. Der Grund: Das &lt;section&gt;-Element ist nicht als Container gedacht. Diese
+  Rolle behält nach wie vor das &lt;div&gt;.
+  Eine &lt;section&gt; ist ein in sich geschlossenes Element, das z.B. eine Headline und einen Inhalt enthält.
+  Als Faustregel kann man sich folgendes merken:
+  Ein &lt;div&gt; ist immer dann die richtige Wahl, wenn man etwas zusammenfassen möchte. Ein
+  &lt;section&gt;-Element steht für sich und hat immer eine eigene Headline bzw. könnte sinngemäß eine haben.
+  Das &lt;section&gt;-Element steht damit quasi eine Stufe tiefer als das &lt;article&gt;-Element, das relativ
+  komplex strukturierte Inhalte aufnehmen kann und ausdrücklich für Blog-Posts konzipiert wurde.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-58">
+    &lt;section&gt;
+      &lt;h2&gt;Section Heading&lt;/h2&gt;
+      &lt;p&gt;This is a section of the page.&lt;/p&gt;
+    &lt;/section&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(58)">Try It</button>
+  <div id="sandbox-output-58" class="sandbox-output"></div>
+</div>
+
+<h2>Article (article)</h2>
+<p>Das HTML- Element &lt;article&gt; stellt eine in sich geschlossene Komposition in einem Dokument, einer
+  Seite, einer Anwendung oder einer Site dar, die unabhängig vertreibbar oder wiederverwendbar sein soll (z.
+  B. in Syndikation). Beispiele hierfür sind: ein Forumsbeitrag, ein Zeitschriften- oder Zeitungsartikel oder
+  ein Blogeintrag, eine Produktkarte, ein vom Benutzer eingereichter Kommentar, ein interaktives Widget oder
+  Gadget oder jedes andere unabhängige Inhaltselement.
+  Ein gegebenes Dokument kann mehrere Artikel enthalten; zum Beispiel in einem Blog, das den Text jedes
+  Artikels nacheinander anzeigt, während der Leser scrollt, wäre jeder Beitrag in einem &lt;article&gt;
+  -Element enthalten, möglicherweise mit einem oder mehreren &lt;section&gt; s darin.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-59">
+    &lt;article&gt;
+      &lt;h2&gt;Article Title&lt;/h2&gt;
+      &lt;p&gt;This is an article.&lt;/p&gt;
+    &lt;/article&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(59)">Try It</button>
+  <div id="sandbox-output-59" class="sandbox-output"></div>
+</div>
+
+<h2>Aside (aside)</h2>
+<p>Das &lt;aside&gt; Element wurde mit HTML5 neu eingeführt und kann auf zwei Arten eingesetzt werden.
+  Grundsätzlich basiert der Kontext des &lt;aside&gt; Elements darauf ob es innerhalb oder außerhalb eines
+  article Elementes eingesetzt wird. </p>
+<p>In Magazinen sieht man oft Info-Kästen die aus dem eigentlichen Inhalt des Artikels herausgezogen sind und
+  z.B. etwas besonders relevantes aus dem Artikel noch einmal gesondert hervorheben. Wenn das der Einsatzzweck
+  des aside Elementes ist, so muss es innerhalb des article Elementes platziert werden, da es eine Beziehung
+  zum Inhalt des Artikels hat.</p>
+<p>Inhalt der mit dem aktuellen Artikel, Blogpost usw. in Beziehung steht</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-60">
+    &lt;aside&gt;
+      &lt;h3&gt;Sidebar&lt;/h3&gt;
+      &lt;p&gt;This is a sidebar section.&lt;/p&gt;
+    &lt;/aside&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(60)">Try It</button>
+  <div id="sandbox-output-60" class="sandbox-output"></div>
+</div>
+
+<h2>Details (details)</h2>
+<p>Der <code>&lt;details&gt;</code> Tag wird verwendet, um ein Offenlegungs-Widget zu erstellen, das umgeschaltet werden kann, um zusätzliche Inhalte ein- oder auszublenden. Es wird normalerweise verwendet, um erweiterbare Abschnitte mit einer zusammenfassenden Überschrift zu erstellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-61">
+    &lt;details&gt;
+      &lt;summary&gt;Click me to toggle the details&lt;/summary&gt;
+      &lt;p&gt;Hidden details content.&lt;/p&gt;
+    &lt;/details&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(61)">Try It</button>
+  <div id="sandbox-output-61" class="sandbox-output"></div>
+</div>
+
+<h2>Dialog (dialog)</h2>
+<p>Der <code>&lt;dialog&gt;</code> Tag wird verwendet, um ein modales oder ein Dialogfeld innerhalb einer Webseite zu erstellen. Es wird in der Regel für interaktive Eingabeaufforderungen oder Nachrichten verwendet.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-62">
+    &lt;dialog open&gt;
+      &lt;p&gt;This is a dialog box.&lt;/p&gt;
+      &lt;button&gt;Close&lt;/button&gt;
+    &lt;/dialog&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(62)">Try It</button>
+  <div id="sandbox-output-62" class="sandbox-output"></div>
+</div>
+
+<h2>Summary (summary)</h2>
+<p>Der <code>&lt;summary&gt;</code> Tag wird verwendet, um eine sichtbare Überschrift oder Zusammenfassung für das <code>&lt;details&gt;</code>-Element zu definieren. Es wird angeklickt, um die Sichtbarkeit des Inhalts der Details umzuschalten.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-63">
+    &lt;details&gt;
+      &lt;summary&gt;Click me to toggle the details&lt;/summary&gt;
+      &lt;p&gt;Hidden details content.&lt;/p&gt;
+    &lt;/details&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(63)">Try It</button>
+  <div id="sandbox-output-63" class="sandbox-output"></div>
+</div>
+
+<h2>Data (data)</h2>
+<p>Mit &lt;data&gt;-Attributen (Custom Data Attributes) haben Sie die Möglichkeit, Elementen eigene Attribute mitzugeben, die dann per Script ausgewertet oder mit CSS genutzt werden können. In diesen Attributen können Sie Informationen, die nicht visuell präsentiert werden sollen, zur Verfügung stellen. </p>
+<p>Anders als Mikroformate sind &lt;data&gt;-Attribute interne Angaben und werden von Suchmaschinen nicht ausgewertet. Sie können beliebig viele &lt;data&gt;-Attribute definieren; diese müssen nur mit &lt;data&gt;- beginnen und aus Kleinbuchstaben bestehen.</p> 
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-64">
+    &lt;p&gt;The average temperature is &lt;data value="23"&gt;23&lt;/data&gt;°C.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(64)">Try It</button>
+  <div id="sandbox-output-64" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="meta">Meta Info</h1>
+<h2>Head (head)</h2>
+<p>Der <code>&lt;head&gt;</code> Tag wird verwendet, um den Kopfbereich eines HTML-Dokuments zu definieren. Er enthält Metainformationen über das Dokument, wie z. B. den Titel, Links zu externen Stylesheets und Skripten sowie andere Metadaten.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-65">
+    &lt;head&gt;
+      &lt;title&gt;My Web Page&lt;/title&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;link rel="stylesheet" href="styles.css"&gt;
+      &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(65)">Try It</button>
+  <div id="sandbox-output-65" class="sandbox-output"></div>
+</div>
+
+<h2>Meta (meta)</h2>
+<p>Das Tag &lt;meta&gt; enthält Metadaten, die dem Browser und der Suchmaschine über die Einzelheiten des
+  HTML-Dokuments (Codierung des Dokuments, Angaben des Autors, Schlüsselwörter, Beschreibung von Webseiten
+  usw.) informieren. Die Metadaten werden auf der Webseite nicht angezeigt.
+  Das Tag &lt;meta&gt; wird im Tag &lt;head&gt; platziert. In einem Dokument kann man einige Tags &lt;meta&gt;
+  verwenden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-66">
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="This is my website"&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(66)">Try It</button>
+  <div id="sandbox-output-66" class="sandbox-output"></div>
+</div>
+
+<h2>Base (base)</h2>
+<p>Der <code>&lt;base&gt;</code> Tag gibt die Basis-URL und das Ziel für alle relativen URLs in einem Dokument an. Er wird innerhalb des Kopfbereichs verwendet und hilft, relative Links korrekt aufzulösen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-67">
+    &lt;base href="https://www.example.com/" target="_blank"&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(67)">Try It</button>
+  <div id="sandbox-output-67" class="sandbox-output"></div>
+</div>
+
+<h2>Basefont (basefont)</h2>
+<p>Der <code>&lt;basefont&gt;</code> Tag wird verwendet, um die Basisschriftgröße, -farbe und -schriftart für ein Dokument festzulegen. Es ist jedoch in HTML5 veraltet, und seine Verwendung wird nicht empfohlen. Stattdessen sollte CSS für die Gestaltung des Dokuments verwendet werden.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-68">
+    &lt;basefont size="4" color="red" face="Arial"&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(68)">Try It</button>
+  <div id="sandbox-output-68" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="programming">Programming</h1>
+<h2>Script (script)</h2>
+<p>Das HTML &lt;script&gt;-Element lädt Scripte innerhalb des &lt;head&gt;- und &lt;body&gt;-Elementen einer HTML-Seite. &lt;script&gt; wird in erster Linie zum Einbinden von Javascript in Webseiten benutzt.
+  Das &lt;script&gt;-Element darf sowohl im head- also auch an jeder Stelle im &lt;body&gt;-Element stehen.</p>
+  <p>Im &lt;script&gt;-Element können Script-Anweisungen direkt eingesetzt werden, aber &lt;script&gt; kann auch eine externe Script-Datei mittels &lt;scr&gt;-Attribut laden. Ohne weitere Vorsorge führt der Browser führt das Script sofort an Ort und Stelle aus. </p>
+  <p>Javascript ändert Inhalte, CSS-Stile oder HTML-Elemente und kann erst fehlerfrei ausgeführt werden, wenn das DOM, CSS-Dateien, globale CSS-Stile und der Inhalt bereits geladen sind. Wenn das Javascript im &lt;head&gt; der HTML-Seite geladen wird, stellt der Browser alle weiteren Elemente zurück, bis das Script geladen und interpretiert ist. Das kann zu einem sichtbaren Aussetzer beim Laden der Seite führen. Wenn das Script schon in HTML &lt;head&gt; geladen werden muss, dann besser nach allen CSS-Dateien.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-69">
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      // JavaScript code goes here
+    &lt;/script&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(69)">Try It</button>
+  <div id="sandbox-output-69" class="sandbox-output"></div>
+</div>
+
+<h2>Noscript (noscript)</h2>
+<p>Der <code>&lt;noscript&gt;</code> Tag wird verwendet, um alternative Inhalte anzuzeigen, wenn ein Browser kein JavaScript unterstützt oder JavaScript deaktiviert hat.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-70">
+    &lt;noscript&gt;
+      &lt;p&gt;JavaScript is disabled in your browser. Please enable it to view this website.&lt;/p&gt;
+    &lt;/noscript&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(70)">Try It</button>
+  <div id="sandbox-output-70" class="sandbox-output"></div>
+</div>
+
+<h2>Applet (applet)</h2>
+<p>Der <code>&lt;applet&gt;</code> Tag wird verwendet, um Java-Applets in ein HTML-Dokument einzubetten. Allerdings werden Java-Applets von den meisten modernen Browsern nicht mehr unterstützt.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-71">
+    &lt;applet code="MyApplet.class" width="300" height="200"&gt;
+      Applet content goes here
+    &lt;/applet&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(71)">Try It</button>
+  <div id="sandbox-output-71" class="sandbox-output"></div>
+</div>
+
+<h2>Embed (embed)</h2>
+<p>Das Tag &lt;embed&gt; wird als Container für die externen Anwendungen, den multimedialen und interaktiven
+  Inhalt, die der Browser nicht versteht, verwendet. Für ihre korrekte Darstellung muss man externes Plug-in
+  oder spezielle Programme anschließen. Wie der beigefügte Inhalt angezeigt wird, hängt vom Typ der Datei, von
+  den Attributen des Tages &lt;embed&gt; sowie von Plug-ins, die im Browser installiert sind, ab.
+  Obwohl das Tag &lt;embed&gt; von den Browsern unterstützt wurde, war es in HTML 4 nicht eingeschlossen. Fürs
+  Hochladen von Objekten in HTML 4 wird das Tag &lt;object&gt; verwendet. Da nicht alle Browser in sich
+  befindende Information korrekt darstellen, wird für die Unterstützung der großen Anzahl von Browsern sowie
+  die Validität des Dokumentes das Tag &lt;embed&gt; innerhalb des Tages &lt;object&gt; verwendet. In HTML 5
+  gibt es kein Problem mit der Validität des Dokuments, weil das Tag &lt;embed&gt; bereits ein ofizielles
+  Status in der neuen Version von HTML hat.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-72">
+    &lt;embed src="video.mp4" type="video/mp4" width="640" height="480"&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(72)">Try It</button>
+  <div id="sandbox-output-72" class="sandbox-output"></div>
+</div>
+
+<h2>Object (object)</h2>
+<p>Das &lt;object&gt; Tag ist ein HTML-Tag und wird verwendet, um Multimedia wie Audios, Videos, Bilder, PDFs und Flash in Webseiten anzuzeigen. Es kann auch zur Anzeige einer anderen Webseite innerhalb der HTML-Seite verwendet werden. </p>
+<p>Der &lt;param&gt; Tag wird auch zusammen mit diesem Tag verwendet, um verschiedene Parameter zu definieren. Jeder Text, der innerhalb von &lt;object&gt; und &lt;/object&gt; Tags geschrieben wird, wird als alternativer Text betrachtet, der erscheint, wenn die angegebenen Daten vom Browser nicht unterstützt werden. </p>
+<p>Dieser Tag unterstützt alle Global- und Ereignisattribute von HTML..</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-73">
+    &lt;object data="file.pdf" type="application/pdf" width="500" height="600"&gt;
+    Alternative content goes here
+  &lt;/object&gt;
+</code>
+<button class="sandbox-button" onclick="toggleCodeExecution(73)">Try It</button>
+<div id="sandbox-output-73" class="sandbox-output"></div>
+</div>
+
+<h2>Param (param)</h2>
+<p>Der <code>&lt;param&gt;</code> Tag wird verwendet, um Parameter für Objekte oder Applets zu definieren, die in ein HTML-Dokument mit der <code>&lt;object&gt;</code> or <code>&lt;applet&gt;</code> Tag benutzt werden.</p>
+<div class="code-example">
+<p><strong>Example:</strong></p>
+<code id="code-74">
+  &lt;object data="file.swf"&gt;
+    &lt;param name="autoplay" value="true"&gt;
+    &lt;param name="loop" value="false"&gt;
+  &lt;/object&gt;
+</code>
+<button class="sandbox-button" onclick="toggleCodeExecution(74)">Try It</button>
+<div id="sandbox-output-74" class="sandbox-output"></div>
+</div>
+
+<h1 class="headline" id="formatting">Formatting</h1>
+
+<h2>Abbreviation (abbr)</h2>
+<p>&lt;abbr&gt; kennzeichnet einen Text als Abkürzung eines längeren Wortes oder Ausdrucks oder Akronyms
+  (Abkürzung aus den Anfangsbuchstaben). Die Browser stellen Text in abbr durch eine gestrichelte Linie unter
+  dem Text heraus und machen die Erklärung mit einer kleinen Verzögerung beim Hovern mit der Maus sichtbar.
+</p>
+<p>Abkürzungen sind sinnvoll für den Besucher: Wer will schon dauernd Cascading Style Sheets statt einfach CSS
+  lesen? Die Erklärung einer Abkürzung bringt zusätzliche Informationen für Browser, Übersetzungen und auch
+  für die Suchmaschinen.</p>
+<p>&lt;abbr&gt; – abbreviation – Kürzel</p>
+<p>Die meisten Browser markieren den Text innerhalb eines abbr-Tags durch einen Unterstrich, aber eine
+  zuverlässige Kennzeichnung gibt es nur durch eine CSS-Eigenschaft für &lt;abbr&gt;.</p>
+<p>HTML abbr ist ein Phrase-Tag (Inlineelement), d.h., es führt nicht zu einem Zeilenvorschub und kann in
+  jedem Block- und Inline-Element stehen. Phrase-Tags wie code und cite umschließen eine oder mehrere Wörter
+  innerhalb eines Satzes.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-75">
+    &lt;p&gt;I work at &lt;abbr title="OpenAI"&gt;AI&lt;/abbr&gt; company.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(75)">Try It</button>
+  <div id="sandbox-output-75" class="sandbox-output"></div>
+</div>
+
+<h2>Address (address)</h2>
+<p>Der <code>&lt;address&gt;</code> Tag wird verwendet, um Kontaktinformationen für den Autor oder Eigentümer eines Dokuments oder eines Artikels festzulegen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-76">
+    &lt;address&gt;
+      Written by John Doe.&lt;br&gt;
+      Visit us at: &lt;a href="mailto:john@example.com"&gt;john@example.com&lt;/a&gt;&lt;br&gt;
+      1234 Main Street, Anytown, USA
+    &lt;/address&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(76)">Try It</button>
+  <div id="sandbox-output-76" class="sandbox-output"></div>
+</div>
+
+<h2>Bold (b)</h2>
+<p>Der <code>&lt;b&gt;</code> Tag wird verwendet, um Text fett darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-77">
+    &lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(77)">Try It</button>
+  <div id="sandbox-output-77" class="sandbox-output"></div>
+</div>
+
+<h2>Bidirectional Override (bdi)</h2>
+<p>Der <code>&lt;bdi&gt;</code> Tag wird verwendet, um einen Teil des Textes zu isolieren, der in einer anderen Richtung formatiert werden könnte als der übrige Text außerhalb dieses Teils.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-78">
+    &lt;p&gt;This is &lt;bdi&gt;مرحبا بك&lt;/bdi&gt; in Arabic.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(78)">Try It</button>
+  <div id="sandbox-output-78" class="sandbox-output"></div>
+</div>
+
+<h2>Bidirectional Override (bdo)</h2>
+<p>Der <code>&lt;bdo&gt;</code> Tag wird verwendet, um die aktuelle Textrichtung außer Kraft zu setzen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-79">
+    &lt;p&gt;This is &lt;bdo dir="rtl"&gt;text in RTL direction&lt;/bdo&gt;.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(79)">Try It</button>
+  <div id="sandbox-output-79" class="sandbox-output"></div>
+</div>
+
+<h2>Blockquote (blockquote)</h2>
+<p>Der <code>&lt;blockquote&gt;</code> Tag wird verwendet, um einen Abschnitt des zitierten Textes anzugeben.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-80">
+    &lt;blockquote&gt;
+      &lt;p&gt;This is a quote.&lt;/p&gt;
+      &lt;footer&gt;- John Doe&lt;/footer&gt;
+    &lt;/blockquote&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(80)">Try It</button>
+  <div id="sandbox-output-80" class="sandbox-output"></div>
+</div>
+
+<h2>Citation (cite)</h2>
+<p>Das HTML &lt;cite&gt;-Tag war ursprünglich für Zitate gedacht, aber mit HTML5 ist seine Bedeutung in Titel
+  eines Werks oder auch Autor eines Werks umgewandelt worden. Die Browser setzen Text in cite in kursiver
+  Schrift.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-81">
+    &lt;p&gt;I read an interesting article on &lt;cite&gt;example.com&lt;/cite&gt;.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(81)">Try It</button>
+  <div id="sandbox-output-81" class="sandbox-output"></div>
+</div>
+
+<h2>Code (code)</h2>
+<p>Der <code>&lt;code&gt;</code> Tag wird verwendet, um einen Teil des Computercodes zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-82">
+    &lt;p&gt;This is a &lt;code&gt;code&lt;/code&gt; example.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(82)">Try It</button>
+  <div id="sandbox-output-82" class="sandbox-output"></div>
+</div>
+
+<h2>Deleted Text (del)</h2>
+<p>&lt;del&gt; markiert einen Text mit einer horizontalen Linie mitten durch den Text als gelöscht. HTML &lt;ins&gt; markiert den eingefügten Text durch eine horizontalen Linie unter dem Text. Ein &lt;del&gt;-Tag kann nicht direkt innerhalb eines &lt;ins&gt;-Tags stehen und umgekehrt.</p>  
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-83">
+    &lt;p&gt;This is &lt;del&gt;deleted&lt;/del&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(83)">Try It</button>
+  <div id="sandbox-output-83" class="sandbox-output"></div>
+</div>
+
+<h2>Definition (dfn)</h2>
+<p>Der <code>&lt;dfn&gt;</code> Tag wird verwendet, um die definierende Instanz eines Begriffs zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-84">
+    &lt;p&gt;The &lt;dfn&gt;HTML&lt;/dfn&gt; stands for Hypertext Markup Language.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(84)">Try It</button>
+  <div id="sandbox-output-84" class="sandbox-output"></div>
+</div>
+
+<h2>Emphasis (em)</h2>
+<p>Die Tags &lt;em&gt; und &lt;i&gt; betonen ein eingeschlossenes Wort oder Ausdruck. Die Browser stellen den eingeschlossenen Text in einer kursiven Schrift dar. In der Sprachsynthese wird ein Text in &lt;em&gt; leicht betont ausgesprochen, ein Text in &lt;i&gt; mit einer anderen Stimme. Das &lt;i&gt;-Tag und das &lt;em&gt;-Tag &lt;em&gt;betonen&lt;/em&gt; einen Text.</p>  
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-85">
+    &lt;p&gt;This is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(85)">Try It</button>
+  <div id="sandbox-output-85" class="sandbox-output"></div>
+</div>
+
+<h2>Italic (i)</h2>
+<p>Der <code>&lt;i&gt;</code> Tag wird verwendet, um Text kursiv zu machen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-86">
+    &lt;p&gt;This is &lt;i&gt;italic&lt;/i&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(86)">Try It</button>
+  <div id="sandbox-output-86" class="sandbox-output"></div>
+</div>
+
+<h2>Inserted Text (ins)</h2>
+<p>Der <code>&lt;ins&gt;</code> Tag wird verwendet, um eingefügten Text in einem Dokument darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-87">
+    &lt;p&gt;This is &lt;ins&gt;inserted&lt;/ins&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(87)">Try It</button>
+  <div id="sandbox-output-87" class="sandbox-output"></div>
+</div>
+
+<h2>Keyboard Input (kbd)</h2>
+<p>Der <code>&lt;kbd&gt;</code> Tag wird verwendet, um die Tastatureingabe des Benutzers darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-88">
+    &lt;p&gt;Press &lt;kbd&gt;Ctrl+C&lt;/kbd&gt; to copy the selected text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(88)">Try It</button>
+  <div id="sandbox-output-88" class="sandbox-output"></div>
+</div>
+
+<h2>Marked Text (mark)</h2>
+<p>Der <code>&lt;mark&gt;</code> Tag wird verwendet, um Text in einem Dokument hervorzuheben oder zu markieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-89">
+    &lt;p&gt;This is &lt;mark&gt;highlighted&lt;/mark&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(89)">Try It</button>
+  <div id="sandbox-output-89" class="sandbox-output"></div>
+</div>
+
+<h2>Meter (meter)</h2>
+<p>Der <code>&lt;meter&gt;</code> Tag wird verwendet, um Daten innerhalb eines bestimmten Bereichs zu messen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-90">
+    &lt;p&gt;Progress: &lt;meter value="75" min="0" max="100"&gt;75%&lt;/meter&gt;&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(90)">Try It</button>
+  <div id="sandbox-output-90" class="sandbox-output"></div>
+</div>
+
+<h2>Preformatted Text (pre)</h2>
+<p>Der <code>&lt;pre&gt;</code> Tag wird verwendet, um Leerzeichen und Zeilenumbrüche im Text zu erhalten.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-91">
+    &lt;pre&gt;This is preformatted
+    text with    multiple spaces
+    and line breaks.&lt;/pre&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(91)">Try It</button>
+  <div id="sandbox-output-91" class="sandbox-output"></div>
+</div>
+
+<h2>Progress (progress)</h2>
+<p>Der <code>&lt;progress&gt;</code> Tag wird verwendet, um den Fortschritt einer Aufgabe darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-92">
+    &lt;p&gt;Loading: &lt;progress value="60" max="100"&gt;60%&lt;/progress&gt;&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(92)">Try It</button>
+  <div id="sandbox-output-92" class="sandbox-output"></div>
+</div>
+
+<h2>Quotation (q)</h2>
+<p>Der <code>&lt;q&gt;</code> Tag wird verwendet, um kurze Inline-Zitate einzuschließen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-93">
+    &lt;p&gt;He said, &lt;q&gt;Hello!&lt;/q&gt;&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(93)">Try It</button>
+  <div id="sandbox-output-93" class="sandbox-output"></div>
+</div>
+
+<h2>Ruby Parenthesis (rp)</h2>
+<p>Der <code>&lt;rp&gt;</code> Tag wird verwendet, um die Ruby-Text-Komponente einer Ruby-Anmerkung in Klammern zu setzen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-94">
+    &lt;ruby&gt;漢字 &lt;rp&gt;(&lt;/rp&gt; かんじ &lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(94)">Try It</button>
+  <div id="sandbox-output-94" class="sandbox-output"></div>
+</div>
+
+<h2>Ruby Text (rt)</h2>
+<p>Der <code>&lt;rt&gt;</code> Tag wird verwendet, um die Aussprache von Zeichen in einer Ruby-Anmerkung anzugeben.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-95">
+    &lt;ruby&gt;漢字 &lt;rp&gt;(&lt;/rp&gt; かんじ &lt;rt&gt;Kanji&lt;/rt&gt; &lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(95)">Try It</button>
+  <div id="sandbox-output-95" class="sandbox-output"></div>
+</div>
+
+<h2>Ruby Annotation (ruby)</h2>
+<p>Der <code>&lt;ruby&gt;</code> Tag wird verwendet, um eine Ruby-Annotation anzugeben, die für die phonetische Transkription oder Annotationen von ostasiatischen Zeichen verwendet wird.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-96">
+    &lt;ruby&gt;漢字 &lt;rp&gt;(&lt;/rp&gt; かんじ &lt;rt&gt;Kanji&lt;/rt&gt; &lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(96)">Try It</button>
+  <div id="sandbox-output-96" class="sandbox-output"></div>
+</div>
+
+<h2>Strikethrough (s)</h2>
+<p>Der <code>&lt;s&gt;</code> Tag wird verwendet, um Text darzustellen, der nicht mehr korrekt oder relevant ist.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-97">
+    &lt;p&gt;This is &lt;s&gt;strikethrough&lt;/s&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(97)">Try It</button>
+  <div id="sandbox-output-97" class="sandbox-output"></div>
+</div>
+
+<h2>Sample Output (samp)</h2>
+&gt; enthält das Ergebnis der Ausgabe des Computerprogramms oder Skripts. Im Browser wird der Inhalt des Tages durch nichtproportionale Schriftart angezeigt. </p>
+<p>Syntax</p>  
+<p>Das Tag &lt;samp&gt; wird gepaart verwendet, sein Inhalt wird zwischen den Start- (&lt;samp&gt;) und Endtags (&lt;/samp&gt;) geschrieben.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-98">
+    &lt;p&gt;The output is: &lt;samp&gt;Hello, World!&lt;/samp&gt;&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(98)">Try It</button>
+  <div id="sandbox-output-98" class="sandbox-output"></div>
+</div>
+
+<h2>Small Text (small)</h2>
+<p>Der <code>&lt;small&gt;</code> Tag wird verwendet, um kleineren Text oder Kleingedrucktes darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-99">
+    &lt;p&gt;This is some &lt;small&gt;small text&lt;/small&gt; in a paragraph.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(99)">Try It</button>
+  <div id="sandbox-output-99" class="sandbox-output"></div>
+</div>
+
+<h2>Strong Text (strong)</h2>
+<p>Der <code>&lt;strong&gt;</code> Tag wird verwendet, um wichtigen Text hervorzuheben oder zu betonen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-100">
+    &lt;p&gt;This is &lt;strong&gt;strong&lt;/strong&gt; text.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(100)">Try It</button>
+  <div id="sandbox-output-100" class="sandbox-output"></div>
+</div>
+
+<h2>Subscript (sub)</h2>
+<p>HTML &lt;sub&gt; und &lt;sup&gt; stellen einfache chemische, physikalische und mathematische Ausdrücke wie Potenzen oder Maße im Text ohne Grafik oder Bitmap dar. Die Buchstaben oder Ziffern werden in einer kleinen Schriftgröße hochgestellt oder tiefgestellt und auch als Supscript bzw. Superscript bezeichnet.</p>  
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-101">
+    &lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(101)">Try It</button>
+  <div id="sandbox-output-101" class="sandbox-output"></div>
+</div>
+
+<h2>Superscript (sup)</h2>
+<p>HTML &lt;sub&gt; und &lt;sup&gt; stellen einfache chemische, physikalische und mathematische Ausdrücke wie Potenzen oder Maße im Text ohne Grafik oder Bitmap dar. Die Buchstaben oder Ziffern werden in einer kleinen Schriftgröße hochgestellt oder tiefgestellt und auch als Supscript bzw. Superscript bezeichnet.</p>  
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-102">
+    &lt;p&gt;2&lt;sup&gt;nd&lt;/sup&gt;&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(102)">Try It</button>
+  <div id="sandbox-output-102" class="sandbox-output"></div>
+</div>
+
+<h2>Template (template)</h2>
+<p>Das Element &lt;template&gt; verwendet man für die Aufbewahrung der Vorlagen des HTML-Kodes, die man klonen und ins Dokument mithilfe von Skripten platzieren kann. Es wird gewöhnlich für die Elemente mit einer wiederholenden Struktur wie Listen, Tabellen usw. verwendet. </p>
+<p>Das Tag &lt;template&gt; unterscheidet sich von anderen Tags dadurch, dass sein Inhalt besonders bearbeitet wird. Die Fragmente des Kodes werden auf der Seite des Kunden bewahrt und werden während des Hochladens der Seite nicht angezeigt. Der Inhalt wird nur dann aktiviert (das Video wird gespielt, die Skripte werden durchgeführt usw.), wenn er im Dokument platziert wird.</p>                
+<p>Der Browser bearbeitet den Inhalt des Tages, um die Validität des Codes zu bestätigen.</p>              
+<p>Das Tag &lt;template&gt; kann tatsächlich an einer beliebigen Stelle des HTML-Dokumentes platziert werden sein: &lt;head&gt;, &lt;body&gt; oder &lt;frameset&gt; und kann jede Art von Inhalt, der in diesen Elementen erlaubt ist, enthalten.</p>  
+  
+<p>Das Tag &lt;template&gt; ist ein neues Element in HTML 5</p>  
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-103">
+    &lt;template id="myTemplate"&gt;
+      &lt;p&gt;This is a template.&lt;/p&gt;
+    &lt;/template&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(103)">Try It</button>
+  <div id="sandbox-output-103" class="sandbox-output"></div>
+</div>
+
+<h2>Time (time)</h2>
+<p>Der <code>&lt;time&gt;</code> Tag wird verwendet, um ein bestimmtes Datum und/oder eine bestimmte Uhrzeit darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-104">
+    &lt;p&gt;The event starts at &lt;time datetime="2023-06-01T18:00"&gt;6:00 PM&lt;/time&gt;.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(104)">Try It</button>
+  <div id="sandbox-output-104" class="sandbox-output"></div>
+</div>
+
+<h2>Underline (u)</h2>
+<p>Der <code>&lt;u&gt;</code> Tag wird verwendet, um Text zu unterstreichen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-105">
+    &lt;p&gt;This is some &lt;u&gt;underlined text&lt;/u&gt; in a paragraph.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(105)">Try It</button>
+  <div id="sandbox-output-105" class="sandbox-output"></div>
+</div>
+
+<h2>Variable (var)</h2>
+<p>Der <code>&lt;var&gt;</code> Tag wird verwendet, um den Namen einer Variablen im Computercode oder einen mathematischen Ausdruck darzustellen.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-106">
+    &lt;p&gt;Let <var>x</var> be the variable.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(106)">Try It</button>
+  <div id="sandbox-output-106" class="sandbox-output"></div>
+</div>
+
+<h2>Word Break Opportunity (wbr)</h2>
+<p>Der <code>&lt;wbr&gt;</code> Tag wird verwendet, um einen möglichen Zeilenumbruch innerhalb eines Wortes zu definieren.</p>
+<div class="code-example">
+  <p><strong>Example:</strong></p>
+  <code id="code-107">
+    &lt;p&gt;This is a longword that may break &lt;wbr&gt;into multiple lines.&lt;/p&gt;
+  </code>
+  <button class="sandbox-button" onclick="toggleCodeExecution(107)">Try It</button>
+  <div id="sandbox-output-107" class="sandbox-output"></div>
+</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
