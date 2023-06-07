@@ -24,7 +24,6 @@ HERE will be the live version LINK
 </a>
 
 
-</>
 
 <br/>
 
