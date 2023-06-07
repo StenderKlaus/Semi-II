@@ -207,25 +207,7 @@ This project was created using the following technologies.
 ![11](https://user-images.githubusercontent.com/111676859/226197338-3e530bc6-e7bf-4e4a-9284-165f85be47d2.png)
 
 ## Authors
-<h5  align ="center">George Beyrouti<h5>
 
-- Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
-
-- Github: [George-Beyrouti](https://github.com/George-Beyrouti)
-
-- Linkedin: [@George-Beyrouti](https://de.linkedin.com/in/george-beyrouti)
-
-- Email: [georges.beyrouti@gmail.com](mailto:georges.beyrouti@gmail.com)
-
-<h5  align ="center">Klaus Stender<h5>
-
-- Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
-
-- Github: [StenderKlaus](https://github.com/StenderKlaus)
-
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/klaus-stender-7ba879266/)
-
-- Email: [stender.klaus@yahoo.de](mailto:stender.klaus@yahoo.de)
 
 <h5  align ="center">Lea Prem<h5>
 
@@ -236,6 +218,18 @@ This project was created using the following technologies.
 - Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
 
 - Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
+
+
+<h5  align ="center">George Beyrouti<h5>
+
+- Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
+
+- Github: [George-Beyrouti](https://github.com/George-Beyrouti)
+
+- Linkedin: [@George-Beyrouti](https://de.linkedin.com/in/george-beyrouti)
+
+- Email: [georges.beyrouti@gmail.com](mailto:georges.beyrouti@gmail.com)
+
 
 <h5  align ="center">Marvin Hampe<h5>
 
@@ -248,12 +242,25 @@ This project was created using the following technologies.
 - Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
 
 
+<h5  align ="center">Klaus Stender<h5>
+
+- Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
+
+- Github: [StenderKlaus](https://github.com/StenderKlaus)
+
+- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/klaus-stender-7ba879266/)
+
+- Email: [stender.klaus@yahoo.de](mailto:stender.klaus@yahoo.de)
+
+
+
+
 <br>
 ## License
 
 MIT License
 
-Copyright (c) 2023 George Beyrouti, Klaus Stender, Lea Prem, Marvin Hampe.
+Copyright (c) 2023 Lea Prem, George Beyrouti, Marvin Hampe, Klaus Stender.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
