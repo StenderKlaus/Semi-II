@@ -13,6 +13,8 @@ We Provide a section for self-learners under the Cheat sheets section of the Web
 We filled The Story Section of the Live Version of this Blog / Platform with multiple Posts that have Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
 and with Useful Links to Other resources that we used and found them to very helpful ourselves.
 
+
+this Blog / Learning-Platform was built by Team of Developers using Modern Agile Methods and Tools. More information about the Authors are Provided in a later Section of the Readme file.
 </>
 
 a Live Version of this Blog Can be Found Under :
@@ -33,7 +35,7 @@ HERE will be the live version LINK
       - [Backend](#backend)
       - [Database](#database)
   * [📸 Screenshots](#screenshots)
-  * [Author](#author)
+  * [Author](#authors)
   * [License](#license)
 
 
