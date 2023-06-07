@@ -112,7 +112,7 @@ const Home = () => {
                         isMulti
                     />
                 </label>
-                <button onClick={()=> {setCategories([]);navigate("/")}} >click here to go back to Homepage / all posts</button>
+                <button onClick={()=> {setCategories([]);navigate("/")}} >Homepage / all posts</button>
       </div>
       {loading ?
 
