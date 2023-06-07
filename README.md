@@ -1,6 +1,6 @@
 <H1 align ="center" > SEMICOLONS_BLOG  </h1>
-<h3  align ="center"> 
-Fullstack open source blogging application made with MongoDB, Express, React & Nodejs (MERN) </h3>
+<h4  align ="center"> 
+Fullstack open source blogging application made with MongoDB, Express, React & Nodejs (MERN) </h4>
 
 <h5> 
 This Blog / Self-Learning Platform helps people who are interested in learning WEB DEVELOPMENT by themselves to take the first step in this exciting field.</h5>
