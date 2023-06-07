@@ -3,21 +3,21 @@
 Fullstack open source blogging application made with MongoDB, Express, React & Nodejs (MERN) </h5>
 
 <h5> 
-This Blog / Learning Platform helps people who are interested in learning WEB DEVELOPMENT by themselves in taking the First step in this exciting Field.</h5>
+This Blog / Self-Learning Platform helps people who are interested in learning WEB DEVELOPMENT by themselves to take the first step in this exciting field.</h5>
 
 
 <h5> 
-We provide a section for self-learners under the Cheat-Sheets section of the Website, that would save them a lot of time by avoiding the reading of long Documentation in <a href="https://www.w3schools.com/" target="_blank">W3School</a> and <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
+For self-learners, we provided under the Cheat-Sheets section of the website a lot of materials that would save them a lot of time by avoiding the reading of long documentation in <a href="https://www.w3schools.com/" target="_blank">W3School</a> and <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> for each HTML Tag or CSS Styling Element and JavaScript commands but instead browsing the extensive list of the most used tags and commands through this section and trying them for themselves through the integration of individual Sandboxes for each HTML Tag, CSS Styling Elements or JS. Command.</h5>
 
 <h5>
-We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
-and also with useful links to other resources that we used and found them to be very helpful ourselves.</h5>
+We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain tips and suggestions that will help guide Future Web Developers on their journey of Self-Learning.
+and also with useful links to other resources that we used and found to be very helpful ourselves.</h5>
 
 <h5>
-This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the Authors are Provided in a later Section of the Readme file.</h5>
+This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the authors is provided in a later section of the readme file.</h5>
 
 
-A Live Version of this Blog can be Found Under :
+A Live Version of this Blog /  Self-Learning Platform can be found under:
 
 <a>
 HERE will be the live version LINK
