@@ -25,7 +25,9 @@ HERE will be the live version LINK
 
 
 
-<br/>
+<br>
+
+<h3>Table of Contents:</h3>
 
   * [Configuration and Setup](#configuration-and-setup)
   * [Key Features](#key-features)
