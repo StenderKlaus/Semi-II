@@ -1,6 +1,25 @@
-<H1 align ="center" > MERN-BLOG  </h1>
+<H1 align ="center" > SEMICOLONS_BLOG  </h1>
 <h5  align ="center"> 
 Fullstack open source blogging application made with MongoDB, Express, React & Nodejs (MERN) </h5>
+
+<h6> 
+This Blog / Learning Platform helps people who are interested in learning WEB DEVELOPMENT by themselves in taking the First step in this exciting Field.
+
+We Provide a section for self-learners under the Cheat sheets tab that would save them a lot of time by avoiding the reading of long Documentation in W3School or MDN for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.
+
+
+We filled The Story Section of the Live Version of this Blog / Platform with multiple Posts that have Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
+and with Useful Links to Other resources that we used and found them to very helpful ourselves.
+
+
+a Live Version of this Blog Can be Found Under :
+
+<a>
+HERE will be the live version LINK
+</a>
+
+
+</h6>
 <br/>
 
   * [Configuration and Setup](#configuration-and-setup)
@@ -18,7 +37,7 @@ Fullstack open source blogging application made with MongoDB, Express, React & N
 
 In order to run this project locally, simply fork and clone the repository or download as zip and unzip on your machine.
 
-- Open the project in your prefered code editor.
+- Open the project in your preferred code editor.
 - Go to terminal -> New terminal (If you are using VS code)
 - Split your terminal into two (run the Frontend on one terminal and the Backend on the other terminal)
 
@@ -49,6 +68,15 @@ JWT_SECRET_KEY =
 JWT_EXPIRE = 60m
 RESET_PASSWORD_EXPIRE = 3600000 
 
+
+# Cloudinary
+
+cloudinary.config({ 
+CLOUD_NAME: your Cloudinary NAME
+API_KEY:  your Cloudinary API Key
+API_SECRET:  your Cloudinary API Secret
+});
+
 # Nodemailer
 
 SMTP_HOST =smtp.gmail.com
@@ -56,6 +84,18 @@ SMTP_PORT =587
 EMAIL_USERNAME = example@gmail.com
 EMAIL_PASS = your_password
 ```
+Set environment variables in .env under in the main Backend Folder ./
+
+                      #  ---  .env  ---
+
+
+
+#Cloudinary 
+
+CLOUD_NAME: your Cloudinary NAME
+API_KEY:  your Cloudinary API Key
+API_SECRET:  your Cloudinary API Secret
+
 
 
 ```
@@ -71,13 +111,28 @@ $ nodemon start (to start the backend)
 
 - User registration and login
 - Authentication using JWT Tokens
-- Story searching  and pagination 
 - CRUD operations (Story create, read, update and delete)
-- Upload user ımages and story ımages  to the server
+- Upload user Profile Images and story Images  to the Cloudinary Server
+- Commenting on the story and Liking of the Comments
 - Liking  stories and adding stories  to the Reading list
-- Commenting  on the story
-- Skeleton loading effect
+- the Ability to add Relevant Categories When adding a new Story 
+- Browse Stories Based on story Categories 
+- Story searching Based on Story Title and pagination
+- An add to Favorites or to Reading List of bookmarked stories
+- Skeleton loading effect / Animation
 - Responsive Design
+- and many other features.
+
+<br/>
+
+##   Coming Features (currently in Development)
+
+- the Edit and Delete of own Comments
+- the ability to sort the stories by: Date, Likes and average read-time
+- limiting the size of the uploaded Photos to cloudinary servers
+- Administrators Dashboard were admins can see all posts and are authorized to delete inappropriate or unrelated and non-compliant (to the purpose of this blogs) Stories and Comments,
+- A page where an Author can see all his stories and Previous Activity on the Blog and Manage them
+- Adding other Cheat Sheets for other Web Development tools like React, MongooDB, SQL ... 
 
 <br/>
 
@@ -96,19 +151,22 @@ This project was created using the following technologies.
 - [uuid](https://www.npmjs.com/package/uuid) - For random id generator
 - [React icons](https://react-icons.github.io/react-icons/) -
  Small library that helps you add icons  to your react apps.
+ - [React Select](https://www.npmjs.com/package/react-select) -
+ an NPM Package that helps you select from an option input-Field in your react apps.
 
 ####  Backend 
 
-- [Node js](https://nodejs.org/en/) -A runtime environment to help build fast server applications using JS
-- [Express js](https://www.npmjs.com/package/express) -The server for handling and routing HTTP requests
-- [Mongoose](https://mongoosejs.com/) - For modeling and mapping MongoDB data to JavaScript
-- [express-async-handler](https://www.npmjs.com/package/express-async-handler) - Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers 
+- [Node js](https://nodejs.org/en/) -A runtime environment to help build fast server applications using JS.
+- [Express js](https://www.npmjs.com/package/express) -The server for handling and routing HTTP requests.
+- [Mongoose](https://mongoosejs.com/) - For modeling and mapping MongoDB data to JavaScript.
+- [express-async-handler](https://www.npmjs.com/package/express-async-handler) - Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
 - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) - For authentication
-- [Bcryptjs](https://www.npmjs.com/package/bcryptjs) - For data encryption
-- [Nodemailer](https://nodemailer.com/about/) - Send e-mails from Node.js
-- [Dotenv](https://www.npmjs.com/package/dotenv) - Zero Dependency module that loads environment variables
-- [multer](https://www.npmjs.com/package/multer) - Node.js middleware for uploading files 
-- [slugify](https://www.npmjs.com/package/slugify) - For encoding titles into a URL-friendly format
+- [Bcryptjs](https://www.npmjs.com/package/bcryptjs) - For data encryption.
+- [Cloudinary](https://https://cloudinary.com/about) - a Cloud media management For the upload of User Profile Images and Story Images.
+- [Nodemailer](https://nodemailer.com/about/) - Send e-mails from Node.js.
+- [Dotenv](https://www.npmjs.com/package/dotenv) - Zero Dependency module that loads environment variables.
+- [multer](https://www.npmjs.com/package/multer) - Node.js middleware for uploading files. 
+- [slugify](https://www.npmjs.com/package/slugify) - For encoding titles into a URL-friendly format.
 - [cors](https://www.npmjs.com/package/cors) - Provides a Connect/Express middleware
 
 
@@ -141,7 +199,26 @@ This project was created using the following technologies.
 --- - 
 ![11](https://user-images.githubusercontent.com/111676859/226197338-3e530bc6-e7bf-4e4a-9284-165f85be47d2.png)
 
-## Author
+## Authors
+<h5  align ="center">George Beyrouti<h5>
+- Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
+- Github: [George-Beyrouti](https://github.com/George-Beyrouti)
+- Linkedin: [@George-Beyrouti](https://de.linkedin.com/in/george-beyrouti)
+- Email: [georges.beyrouti@gmail.com](mailto:georges.beyrouti@gmail.com)
+
+<h5  align ="center">Klaus Stender<h5>
+- Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
+- Github: [StenderKlaus](https://github.com/StenderKlaus)
+- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/klaus-stender-7ba879266/)
+- Email: [stender.klaus@yahoo.de](mailto:stender.klaus@yahoo.de)
+
+<h5  align ="center">Lea Prem<h5>
+- Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+- Github: [@bert-hutapea](https://github.com/berthutapea)
+- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
+- Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
+
+<h5  align ="center">Marvin Hampe<h5>
 - Portfolio: [berthutapea](https://berthutapea.vercel.app/)
 - Github: [@bert-hutapea](https://github.com/berthutapea)
 - Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
@@ -151,7 +228,7 @@ This project was created using the following technologies.
 
 MIT License
 
-Copyright (c) 2022 Gilbert Hutapea
+Copyright (c) 2023 George Beyrouti, Klaus Stender, Lea Prem, Marvin Hampe.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

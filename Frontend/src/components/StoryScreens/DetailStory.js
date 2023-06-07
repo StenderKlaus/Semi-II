@@ -77,7 +77,7 @@ const DetailStory = () => {
 
     }
     getDetailStory();
-//  return ()=> getDetailStory();
+      return ()=> getDetailStory();
   }, [slug, setLoading])
 
 
