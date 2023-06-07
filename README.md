@@ -5,7 +5,7 @@ Fullstack open source blogging application made with MongoDB, Express, React & N
 <h5> 
 This Blog / Learning Platform helps people who are interested in learning WEB DEVELOPMENT by themselves in taking the First step in this exciting Field.</h5>
 
-<br>
+
 <h5> 
 We Provide a section for self-learners under the Cheat sheets section of the Website that would save them a lot of time by avoiding the reading of long Documentation in W3School or MDN for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.
 
@@ -244,6 +244,8 @@ This project was created using the following technologies.
 
 - Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
 
+
+<br>
 ## License
 
 MIT License
