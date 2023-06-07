@@ -7,7 +7,7 @@ This Blog / Learning Platform helps people who are interested in learning WEB DE
 
 
 <h5> 
-We provide a section for self-learners under the Cheat-Sheets section of the Website, that would save them a lot of time by avoiding the reading of long Documentation in  <a link=https://www.w3schools.com/ >W3-School</a> or MDN <a>https://developer.mozilla.org/en-US/</a> for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
+We provide a section for self-learners under the Cheat-Sheets section of the Website, that would save them a lot of time by avoiding the reading of long Documentation in   MDN <a href="https://developer.mozilla.org/en-US/">MDN</a> for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
 
 <h5>
 We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
@@ -149,8 +149,8 @@ This project was created using the following technologies.
 
 ####  Frontend 
 
-- [React js ](https://www.npmjs.com/package/react) - JavaScript library that is used for building user interfaces specifically for single-page applications
-- [React Hooks  ](https://reactjs.org/docs/hooks-intro.html) - For managing and centralizing application state
+- [React js](https://www.npmjs.com/package/react) - JavaScript library that is used for building user interfaces specifically for single-page applications
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html) - For managing and centralizing application state
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom) - To handle routing
 - [axios](https://www.npmjs.com/package/axios) - For making Api calls
 - [Css](https://developer.mozilla.org/en-US/docs/Web/CSS) - For User Interface
