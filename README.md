@@ -2,15 +2,18 @@
 <h5  align ="center"> 
 Fullstack open source blogging application made with MongoDB, Express, React & Nodejs (MERN) </h5>
 
-<h6> 
+<h5> 
 This Blog / Learning Platform helps people who are interested in learning WEB DEVELOPMENT by themselves in taking the First step in this exciting Field.
 
-We Provide a section for self-learners under the Cheat sheets tab that would save them a lot of time by avoiding the reading of long Documentation in W3School or MDN for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.
+<br>
+
+We Provide a section for self-learners under the Cheat sheets section of the Website that would save them a lot of time by avoiding the reading of long Documentation in W3School or MDN for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.
 
 
 We filled The Story Section of the Live Version of this Blog / Platform with multiple Posts that have Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
 and with Useful Links to Other resources that we used and found them to very helpful ourselves.
 
+</h5>
 
 a Live Version of this Blog Can be Found Under :
 
@@ -19,7 +22,7 @@ HERE will be the live version LINK
 </a>
 
 
-</h6>
+</h5>
 <br/>
 
   * [Configuration and Setup](#configuration-and-setup)
@@ -201,27 +204,43 @@ This project was created using the following technologies.
 
 ## Authors
 <h5  align ="center">George Beyrouti<h5>
+
 - Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
+
 - Github: [George-Beyrouti](https://github.com/George-Beyrouti)
+
 - Linkedin: [@George-Beyrouti](https://de.linkedin.com/in/george-beyrouti)
+
 - Email: [georges.beyrouti@gmail.com](mailto:georges.beyrouti@gmail.com)
 
 <h5  align ="center">Klaus Stender<h5>
+
 - Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
+
 - Github: [StenderKlaus](https://github.com/StenderKlaus)
+
 - Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/klaus-stender-7ba879266/)
+
 - Email: [stender.klaus@yahoo.de](mailto:stender.klaus@yahoo.de)
 
 <h5  align ="center">Lea Prem<h5>
+
 - Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+
 - Github: [@bert-hutapea](https://github.com/berthutapea)
+
 - Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
+
 - Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
 
 <h5  align ="center">Marvin Hampe<h5>
+
 - Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+
 - Github: [@bert-hutapea](https://github.com/berthutapea)
+
 - Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
+
 - Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
 
 ## License
