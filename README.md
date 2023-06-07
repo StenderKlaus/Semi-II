@@ -7,17 +7,17 @@ This Blog / Learning Platform helps people who are interested in learning WEB DE
 
 
 <h5> 
-We Provide a section for self-learners under the Cheat sheets section of the Website that would save them a lot of time by avoiding the reading of long Documentation in W3School or MDN for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
+We provide a section for self-learners under the Cheat-Sheets section of the Website, that would save them a lot of time by avoiding the reading of long Documentation in W3-School <a>https://www.w3schools.com/</a> or MDN <a>https://developer.mozilla.org/en-US/</a> for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
 
 <h5>
-We filled The Story Section of the Live Version of this Blog / Platform with multiple Posts that have Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
-and with Useful Links to Other resources that we used and found them to very helpful ourselves.</h5>
+We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
+and also with useful links to other resources that we used and found them to be very helpful ourselves.</h5>
 
 <h5>
-this Blog / Learning-Platform was built by Team of Developers using Modern Agile Methods and Tools. More information about the Authors are Provided in a later Section of the Readme file.</h5>
+This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the Authors are Provided in a later Section of the Readme file.</h5>
 
 
-a Live Version of this Blog Can be Found Under :
+A Live Version of this Blog can be Found Under :
 
 <a>
 HERE will be the live version LINK
