@@ -7,7 +7,7 @@ This Blog / Learning Platform helps people who are interested in learning WEB DE
 
 
 <h5> 
-We provide a section for self-learners under the Cheat-Sheets section of the Website, that would save them a lot of time by avoiding the reading of long Documentation in <a target="blank" href="https://www.w3schools.com/">W3School</a> and <a target="blank" href="https://developer.mozilla.org/en-US/">MDN</a> for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
+We provide a section for self-learners under the Cheat-Sheets section of the Website, that would save them a lot of time by avoiding the reading of long Documentation in <a href="https://www.w3schools.com/" target="_blank">W3School</a> and <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> for each HTML Tag or CSS Styling Elements, and JavaScript commands but browse the extensive list of the most used tags and commands through this section and Trying them for Themselves through the Integration of individual Sandboxes for each Tag, Styling Elements or Command.</h5>
 
 <h5>
 We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain Tips and Suggestions that will Help Guide Future Web Developers on their Journey of Self Learning.
@@ -36,7 +36,7 @@ HERE will be the live version LINK
       - [Backend](#backend)
       - [Database](#database)
   * [📸 Screenshots](#screenshots)
-  * [Author](#authors)
+  * [Authors](#authors)
   * [License](#license)
 
 
