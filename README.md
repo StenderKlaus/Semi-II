@@ -9,7 +9,7 @@ This Blog / Self-Learning Platform helps people who are interested in learning W
 <h5> 
 For self-learners, we provided under the Cheat-Sheets section of the website a lot of materials that would save them a lot of time by avoiding the reading of long documentation in <a href="https://www.w3schools.com/" target="_blank">W3School</a> and <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> for each HTML Tag or CSS Styling Element and JavaScript commands.
 
- but instead browsing the extensive list of the most used tags and commands through this section and trying them for themselves through the integration of individual Sandboxes for each HTML Tag, CSS Styling Elements or JS. Command.</h5>
+But instead browsing the extensive list of the most used tags and commands through this section and trying them for themselves through the integration of individual Sandboxes for each HTML Tag, CSS Styling Elements or JS. Command.</h5>
 
 <h5>
 We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain tips and suggestions that will help guide Future Web Developers on their journey of Self-Learning.
