@@ -42,6 +42,33 @@ const Header = () => {
 
                     </h5>
                 </Link>
+
+
+                    <div class="dropdownContainer">
+                        <div class="dropdown">
+                        <button class="dropbtn">Menu</button>
+                        <div class="dropdown-content">
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Home</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Products</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Login</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Signup</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Home</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Products</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Login</a>
+                            <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">Signup</a>
+                            
+                        </div>
+                        
+                        
+                        </div>
+                        
+                        </div>              
+
+
+    
+
+                    
+
                 <SearchForm />
                 <div className='header_options'>
 
