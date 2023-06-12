@@ -44,6 +44,11 @@ header .logo h5 {
   color: rgb(56, 162, 170);
 }
 
+.header .logo img {
+  width: 50px;
+  height: auto;
+}
+
 .header_options div.noAuth_options a,
 .header_options div.auth_options a.addStory-link {
   text-decoration: none;

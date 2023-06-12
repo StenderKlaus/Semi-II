@@ -141,13 +141,22 @@
 
 .editprofile-btn {
   width: 100%;
-  background-color: rgb(56, 162, 170);
+  border: 1px solid rgb(56, 162, 170);
+  background-color: none;
+  border-radius: 3px;
   padding: 0.7rem;
   color: white;
   margin-top: 1.9rem;
-  border: none;
   border-radius: 6px;
   font-size: 1.1rem;
+  transition: 450ms ease;
+  font-size: 0.9rem;
+}
+
+.editprofile-btn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
 }
 
 .Inclusive-editprofile-page form .error_msg {
@@ -176,4 +185,8 @@
   color: black;
   font-weight: bold;
   padding-left: 1rem;
+}
+
+.currentImage {
+  color: white;
 }

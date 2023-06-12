@@ -17,6 +17,7 @@ import NotFound from "./components/GeneralScreens/NotFound";
 import EditStory from "./components/StoryScreens/EditStory";
 import ReadListPage from "./components/ProfileScreens/ReadListPage";
 import LiveCode from "./components/LiveCodingScreens/Livecode";
+import "../src/Css/app.css";
 
 const App = () => {
   return (

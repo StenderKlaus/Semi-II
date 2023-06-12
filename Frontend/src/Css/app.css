@@ -1,6 +1,10 @@
+body {
+  background-color: black;
+}
+
 .scriptHead {
   position: fixed;
-  top: ;
+  margin-top: 7.5em;
   left: 0;
   z-index: -5;
   width: 100%;
