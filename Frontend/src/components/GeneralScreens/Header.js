@@ -37,7 +37,9 @@ const Header = () => {
 
         <div class="dropdownContainer">
           <div class="dropdown">
-            <button class="dropbtn">Menu</button>
+            <button class="dropbtn">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
             <div class="dropdown-content">
               <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
                 Home

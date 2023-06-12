@@ -113,6 +113,7 @@
 .StoryImageField svg {
   font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.7);
+  fill: white;
 }
 
 .StoryImageField .txt {
@@ -120,7 +121,7 @@
   height: auto;
   margin-top: 14px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .StoryImageField [type="file"] {
@@ -133,25 +134,53 @@
 
 .addStory-btn {
   width: 100%;
-  background-color: rgb(56, 162, 170);
   padding: 0.7rem;
-  color: white;
   margin-top: 1.9rem;
-  border: none;
   border-radius: 6px;
   font-size: 1.1rem;
+
+  border: 1px solid rgb(56, 162, 170);
+  background-color: none;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mukta";
+  transition: 450ms ease;
+  cursor: pointer;
+}
+
+.addStory-btn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
 }
 
 .dis-btn {
   width: 100%;
-  background-color: #0063a5;
   padding: 0.7rem;
-  color: white;
   margin-top: 1.9rem;
-  border: none;
   border-radius: 6px;
   font-size: 1.1rem;
-  opacity: 0.4;
+
+  border: 1px solid rgb(56, 162, 170);
+  background-color: none;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mukta";
+  transition: 450ms ease;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.dis-btn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
 }
 
 .addStory-form .error_msg {
@@ -213,6 +242,40 @@ span {
 }
 
 /* will nicht */
-.StoryImageField .txt {
+.txt {
   color: white;
+}
+
+/* ----- */
+.StoryImageField svg {
+  fill: white;
+}
+
+.Inclusive-addStory-page button {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1.9rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+
+  border: 1px solid rgb(56, 162, 170);
+  background-color: none;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mukta";
+  transition: 450ms ease;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.Inclusive-addStory-page button:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
+}
+label Select {
+  background-color: black;
 }

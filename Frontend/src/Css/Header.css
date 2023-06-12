@@ -63,15 +63,23 @@ header .logo h5 {
   color: rgb(185, 185, 185) !important;
   border: rgb(185, 185, 185) solid 2px;
   padding: 4px 10px !important;
+  background-color: none;
   margin-right: 2rem;
   border-radius: 4px;
   margin-top: 7px;
 }
 
 .register-link {
-  border: rgb(185, 185, 185) solid 2px;
+  border: 1px solid rgb(56, 162, 170);
   border-radius: 4px;
-  color: rgb(185, 185, 185) !important;
+  color: white !important;
+  transition: 450ms ease;
+}
+
+.register-link:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
 }
 
 .search-form {
@@ -270,6 +278,7 @@ header .logo h5 {
   display: block;
   cursor: pointer;
 }
-.fa-chevron-down {
+.dropbtn .fa-chevron-down {
   font-size: 30px;
+  color: white;
 }
