@@ -45,25 +45,42 @@ const addStory = [parser.single("image"), async  (req,res,next)=> {
     let categorie = req.body.categorie.split(',');
 
     let wordCount = content.split(/\s+/).length ; 
-   
+    console.log("add story fired")
+
+    console.log(req.file)
+
     let readtime = Math.floor(wordCount /200)   ;
-    const newStory = await Story.create({
+
+    const story =  {
         title,
         content,
         categorie,
         author :req.user._id ,
-        image : req.file.path,
         readtime
-    })
+    }
+    if (req.file) {
+     story.image =req.file.path
+    }
+
+
+    const newStory = await Story.create(story)
+    console.log("story created")
+
     try {
 
-        
+
         await newStory.save();
+        if (req.file) {
         const result = await cloudinary.uploader.upload(req.file.path, {
             public_id : `storyPhoto/${newStory.author}/story`
-        })
+
+        })   
+        console.log("photo result", result)
+
         await newStory.save();
+        }
         res.send({ message: 'story added successfully', newStory });
+        console.log("story saved")
 
         // return res.status(200).json({
         //     success :true ,
@@ -72,7 +89,9 @@ const addStory = [parser.single("image"), async  (req,res,next)=> {
         // })
     }
 
-    catch(error) {
+    catch(error) { 
+        console.log(error)
+
         console.log(error.message)
         // deleteImageFile(req)
 
@@ -92,7 +111,7 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
     query = paginationResult.query  ;
 
-    query = query.sort("-likeCount -commentCount -createdAt")
+    query = query.sort("-updatedAt -createdAt")
 
     const stories = await query
     

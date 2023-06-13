@@ -12,7 +12,7 @@ import "../../Css/Home.css";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 
-const Home = () => {
+const Home = ({error}) => {
   const search = useLocation().search;
   const searchKey = new URLSearchParams(search).get("search");
   const [stories, setStories] = useState([]);
@@ -41,6 +41,9 @@ const Home = () => {
     { value: "livecoding", label: "Live coding" },
     { value: "exercises", label: "Exercises" },
   ];
+
+  console.log(error)
+
   useEffect(() => {
     const getStories = async () => {
       setLoading(true);
@@ -51,6 +54,7 @@ const Home = () => {
           );
           setStories(data.data);
           setPages(data.pages);
+          console.log("if fired")
           navigate({
             pathname: "/",
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
@@ -61,6 +65,7 @@ const Home = () => {
           );
           setStories(data.data);
           setPages(data.pages);
+          console.log("else if fired")
           navigate({
             pathname: "/",
             // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
@@ -78,14 +83,14 @@ const Home = () => {
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
         }
-        console.log("Home rerendered");
+        // console.log("Home rerendered");
         setLoading(false);
       } catch (error) {
         setLoading(true);
       }
     };
     getStories();
-    console.log("input search fired");
+    // console.log("input search fired");
   }, [setLoading, categories, search, page, navigate]);
 
   useEffect(() => {

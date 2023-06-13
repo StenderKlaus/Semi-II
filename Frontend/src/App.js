@@ -29,9 +29,9 @@ const App = () => {
           <Route path="/" element={<LayoutsWithHeader />}>
             <Route path="*" element={<NotFound />} />
 
-            <Route exact path="/" element={<PrivateRoute />}>
+            {/* <Route exact path="/" element={<PrivateRoute />}> */}
               <Route exact path="/" element={<Home />} />
-            </Route>
+            {/* </Route> */}
 
             <Route exact path="/story/:slug" element={<DetailStory />} />
 

@@ -20,6 +20,7 @@ const AddStory = () => {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
   const [categories, setCategories] = useState([]);
+ 
   const clearInputs = () => {
     setTitle("");
     setCategories([]);
@@ -159,8 +160,7 @@ const AddStory = () => {
         </div>
         <button
           type="submit"
-          disabled={image ? false : true}
-          className={image ? "addStory-btn" : "dis-btn"}
+          className="addStory-btn" 
         >
           Publish{" "}
         </button>
