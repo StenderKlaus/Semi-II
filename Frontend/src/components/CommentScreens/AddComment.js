@@ -2,7 +2,9 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import StarRating from "./StarRating";
 import { BsShieldCheck, BsCheckAll } from "react-icons/bs";
-import { IoAdd } from "react-icons/io5";
+import { MdClose} from "react-icons/md";
+
+
 import { useNavigate } from "react-router-dom";
 import "../../Css/AddComment.css";
 
@@ -76,10 +78,13 @@ const AddComment = ({
 
         <div>
           <BsShieldCheck />
-          <IoAdd
+          <MdClose onClick={() => setSidebarShowStatus(false)}
+            className="MdClose"/>
+          {/* <IoAdd
             onClick={() => setSidebarShowStatus(false)}
             className="ıoAddIcon"
-          />
+            style={{fill='rgb: fffffff'}}
+          /> */}
         </div>
       </div>
 

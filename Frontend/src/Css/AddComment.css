@@ -46,10 +46,11 @@
   margin-top: -8px;
 }
 
-.ıoAddIcon {
-  font-size: 2rem;
-  transform: rotate(45deg);
+.MdClose {
+  font-size: 1.5rem;
+  /* transform: rotate(45deg); */
   margin-left: 11px;
+  font-color: white;
 }
 
 .addComment-form {
