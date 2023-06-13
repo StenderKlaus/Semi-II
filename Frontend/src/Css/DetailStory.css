@@ -2,9 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&family=Roboto:wght@500&family=Secular+One&display=swap");
 
 .Inclusive-detailStory-page {
-  width: 1000px;
-  margin: 2rem auto 4rem;
   position: relative;
+  width: 1000px;
+  margin: 2.8rem auto;
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -73,7 +79,7 @@ li.story-author-info img {
 li.story-author-info span {
   font-family: "Mukta", sans-serif;
   font-weight: bold;
-  color: #0063a5;
+  color: #ffffff;
   margin: 0 6px;
 }
 
@@ -107,6 +113,8 @@ li.story-readtime {
   height: 400px;
   margin: 1.9rem 0;
   object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
 .story-content a {
@@ -274,4 +282,55 @@ li.story-readtime {
 .top_story_transactions span {
   color: #0063a5;
   cursor: pointer;
+}
+
+.CommentFieldEmp .Inclusive-comment-sidebar.hidden {
+  right: -1000px;
+}
+h5 {
+  border-top: 4px dotted rgba(102, 102, 102, 0.3);
+  border-bottom: 4px dotted rgba(102, 102, 102, 0.3);
+  width: 92%;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.story-general-info {
+  padding: 25px 5px;
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
+  width: 92%;
+  margin: 0 auto;
+}
+
+.story-categories-section button {
+  border: 1px dotted rgba(102, 102, 102, 0.3);
+  color: white;
+  background: rgba(102, 102, 102, 0.3);
+}
+
+.story-categories-section {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.content {
+  padding: 25px 5px;
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
+  width: 92%;
+  margin: 0 auto;
+}
+
+.content p {
+  color: white;
 }

@@ -4,7 +4,7 @@ body {
 
 .scriptHead {
   position: fixed;
-  margin-top: 7.5em;
+  margin-top: 5em;
   left: 0;
   z-index: -5;
   width: 100%;
