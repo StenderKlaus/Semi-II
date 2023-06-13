@@ -38,32 +38,27 @@ const Header = () => {
         <div class="dropdownContainer">
           <div class="dropdown">
             <button class="dropbtn">
+              Cheat sheets
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Home
+              <a href="https://livecoding-examples-html.vercel.app/" rel="noreferrer" target="_blank">
+                HTML En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Products
+              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+                HTML De
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Login
+              <a href="https://livecoding-examples-css.vercel.app/" rel="noreferrer" target="_blank">
+                CSS En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Signup
+              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+                CSS De
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Home
+              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+                JS En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Products
-              </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Login
-              </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp">
-                Signup
+              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+                JS De
               </a>
             </div>
           </div>

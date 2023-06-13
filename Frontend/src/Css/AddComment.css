@@ -1,12 +1,12 @@
 .Inclusive-comment-sidebar {
   position: fixed;
-  right: 0;
+  right: -440px;
   top: 0;
   height: 100vh;
-  width: 420px;
+  width: 425px;
 
   z-index: 99;
-  padding: 1.4rem 0.8rem 0.5rem 1.4rem;
+  padding: 1.4rem 1rem 0.1rem 1.4rem;
   transition: 350ms ease right;
   overflow-y: auto;
   overflow-x: hidden;
@@ -31,6 +31,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.6rem;
+
 }
 
 .sidebar-top-block h3 {
