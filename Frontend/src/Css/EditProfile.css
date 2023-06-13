@@ -154,7 +154,7 @@
 }
 
 .editprofile-btn:hover {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   background-color: rgb(56, 162, 170);
 }

@@ -2,20 +2,35 @@
 .Inclusive-readList-page {
   width: 700px;
   margin: 2.6rem auto;
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
 .Inclusive-readList-page h2 {
   font-family: "Secular One", sans-serif;
   font-size: 2.1rem;
-  margin-bottom: 1.6rem;
+  /* margin-bottom: 1.6rem; */
   font-weight: bold;
+  padding: 22px 25px;
+  color: rgb(56, 162, 170);
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-top: 4px dotted rgba(102, 102, 102, 0.3);
+  border-bottom: 4px dotted rgba(102, 102, 102, 0.3);
 }
 
 .readList-top-block {
-  padding: 0 3px;
+  padding: 20px 20px;
   display: flex;
   margin-bottom: 2.6rem;
   position: relative;
+  border-bottom: 4px dotted rgba(102, 102, 102, 0.3);
 }
 
 .readList-top-block img {
@@ -39,7 +54,7 @@
 }
 
 .readList-top-block .activeUser-info-wrapper b {
-  color: #0063a5;
+  color: rgb(56, 162, 170);
   display: block;
   font-size: 1rem;
   margin-bottom: 2px;
@@ -48,13 +63,13 @@
 .activeUser-info-wrapper div span {
   margin-right: 7px;
   font-size: 0.8rem;
-  color: rgb(94, 94, 94);
+  color: rgb(56, 162, 170);
   font-weight: bold;
 }
 
 .activeUser-info-wrapper div i svg {
   font-size: 0.8rem;
-  color: rgb(70, 70, 70);
+  color: rgb(56, 162, 170);
   margin-left: 6px;
   margin-top: -1px;
 }
@@ -65,12 +80,21 @@
 }
 
 .readList-story-wrapper .readList-story-item {
-  border-bottom: rgba(214, 214, 214, 0.4) solid 1px;
+  /* border-bottom: rgba(214, 214, 214, 0.4) solid 1px; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.7rem;
   position: relative;
-  padding-bottom: 2rem;
+  padding: 2rem;
+  width: 92%;
+  margin: 2rem auto;
+
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
 .readList-story-item section:first-child {
@@ -84,6 +108,7 @@
   font-weight: 500;
   width: 350px;
   font-family: "Signika Negative", sans-serif;
+  color: rgb(56, 162, 170);
 }
 
 .readList-story-item .story-top-block span {
@@ -108,7 +133,7 @@
 }
 
 .readList-story-title a {
-  color: rgb(49, 49, 49);
+  color: rgb(56, 162, 170);
   font-weight: 500;
   font-family: "Acme", sans-serif;
   text-decoration: none;
@@ -124,7 +149,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 730px) {
@@ -150,7 +175,7 @@
 }
 
 .story-bottom-block a {
-  color: #0063a5;
+  color: rgb(56, 162, 170);
   font-size: 0.8rem;
   text-decoration: none;
   font-weight: 500;
@@ -201,7 +226,13 @@
   display: flex;
   font-size: 1.1rem;
   font-family: "Inter";
-  color: rgb(112, 112, 112);
+  color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
+}
+
+.fa-angle-left {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
