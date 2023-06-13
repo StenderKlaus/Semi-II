@@ -187,7 +187,7 @@ const DetailStory = () => {
                         setSidebarShowStatus(!sidebarShowStatus);
                       }}
                     >
-                      <FaRegComment />
+                      <FaRegComment color="rgb(56, 162, 170)" />
                     </i>
 
                     <b className="commentCount">{story.commentCount}</b>
@@ -202,10 +202,10 @@ const DetailStory = () => {
                       className="editStoryLink"
                       to={`/story/${story.slug}/edit`}
                     >
-                      <FiEdit />
+                      <FiEdit color="rgb(56, 162, 170)" />
                     </Link>
                     <span className="deleteStoryLink" onClick={handleDelete}>
-                      <RiDeleteBin6Line />
+                      <RiDeleteBin6Line color="rgb(163, 4, 4)" />
                     </span>
                   </div>
                 ) : null}
@@ -247,9 +247,9 @@ const DetailStory = () => {
                   <li>
                     <i onClick={handleLike}>
                       {likeStatus ? (
-                        <FaHeart color="#0063a5" />
+                        <FaHeart color="rgb(56, 162, 170)" />
                       ) : (
-                        <FaRegHeart />
+                        <FaRegHeart color="rgb(56, 162, 170)" />
                       )}
                     </i>
 
@@ -257,8 +257,8 @@ const DetailStory = () => {
                       className="likecount"
                       style={
                         likeStatus
-                          ? { color: "#0063a5" }
-                          : { color: "rgb(99, 99, 99)" }
+                          ? { color: "rgb(56, 162, 170)" }
+                          : { color: "rgb(56, 162, 170)" }
                       }
                     >
                       {" "}
@@ -272,10 +272,19 @@ const DetailStory = () => {
                         setSidebarShowStatus(!sidebarShowStatus);
                       }}
                     >
-                      <FaRegComment />
+                      <FaRegComment color="rgb(56, 162, 170)" />
                     </i>
 
-                    <b className="commentCount">{story.commentCount}</b>
+                    <b
+                      className="commentCount"
+                      style={
+                        story
+                          ? { color: "rgb(56, 162, 170)" }
+                          : { color: "rgb(56, 162, 170)" }
+                      }
+                    >
+                      {story.commentCount}
+                    </b>
                   </li>
                 </ul>
 
@@ -283,9 +292,9 @@ const DetailStory = () => {
                   <li>
                     <i onClick={addStoryToReadList}>
                       {storyReadListStatus ? (
-                        <BsBookmarkFill color="#0205b1" />
+                        <BsBookmarkFill color="rgb(56, 162, 170)" />
                       ) : (
-                        <BsBookmarkPlus />
+                        <BsBookmarkPlus color="rgb(56, 162, 170)" />
                       )}
                     </i>
                   </li>

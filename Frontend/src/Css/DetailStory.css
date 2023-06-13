@@ -215,16 +215,17 @@ li.story-readtime {
 }
 
 .fixed-story-options {
-  border-top: rgb(236, 236, 236) solid 1px;
+  /* border-top: rgb(236, 236, 236) solid 1px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 1000px;
-  margin: 0 auto;
+  margin-top: 2em;
+  /* margin: 0 auto; */
   padding: 20px 8px;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
-  background-color: #fbfdff;
+  background-color: none;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -334,3 +335,7 @@ h5 {
 .content p {
   color: white;
 }
+
+/* .fixed-story-options ul {
+  margin-top: 15em;
+} */
