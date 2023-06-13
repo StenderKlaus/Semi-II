@@ -48,7 +48,7 @@
 
 .MdClose {
   font-size: 1.5rem;
-  /* transform: rotate(45deg); */
+   transform: rotate(1deg); 
   margin-left: 11px;
   font-color: white;
 }
