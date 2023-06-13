@@ -100,6 +100,7 @@ li.story-readtime {
   font-size: 1.2rem;
   position: relative;
   line-height: 32px;
+  margin-bottom: 2rem;
 }
 
 .story-banner-img {
@@ -149,9 +150,10 @@ li.story-readtime {
 }
 
 .story-content .content {
-  width: 92%;
+  width: 92.5%;
   margin: 0 auto;
-}
+  padding: 50px 50px;
+  }
 
 .bottom-sec-item {
   display: flex;
