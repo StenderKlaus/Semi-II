@@ -99,26 +99,29 @@ const Home = ({ error }) => {
 
   return (
     <div className="Inclusive-home-page">
-      <div class="categoryHome">
-        <i
-          onClick={() => {
-            setCategories([]);
-            navigate("/");
-          }}
-          class="fa-solid fa-angle-left"
-        ></i>
+      <div className="bigCatHome">
+        <div class="categoryHome">
+          <i
+            onClick={() => {
+              setCategories([]);
+              navigate("/");
+            }}
+            class="fa-solid fa-angle-left"
+          ></i>
 
-        <h6>Search Posts by a relevant category: </h6>
-
-        <label>
-          <Select
-            isSearchable={true}
-            options={thema}
-            onChange={(option) => setCategories(option)}
-            value={categories}
-            isMulti
-          />
-        </label>
+          <h6>Search Posts by a relevant category: </h6>
+          <div className="searchCat">
+            <label>
+              <Select
+                isSearchable={true}
+                options={thema}
+                onChange={(option) => setCategories(option)}
+                value={categories}
+                isMulti
+              />
+            </label>
+          </div>
+        </div>
       </div>
       {loading ? (
         <div className="skeleton_emp">
