@@ -32,7 +32,7 @@ const Header = () => {
     <header>
       <div className="averager">
         <Link to="/" className="logo">
-          <img className="logo2" src="logo2.png" alt="lightbulb" />
+          <img className="logo2" src="logo.png" alt="Logo" />
         </Link>
 
         <div class="dropdownContainer">
@@ -42,22 +42,46 @@ const Header = () => {
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="https://livecoding-examples-html.vercel.app/" rel="noreferrer" target="_blank">
+              <a
+                href="https://livecoding-examples-html.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 HTML En
               </a>
-              <a href="https://livecoding-examples-html-de.vercel.app/" rel="noreferrer" target="_blank">
+              <a
+                href="https://livecoding-examples-html-de.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 HTML De
               </a>
-              <a href="https://livecoding-examples-css.vercel.app/" rel="noreferrer" target="_blank">
+              <a
+                href="https://livecoding-examples-css.vercel.app/"
+                rel="noreferrer"
+                target="_blank"
+              >
                 CSS En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a
+                href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp"
+                rel="noreferrer"
+                target="_blank"
+              >
                 CSS De
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a
+                href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp"
+                rel="noreferrer"
+                target="_blank"
+              >
                 JS En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a
+                href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp"
+                rel="noreferrer"
+                target="_blank"
+              >
                 JS De
               </a>
             </div>

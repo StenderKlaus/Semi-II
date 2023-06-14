@@ -110,7 +110,6 @@ body {
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
   padding-bottom: 15px;
-
 }
 
 .Inclusive-home-page {
@@ -121,7 +120,8 @@ body {
   padding: 50px;
 }
 
-.Inclusive-home-page .label {
+.css-1jqq78o-placeholder {
+  z-index: 100;
 }
 
 .pagination button {
@@ -147,16 +147,20 @@ body {
 .fa-angle-left {
   cursor: pointer;
   font-size: 50px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .categoryHome {
-  padding: 25px 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 77.5%;
+  height: 4em;
   background: rgba(102, 102, 102, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.6px);
   -webkit-backdrop-filter: blur(5.6px);
   border: 1px solid rgba(102, 102, 102, 0.3);
-  width: 20em;
   margin: 0 auto;
+  padding: 1em;
+  align-items: center;
 }
