@@ -64,21 +64,21 @@ const Header = () => {
                 CSS En
               </a>
               <a
-                href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp"
+                href="https://www.w3schools.com/css/#"
                 rel="noreferrer"
                 target="_blank"
               >
                 CSS De
               </a>
               <a
-                href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp"
+                href="https://www.w3schools.com/js/"
                 rel="noreferrer"
                 target="_blank"
               >
                 JS En
               </a>
               <a
-                href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp"
+                href="https://www.w3schools.com/js/"
                 rel="noreferrer"
                 target="_blank"
               >
