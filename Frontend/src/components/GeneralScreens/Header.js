@@ -45,7 +45,7 @@ const Header = () => {
               <a href="https://livecoding-examples-html.vercel.app/" rel="noreferrer" target="_blank">
                 HTML En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a href="https://livecoding-examples-html-de.vercel.app/" rel="noreferrer" target="_blank">
                 HTML De
               </a>
               <a href="https://livecoding-examples-css.vercel.app/" rel="noreferrer" target="_blank">
