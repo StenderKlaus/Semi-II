@@ -212,7 +212,7 @@ const DetailStory = () => {
               </div>
             </div>
 
-            <div className="CommentFieldEmp">
+            <div id="CommentFieldEmp">
               <CommentSidebar
                 slug={slug}
                 sidebarShowStatus={sidebarShowStatus}
@@ -266,10 +266,12 @@ const DetailStory = () => {
                     </b>
                   </li>
 
-                  <li>
+                  
+                  <li  style={{textDecoration:"none"}}>
                     <i
                       onClick={(prev) => {
                         setSidebarShowStatus(!sidebarShowStatus);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                     >
                       <FaRegComment color="rgb(56, 162, 170)" />

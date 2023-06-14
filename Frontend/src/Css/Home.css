@@ -126,6 +126,13 @@ body {
   padding-bottom: 15px;
 }
 
+.story-createdAt {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(255, 255, 255);
+  margin: 2rem;
+  padding-bottom: 15px;
+}
+
 .Inclusive-home-page {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(0, 0, 0);

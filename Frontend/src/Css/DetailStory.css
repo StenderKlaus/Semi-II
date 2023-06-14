@@ -292,8 +292,12 @@ li.story-readtime {
   color: #0063a5;
   cursor: pointer;
 }
-
-.CommentFieldEmp .Inclusive-comment-sidebar.hidden {
+#CommentFieldEmp {
+  position: fixed;
+  right: -440px;
+  top:0;
+}
+.Inclusive-comment-sidebar.hidden {
  display: hidden;
 }
 h5 {
@@ -317,11 +321,20 @@ h5 {
 }
 
 .story-categories-section button {
-  border: 1px dotted rgba(102, 102, 102, 0.3);
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
   color: white;
   background: rgba(102, 102, 102, 0.3);
+  margin-left: 5px;
 }
 
+.story-categories-section button:hover {
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  background: rgb(56, 162, 170);
+  margin-left: 5px;
+}
 .story-categories-section {
   width: 92%;
   margin: 0 auto;
