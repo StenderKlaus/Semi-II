@@ -123,16 +123,19 @@ const AddStory = () => {
           onChange={(e) => setTitle(e.target.value)}
           value={title}
         />
-        <h6>Please select the relevant categories for this Post</h6>
-        <label>
-          <span>Post Category:</span>
-          <Select
-            isSearchable={true}
-            options={categoriesZwei}
-            onChange={(option) => setCategories(option)}
-            isMulti
-          />
-        </label>
+        <div className="select_div">
+          <h6 className="cat_select_p">Please select the relevant categories for this Post</h6>
+          <label >
+            <span>Post Category:</span>
+              <Select className="cat_select_color"
+                isSearchable={true}
+                options={categoriesZwei}
+                onChange={(option) => setCategories(option)}
+                isMulti
+                />
+          </label>
+        </div>
+        
 
         <CKEditor
           editor={ClassicEditor}
@@ -147,9 +150,10 @@ const AddStory = () => {
           <div className="txt">
             {image
               ? image.name
-              : " Include a high-quality image in your story to make it more inviting to readers."}
+              : <p className="image_txt"> " Include a high-quality image in your story to make it more inviting to readers."</p>}
           </div>
           <input
+          className="image_input"
             name="image"
             type="file"
             ref={imageEl}

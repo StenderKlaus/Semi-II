@@ -18,7 +18,9 @@
   flex-direction: column;
   align-items: center;
 }
-
+.fa-solid , .fa-angle-left{
+  margin-bottom: 0.5rem !important;
+}
 .addStory-form input#title {
   width: 100%;
   height: 55px;
@@ -45,8 +47,27 @@
   border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
+.cat_select_p{
+  margin: 1rem;
+}
+
+.cat_select_color{
+  margin-bottom: 1rem !important;
+  z-index: 100;
+}
 .ck-editor {
   margin-bottom: 1rem !important;
+}
+.select_div{
+  display: flex;
+    flex-direction: row;
+    margin: 20px;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 101.2%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
 @media only screen and (max-width: 651px) {
@@ -78,7 +99,7 @@
 }
 
 .ck-editor__editable {
-  height: 250px;
+  height: 200px;
   padding: 0.5rem 1rem !important;
 }
 
@@ -99,7 +120,7 @@
   -webkit-backdrop-filter: blur(5.6px);
   border: 1px solid rgba(102, 102, 102, 0.3);
   width: 100%;
-  height: 240px;
+  height: 100px !important;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -118,24 +139,31 @@
 
 .StoryImageField .txt {
   width: 350px;
-  height: auto;
+  height: 100px;
   margin-top: 14px;
   text-align: center;
+  color: white;
+}
+.StoryImageField p{
   color: white;
 }
 
 .StoryImageField [type="file"] {
   width: 100%;
-  height: 200px;
+  height: 100px;
   position: absolute;
   opacity: 0;
   cursor: pointer;
-}
 
+}
+.image_input{
+  height: 100px;
+}
 .addStory-btn {
   width: 100%;
   padding: 0.7rem;
   margin-top: 1.9rem;
+  margin-bottom: 1.9rem;
   border-radius: 6px;
   font-size: 1.1rem;
 
