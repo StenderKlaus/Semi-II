@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../Css/Register.css";
+import { BsArrowBarLeft } from "react-icons/bs";
+
 const RegisterScreen = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -46,8 +48,15 @@ const RegisterScreen = () => {
   return (
     <div className="Inclusive-register-page">
       <div className="register-big-wrapper">
+        <Link to="/" className="back_home">
+          <i class="fa-solid fa-angle-left"></i>
+        </Link>
         <div className="section-wrapper">
           <div className="top-suggest_login">
+            <br />
+            <br />
+            <br />
+            <br />
             <span> Have an account? </span>
             <a href="/login">Sign In</a>
           </div>
