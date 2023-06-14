@@ -86,24 +86,26 @@
 }
 
 .btns_wrap .profileEditBtn a {
+  margin-left: 2rem;
   width: 155px;
   border: 1px solid rgb(56, 162, 170);
-  color: rgb(56, 162, 170);
+  background-color: none;
   border-radius: 3px;
-  background-color: white;
+  color: white;
   height: 45px;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Mukta", sans-serif;
-  margin-left: 2rem;
+  font-family: "Mukta";
+  transition: 450ms ease;
   font-size: 0.9rem;
-  transition: 350ms ease;
 }
 
 .profileEditBtn a:hover {
-  background-color: #f8f8f8;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
 }
 
 .changePassBtn a {
