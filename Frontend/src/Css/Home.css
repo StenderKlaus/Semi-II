@@ -155,9 +155,11 @@ body {
 }
 
 .fa-angle-left {
-  cursor: pointer;
-  font-size: 30px;
-  /* margin: 0 auto; */
+  font-size: 25px;
+  color: white;
+  margin-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
 }
 .categoryHome {
   display: flex;
@@ -183,5 +185,6 @@ body {
 
 .arrowleft {
   display: flex;
-  padding-top: 4px;
+
+  /* padding-top: 4px; */
 }

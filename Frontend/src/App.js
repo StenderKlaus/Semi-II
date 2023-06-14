@@ -30,7 +30,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
 
             {/* <Route exact path="/" element={<PrivateRoute />}> */}
-              <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             {/* </Route> */}
 
             <Route exact path="/story/:slug" element={<DetailStory />} />
@@ -85,22 +85,21 @@ const App = () => {
             <Route exact path="/readList" element={<PrivateRoute />}>
               <Route exact path="/readList" element={<ReadListPage />} />
             </Route>
+            <Route exact path="/login" element={<LoginScreen />} />
+            <Route exact path="/register" element={<RegisterScreen />} />
+
+            <Route
+              exact
+              path="/forgotpassword"
+              element={<ForgotPasswordScreen />}
+            />
+
+            <Route
+              exact
+              path="/resetpassword"
+              element={<ResetPasswordScreen />}
+            />
           </Route>
-
-          <Route exact path="/login" element={<LoginScreen />} />
-          <Route exact path="/register" element={<RegisterScreen />} />
-
-          <Route
-            exact
-            path="/forgotpassword"
-            element={<ForgotPasswordScreen />}
-          />
-
-          <Route
-            exact
-            path="/resetpassword"
-            element={<ResetPasswordScreen />}
-          />
 
           <Route exact path="/livecode" element={<LiveCode />} />
         </Routes>
