@@ -12,7 +12,7 @@ import "../../Css/Home.css";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 
-const Home = ({error}) => {
+const Home = ({ error }) => {
   const search = useLocation().search;
   const searchKey = new URLSearchParams(search).get("search");
   const [stories, setStories] = useState([]);
@@ -42,7 +42,7 @@ const Home = ({error}) => {
     { value: "exercises", label: "Exercises" },
   ];
 
-  console.log(error)
+  console.log(error);
 
   useEffect(() => {
     const getStories = async () => {
@@ -54,7 +54,7 @@ const Home = ({error}) => {
           );
           setStories(data.data);
           setPages(data.pages);
-          console.log("if fired")
+          console.log("if fired");
           navigate({
             pathname: "/",
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
@@ -65,7 +65,7 @@ const Home = ({error}) => {
           );
           setStories(data.data);
           setPages(data.pages);
-          console.log("else if fired")
+          console.log("else if fired");
           navigate({
             pathname: "/",
             // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
@@ -107,7 +107,7 @@ const Home = ({error}) => {
           }}
           class="fa-solid fa-angle-left"
         ></i>
-        <br />
+
         <h6>Search Posts by a relevant category: </h6>
 
         <label>
