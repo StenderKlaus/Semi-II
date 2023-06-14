@@ -158,8 +158,6 @@ body {
   cursor: pointer;
   font-size: 30px;
   /* margin: 0 auto; */
-  margin-left: 3px;
-  margin-bottom: 1.5em;
 }
 .categoryHome {
   display: flex;
@@ -179,6 +177,11 @@ body {
 }
 
 .bigCatHome {
-  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.arrowleft {
+  display: flex;
+  padding-top: 4px;
 }

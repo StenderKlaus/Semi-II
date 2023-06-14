@@ -101,13 +101,15 @@ const Home = ({ error }) => {
     <div className="Inclusive-home-page">
       <div className="bigCatHome">
         <div class="categoryHome">
-          <i
-            onClick={() => {
-              setCategories([]);
-              navigate("/");
-            }}
-            class="fa-solid fa-angle-left"
-          ></i>
+          <div className="arrowleft">
+            <i
+              onClick={() => {
+                setCategories([]);
+                navigate("/");
+              }}
+              class="fa-solid fa-angle-left"
+            ></i>
+          </div>
 
           <h6>Search Posts by a relevant category: </h6>
           <div className="searchCat">
