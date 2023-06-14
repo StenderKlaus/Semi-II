@@ -51,13 +51,13 @@ const Header = () => {
               <a href="https://livecoding-examples-css.vercel.app/" rel="noreferrer" target="_blank">
                 CSS En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a href="https://www.w3schools.com/css/#" rel="noreferrer" target="_blank">
                 CSS De
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a href="https://www.w3schools.com/js/" rel="noreferrer" target="_blank">
                 JS En
               </a>
-              <a href="https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp" rel="noreferrer" target="_blank">
+              <a href="https://www.w3schools.com/js/" rel="noreferrer" target="_blank">
                 JS De
               </a>
             </div>
