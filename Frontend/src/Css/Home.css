@@ -57,7 +57,9 @@ body {
   .story-card {
     width: 380px;
   }
-
+  .bigCatHome {
+    display: none;
+  }
   /* .categoryHome {
     max-width: 674px;
   } */
@@ -157,9 +159,8 @@ body {
 .fa-angle-left {
   font-size: 25px;
   color: white;
-  margin-left: 1em;
-  margin-top: 0.5em;
-  margin-bottom: 2em;
+  margin-left: 1em !important;
+  margin-top: 0.5em !important;
 }
 .categoryHome {
   display: flex;
@@ -187,4 +188,7 @@ body {
   display: flex;
 
   /* padding-top: 4px; */
+}
+
+h6 {
 }
