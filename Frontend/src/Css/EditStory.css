@@ -64,6 +64,27 @@
   margin-bottom: 2em;
 }
 
+.select_div {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  flex-wrap: nowrap;
+  align-content: center;
+  width: 101.2%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cat_select_p {
+  margin: 1rem;
+}
+
+.cat_select_color {
+  margin-bottom: 1rem !important;
+  z-index: 100;
+}
+
 .ck-editor {
   margin-bottom: 1rem !important;
 }

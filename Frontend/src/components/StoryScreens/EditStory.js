@@ -134,16 +134,19 @@ const EditStory = () => {
               onChange={(e) => setTitle(e.target.value)}
               value={title}
             />
-            <h6>Please reselect the relevant categories for this Post</h6>
-            <label>
-              <span>Post Category:</span>
-              <Select
-                isSearchable={true}
-                options={categoriesZwei}
-                onChange={(option) => setCategories(option)}
-                isMulti
-              />
-            </label>
+             <div className="select_div">
+              <h6 className="cat_select_p">Please reselect the relevant categories for this Post</h6>
+              <label>
+                <span>Post Category:</span>
+                <Select  className="cat_select_color"
+                  isSearchable={true}
+                  options={categoriesZwei}
+                  onChange={(option) => setCategories(option)}
+                  isMulti
+                />
+              </label>
+            </div>
+            
             <CKEditor
               editor={ClassicEditor}
               onChange={(e, editor) => {
