@@ -110,7 +110,7 @@ const Header = () => {
                 <div className="sub-profile-wrap  ">
                   <Link className="profile-link" to="/profile">
                     {" "}
-                    <FaUserEdit /> Profile{" "}
+                    <FaUserEdit color="rgb(56, 162, 170) " /> Profile{" "}
                   </Link>
 
                   <button className="logout-btn" onClick={handleLogout}>
