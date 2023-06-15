@@ -95,32 +95,33 @@ const EditProfile = () => {
 
               <div className="profile-img-upld-wrapper">
                 <div className="currentImage">
-                  <div className="absolute">Currently Image</div>
+                  <div className="absolute">Current photo</div>
                   <div className="currentImageDiv">
                     <img src={`${previousPhoto}`} alt="userPhoto" />
                   </div>
                 </div>
-                <div className="ProfilePhotoField">
+                <div className="ProfilePhotoField"> <span>Change  Photo</span>
+                <div className="icons" >
                   <FaUserAlt />
 
                   <div className="txt">
                     {photo === previousPhoto ? (
                       <div>
                         <AiOutlineUpload />
-                        <span>Change Profile Photo</span>
                       </div>
                     ) : (
                       photo.name
                     )}
-                  </div>
-                  <input
+                  <input className="new-image-input"
                     name="photo"
                     type="file"
                     onChange={(e) => {
                       setPhoto(e.target.files[0]);
                     }}
                   />
-                </div>
+                  </div>
+                </div></div>
+                   
               </div>
 
               <button type="submit" className="editprofile-btn">
