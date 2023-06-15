@@ -59,7 +59,7 @@ const login  = asyncErrorWrapper (async(req,res,next) => {
 
 
 const forgotpassword  = asyncErrorWrapper( async (req,res,next) => {
-    const {EMAIL_USERNAME} = process.env ; 
+    const {URI,EMAIL_USERNAME} = process.env ; 
 
     const resetEmail = req.body.email  ;
 
@@ -73,7 +73,7 @@ const forgotpassword  = asyncErrorWrapper( async (req,res,next) => {
 
     await user.save()  ;
 
-    const resetPasswordUrl = `/resetpassword?resetPasswordToken=${resetPasswordToken}`
+    const resetPasswordUrl = `${URI}/resetpassword?resetPasswordToken=${resetPasswordToken}`
 
     const emailTemplate = `
     <h3 style="color : red "> Reset Your Password </h3>
