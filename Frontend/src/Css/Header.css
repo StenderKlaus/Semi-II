@@ -11,8 +11,7 @@ header {
 }
 
 header .averager {
-  max-width: 1000px;
-  width: 100%;
+  width: 65.5%;
   height: 92px;
   border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
   margin: 0 auto;
@@ -140,15 +139,15 @@ header .logo h5 {
 }
 
 .header-profile-wrapper {
-  height: 50px;
+  height: 70px;
   position: relative;
 }
 
 .header-profile-wrapper img {
   border-radius: 50%;
-  width: 52px;
+  width: 70px;
   cursor: pointer;
-  height: 52px;
+  height: 70px;
   margin-top: 3px;
 }
 

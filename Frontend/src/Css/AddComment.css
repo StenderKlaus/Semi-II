@@ -143,8 +143,8 @@
 }
 
 .formBtn-wrapper .respond-Btn {
-  border: 1px solid rgb(56, 162, 170);
-  background-color: none;
+  border: 1px solid white;
+  background-color: rgb(56, 162, 170);
   border-radius: 3px;
   padding: 6px 10px;
   letter-spacing: 0.5px;
@@ -156,9 +156,9 @@
 }
 
 .formBtn-wrapper .respond-Btn:hover {
-  color: white;
+  color: rgb(56, 162, 170);
   text-decoration: none;
-  background-color: rgb(56, 162, 170);
+  background-color: white;
 }
 
 .sidebar-top-block div svg {
@@ -172,6 +172,13 @@ h5 {
 .formBtn-wrapper .respond-Btn.disable {
   opacity: 0.5;
 }
+.formBtn-wrapper .respond-Btn.disable:hover {
+  opacity: 0.5;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(56, 162, 170);
+}
+
 
 .StarRating-wrapper svg {
   cursor: pointer;
@@ -187,7 +194,7 @@ h5 {
   font-weight: bold;
   color: rgb(0, 102, 0);
   padding: 3px 6px;
-  background-color: rgba(185, 185, 185, 0.2);
+  background-color: white;
 }
 
 .alert-error-message {
@@ -197,9 +204,9 @@ h5 {
   font-weight: bold;
   z-index: 52;
   margin-bottom: 11px;
-  color: rgb(138, 1, 12);
+  color: white;
   padding: 3px 6px;
-  background-color: rgba(185, 185, 185, 0.2);
+  background-color: darkred;
 }
 
 .alert-success-message svg {
@@ -213,7 +220,6 @@ h3 {
 
 .comment-item {
   margin-bottom: 2.5rem;
-
   transition: padding-top 400ms ease 0s, padding-bottom 400ms ease 0s;
   padding: 1rem;
   position: relative;

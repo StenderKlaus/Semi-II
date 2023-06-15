@@ -201,6 +201,10 @@ li.story-readtime {
   transform: scale(1.1);
 }
 
+.comment-info-wrap .commentCount {
+  color: whitesmoke;
+}
+
 .bottom-sec-item ul li i svg,
 .fixed-story-options ul li i svg {
   font-size: 1.2rem;
@@ -318,6 +322,17 @@ h5 {
   border: 1px solid rgba(102, 102, 102, 0.3);
   width: 92%;
   margin: 0 auto;
+}
+
+.story-general-info .story-createdAt, 
+.story-general-info .story-readtime,
+.story-general-info b{
+  color: whitesmoke;
+}
+
+.story-general-info .story-createdAt{
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .story-categories-section button {
