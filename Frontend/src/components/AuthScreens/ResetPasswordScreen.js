@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
-import "../../Css/ResetPasswordScreen.css"
+import "../../Css/ResetPasswordScreen.css";
 
 const ResetPasswordScreen = () => {
   const [password, setPassword] = useState("");
@@ -9,7 +9,7 @@ const ResetPasswordScreen = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const search = useLocation().search;
-  const token = search.split("=")[1]
+  const token = search.split("=")[1];
 
   const resetPasswordHandler = async (e) => {
     e.preventDefault();
@@ -32,9 +32,7 @@ const ResetPasswordScreen = () => {
       );
 
       setSuccess(data.message);
-
     } catch (error) {
-
       setError(error.response.data.error);
 
       setTimeout(() => {
@@ -45,12 +43,11 @@ const ResetPasswordScreen = () => {
 
   return (
     <div className="Inclusive-resetPassword-page">
-      <form
-        onSubmit={resetPasswordHandler}
-        className="resetpassword-form"
-      >
-
-        <h3 >Reset Password</h3>
+      <form onSubmit={resetPasswordHandler} className="resetpassword-form">
+        <Link to={"/"}>
+          <i class="fa-solid fa-angle-left"></i>
+        </Link>
+        <h3>Reset Password</h3>
 
         {error && <div className="error_msg">{error} </div>}
 
@@ -74,7 +71,6 @@ const ResetPasswordScreen = () => {
         </div>
 
         <div className="input-wrapper">
-
           <input
             type="password"
             required
@@ -86,10 +82,7 @@ const ResetPasswordScreen = () => {
           />
           <label htmlFor="confirmpassword">Confirm New Password</label>
         </div>
-        <button className="resetPass-btn">
-          Reset Password
-        </button>
-
+        <button className="resetPass-btn">Reset Password</button>
       </form>
     </div>
   );
