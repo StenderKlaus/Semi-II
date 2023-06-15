@@ -100,7 +100,7 @@ const Home = ({ error }) => {
   return (
     <div className="Inclusive-home-page">
 
-<div className="arrowleft">
+      <div className="arrowleft">
             <i
               onClick={() => {
                 setCategories([]);
@@ -108,15 +108,15 @@ const Home = ({ error }) => {
               }}
               class="fa-solid fa-angle-left"
             ></i>
-          </div>
+      </div>
 
       {/* <div className="bigCatHome">
         <div class="categoryHome"> */}
 
-        <div className="select_div">
-          <h6  className="cat_select_p" >Search Posts by a relevant category: </h6>
+        <div className="home_select_div">
+          <h6  className="home_cat_select_p" >Search all Posts by a relevant category: </h6>
             <label>
-              <Select className="cat_select_color"
+              <Select className="home_cat_select_color"
                 isSearchable={true}
                 options={thema}
                 onChange={(option) => setCategories(option)}
