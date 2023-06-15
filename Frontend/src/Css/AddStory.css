@@ -18,7 +18,8 @@
   flex-direction: column;
   align-items: center;
 }
-.fa-solid , .fa-angle-left{
+.fa-solid,
+.fa-angle-left {
   margin-bottom: 0.5rem !important;
 }
 .addStory-form input#title {
@@ -47,27 +48,27 @@
   border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
-.cat_select_p{
+.cat_select_p {
   margin: 1rem;
 }
 
-.cat_select_color{
+.cat_select_color {
   margin-bottom: 1rem !important;
   z-index: 100;
 }
 .ck-editor {
   margin-bottom: 1rem !important;
 }
-.select_div{
+.select_div {
   display: flex;
-    flex-direction: row;
-    margin: 20px;
-    flex-wrap: nowrap;
-    align-content: center;
-    width: 101.2%;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+  flex-direction: row;
+  margin: 20px;
+  flex-wrap: nowrap;
+  align-content: center;
+  width: 101.2%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 651px) {
@@ -144,7 +145,7 @@
   text-align: center;
   color: white;
 }
-.StoryImageField p{
+.StoryImageField p {
   color: white;
 }
 
@@ -154,9 +155,8 @@
   position: absolute;
   opacity: 0;
   cursor: pointer;
-
 }
-.image_input{
+.image_input {
   height: 100px;
 }
 .addStory-btn {
@@ -168,7 +168,7 @@
   font-size: 1.1rem;
 
   border: 1px solid rgb(56, 162, 170);
-  background-color: none;
+  background-color: rgb(56, 162, 170);
   color: white;
   text-decoration: none;
   display: flex;
@@ -180,9 +180,10 @@
 }
 
 .addStory-btn:hover {
-  color: white;
+  color: rgb(56, 162, 170);
   text-decoration: none;
-  background-color: rgb(56, 162, 170);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(56, 162, 170);
 }
 
 .dis-btn {

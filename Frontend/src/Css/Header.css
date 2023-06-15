@@ -34,6 +34,7 @@ header .logo h5 {
   margin-top: 3px;
 }
 
+/* ------------- */
 .header_options {
   width: auto;
   position: relative;
@@ -177,7 +178,7 @@ header .logo h5 {
   text-decoration: none;
   font-family: "Saira Condensed", sans-serif;
   font-size: 1.2rem;
-  color: #0063a5;
+  color: rgb(56, 162, 170);
   font-weight: 500;
 }
 

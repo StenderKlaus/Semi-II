@@ -2,6 +2,17 @@
 .Inclusive-editStory-page {
   width: 1000px;
   margin: 1.2rem auto;
+
+  border-radius: 6px;
+  margin: auto;
+  border: 1px solid rgba(121, 118, 118, 0.3);
+
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
 }
 
 @media only screen and (max-width: 1001px) {
@@ -30,6 +41,27 @@
   font-weight: 450;
   font-family: "Balsamiq Sans", cursive;
   border-bottom: none;
+
+  /* ------------- */
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  margin: auto;
+  border: 1px solid rgba(121, 118, 118, 0.3);
+
+  background: rgba(102, 102, 102, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(102, 102, 102, 0.3);
+}
+
+.Inclusive-addStory-page .fa-angle-left {
+  font-size: 25px;
+  color: white;
+  margin-left: 3em;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
 }
 
 .ck-editor {
@@ -89,7 +121,7 @@
 
 .StoryImageField svg {
   font-size: 1.4rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .StoryImageField .txt {
@@ -97,7 +129,7 @@
   height: auto;
   margin-top: 14px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .StoryImageField [type="file"] {
@@ -110,20 +142,29 @@
 
 .editStory-btn {
   width: 100%;
-  background-color: #ffffff;
   padding: 0.7rem;
-  color: rgb(56, 162, 170);
   margin-top: 1.9rem;
-  border: 1px solid rgb(56, 162, 170);
+  margin-bottom: 1.9rem;
   border-radius: 6px;
   font-size: 1.1rem;
+
+  border: 1px solid rgb(56, 162, 170);
+  background-color: rgb(56, 162, 170);
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mukta";
   transition: 450ms ease;
+  cursor: pointer;
 }
 
 .editStory-btn:hover {
-  color: white;
+  color: rgb(56, 162, 170);
   text-decoration: none;
-  background-color: rgb(56, 162, 170);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(56, 162, 170);
 }
 
 .dis-btn {
