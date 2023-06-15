@@ -129,7 +129,7 @@ const Header = () => {
 
               <Link className="register-link" to="/register">
                 {" "}
-                Get Started
+                Sign-up{" "}
               </Link>
             </div>
           )}
