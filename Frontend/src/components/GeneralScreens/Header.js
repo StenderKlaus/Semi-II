@@ -32,7 +32,7 @@ const Header = () => {
     <header>
       <div className="averager">
         <Link to="/" className="logo">
-          <img className="logo2" src="logo.png" alt="Logo" />
+          <img className="logo2" src="logoneu.png" alt="Logo" />
         </Link>
 
         <div class="dropdownContainer">
