@@ -250,7 +250,7 @@ This project was created using the following technologies.
 
 - Github: [StenderKlaus](https://github.com/StenderKlaus)
 
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/klaus-stender-7ba879266/)
+- Linkedin: [StenderKlaus](https://www.linkedin.com/in/klaus-stender-7ba879266/)
 
 - Email: [stender.klaus@yahoo.de](mailto:stender.klaus@yahoo.de)
 

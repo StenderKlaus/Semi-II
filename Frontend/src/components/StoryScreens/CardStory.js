@@ -12,10 +12,10 @@ const Story = ({ story }) => {
         return datestring
     }
 
-    const truncateContent = (content) => {
-        const trimmedString = content.substr(0, 73);
-        return trimmedString
-    }
+    // const truncateContent = (content) => {
+    //     const trimmedString = content.substr(0, 73);
+    //     return trimmedString
+    // }
     const truncateTitle= (title) => {
         const trimmedString = title.substr(0, 69);
         return trimmedString
@@ -41,8 +41,8 @@ const Story = ({ story }) => {
                         ))}
                     </span>
 
-                    <p className="story-text"dangerouslySetInnerHTML={{__html : truncateContent( story.content) +"..."}}>
-                        </p>
+                    {/* <p className="story-text"dangerouslySetInnerHTML={{__html : truncateContent( story.content) +"..."}}>
+                        </p> */}
                     <p className="story-createdAt">{editDate(story.createdAt)} 
                     </p>
                 </div>
