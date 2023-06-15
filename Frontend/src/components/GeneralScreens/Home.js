@@ -99,9 +99,8 @@ const Home = ({ error }) => {
 
   return (
     <div className="Inclusive-home-page">
-      <div className="bigCatHome">
-        <div class="categoryHome">
-          <div className="arrowleft">
+
+<div className="arrowleft">
             <i
               onClick={() => {
                 setCategories([]);
@@ -111,10 +110,13 @@ const Home = ({ error }) => {
             ></i>
           </div>
 
-          <h6>Search Posts by a relevant category: </h6>
-          <div className="searchCat">
+      {/* <div className="bigCatHome">
+        <div class="categoryHome"> */}
+
+        <div className="select_div">
+          <h6  className="cat_select_p" >Search Posts by a relevant category: </h6>
             <label>
-              <Select
+              <Select className="cat_select_color"
                 isSearchable={true}
                 options={thema}
                 onChange={(option) => setCategories(option)}
@@ -122,9 +124,10 @@ const Home = ({ error }) => {
                 isMulti
               />
             </label>
-          </div>
-        </div>
-      </div>
+        </div>     
+          
+        {/* </div>
+      </div> */}
       {loading ? (
         <div className="skeleton_emp">
           {[...Array(9)].map(() => {
