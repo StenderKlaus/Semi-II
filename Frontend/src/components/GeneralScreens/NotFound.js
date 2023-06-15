@@ -1,8 +1,16 @@
 import React from "react";
-import "../../Css/NotFound.css"
+import "../../Css/NotFound.css";
+import { Link, useNavigate } from "react-router-dom";
 const NotFound = () => (
   <>
-    <div className="notFound">
+    <div className="allroundBox">
+      <img className="notFound" src="404.jpg" alt="404 Page not found" />
+
+      <button className="backBtn">
+        <Link to="/">Back Home</Link>
+      </button>
+    </div>
+    {/* <div className="notFound">
 
       <div className='stars'></div>
       <div className='stars2'></div>
@@ -16,10 +24,8 @@ const NotFound = () => (
           PAGE NOT FOUND
         </span>
       </div>
-    </div>
-
+    </div> */}
   </>
-
 );
 
 export default NotFound;
