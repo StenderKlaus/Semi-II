@@ -37,7 +37,7 @@ const PrivateRoute =( ) => {
 
             navigate("/")
 
-            setError("You are not authorized please login"); 
+            setError("You are not authorized. Please login"); 
         }
         };
 
