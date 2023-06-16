@@ -42,7 +42,7 @@ const PrivateRoute =( ) => {
         };
 
         controlAuth()
-    }, [bool,navigate])
+    }, [bool,navigate, setActiveUser, setConfig])
 
 
     return (auth ? <Outlet />  : <Home error={error} />)
