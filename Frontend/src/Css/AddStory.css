@@ -26,7 +26,6 @@
   width: 100%;
   height: 55px;
   outline: 0;
-
   font-size: 1.4rem;
   padding-left: 1rem;
   font-weight: 450;
@@ -88,6 +87,8 @@
 
 .ck-content {
   border: rgb(235, 235, 235) solid 1px !important;
+  color: whitesmoke;
+  font-size: 0.6rem;
 }
 
 .ck-toolbar__items,
@@ -162,7 +163,6 @@
   margin-bottom: 1.9rem;
   border-radius: 6px;
   font-size: 1.1rem;
-
   border: 1px solid rgb(56, 162, 170);
   background-color: rgb(56, 162, 170);
   color: white;
@@ -188,7 +188,6 @@
   margin-top: 1.9rem;
   border-radius: 6px;
   font-size: 1.1rem;
-
   border: 1px solid rgb(56, 162, 170);
   background-color: none;
   color: white;
@@ -241,7 +240,6 @@
   border-radius: 6px;
   margin: auto;
   border: 1px solid rgba(121, 118, 118, 0.3);
-
   background: rgba(102, 102, 102, 0.3);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -282,7 +280,6 @@ span {
   margin-top: 1.9rem;
   border-radius: 6px;
   font-size: 1.1rem;
-
   border: 1px solid rgb(56, 162, 170);
   background-color: white;
   color: rgb(56, 162, 170);
@@ -303,4 +300,9 @@ span {
 }
 label Select {
   background-color: black;
+}
+
+.table {
+  color: whitesmoke;
+  font-size: 0.9rem;
 }
