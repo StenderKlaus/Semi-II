@@ -91,7 +91,7 @@ const Home = ({ error }) => {
     };
     getStories();
     // console.log("input search fired");
-  }, [setLoading, categories, search, page, navigate, searchKey]);
+  }, [setLoading, categories, search, page, navigate]);
 
   useEffect(() => {
     setPage(1);

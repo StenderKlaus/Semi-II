@@ -5,7 +5,7 @@ import "../../Css/DetailStory.css";
 import Loader from "../GeneralScreens/Loader";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { FiEdit } from "react-icons/fi";
+import { FiEdit, FiArrowLeft } from "react-icons/fi";
 import { FaRegComment } from "react-icons/fa";
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from "react-icons/bs";
 import CommentSidebar from "../CommentScreens/CommentSidebar";
@@ -68,7 +68,7 @@ const DetailStory = () => {
     };
     getDetailStory();
     return () => getDetailStory();
-  }, [slug, setLoading, navigate]);
+  }, [slug, setLoading]);
 
   const handleLike = async () => {
     setTimeout(() => {
