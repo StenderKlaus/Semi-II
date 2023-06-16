@@ -38,8 +38,3 @@ process.on("unhandledRejection",(err , promise) =>{
     server.close(()=>process.exit(1))
 })
 
-app.use(express.static(path.join(__dirname, "../client/build")));
-
-app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname + "/../client/build/index.html"))
-})
