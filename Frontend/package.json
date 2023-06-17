@@ -1,8 +1,8 @@
 {
     "name": "frontend",
     "version": "0.1.0",
-    "proxy": "https://semicolons-backend.onrender.com/",
-    "private": false,
+    "proxy": "http://localhost:5000/",
+    "private": true,
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^32.0.0",
         "@ckeditor/ckeditor5-react": "^4.0.0",
