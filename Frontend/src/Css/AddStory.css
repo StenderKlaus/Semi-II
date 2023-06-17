@@ -87,8 +87,6 @@
 
 .ck-content {
   border: rgb(235, 235, 235) solid 1px !important;
-  color: whitesmoke;
-  font-size: 0.6rem;
 }
 
 .ck-toolbar__items,
@@ -302,7 +300,3 @@ label Select {
   background-color: black;
 }
 
-.table {
-  color: whitesmoke;
-  font-size: 0.9rem;
-}

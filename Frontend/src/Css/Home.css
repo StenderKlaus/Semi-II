@@ -134,9 +134,12 @@ body {
 }
 
 .story-card img.story-image {
-  width: 100%;
+  width: 90%;
   height: 225px;
-  border-radius: 6px 6px 0 0;
+  margin-left: 10px;
+  margin-top: 17px;
+  margin-right: 10px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
