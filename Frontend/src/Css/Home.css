@@ -170,7 +170,7 @@ body {
 
 .story-card .story-text,
 .story-card .story-text * {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
   font-size: 1rem;
   font-weight: normal;
 }

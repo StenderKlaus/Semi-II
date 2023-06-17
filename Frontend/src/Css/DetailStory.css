@@ -366,12 +366,15 @@ h5 {
   border: 1px solid rgba(102, 102, 102, 0.3);
   width: 92%;
   margin: 0 auto;
+  color: whitesmoke !important;
+  font: 0.9rem !important;
 }
 
 .content p {
-  color: white;
+  color: whitesmoke !important;
+  font: 0.9rem !important;
 }
 
 /* .fixed-story-options ul {
   margin-top: 15em;
-} */
+}  */
