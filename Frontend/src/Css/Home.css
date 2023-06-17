@@ -44,9 +44,12 @@ body {
 
 .arrowleft {
   display: flex;
-
-  /* padding-top: 4px; */
   }
+
+.arrowleft:hover {
+  cursor: pointer;
+  }
+
 .home_cat_select_p {
   font-size: 1.1rem;
   color: whitesmoke;
