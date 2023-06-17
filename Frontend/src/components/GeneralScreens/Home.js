@@ -37,8 +37,8 @@ const Home = ({ error }) => {
     { value: "mongodb", label: "MongoDB" },
     { value: "mysql", label: "MySQL" },
     { value: "ubuntu", label: "Ubuntu" },
-    { value: "usefullinks", label: "Useful Links" },
-    { value: "livecoding", label: "Live coding" },
+    { value: "useful links", label: "Useful Links" },
+    { value: "live coding", label: "Live coding" },
     { value: "exercises", label: "Exercises" },
   ];
 
