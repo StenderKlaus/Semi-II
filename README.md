@@ -121,10 +121,10 @@ $ nodemon start (to start the backend)
 - User registration and login
 - Authentication using JWT Tokens
 - CRUD operations (Story create, read, update and delete)
-- Upload user Profile Images and story Images  to the Cloudinary Server
+- Upload user Profile Images and story Images to the Cloudinary Server
 - Commenting on the story and Liking of the Comments
-- Liking  stories and adding stories  to the Reading list
-- the Ability to add Relevant Categories When adding a new Story 
+- Liking  stories and adding stories to the Reading list
+- The Ability to add relevant Categories when adding a new Story 
 - Browse Stories Based on story Categories 
 - Story searching Based on Story Title and pagination
 - An add to Favorites or to Reading List of bookmarked stories
@@ -213,13 +213,11 @@ This project was created using the following technologies.
 
 <h5  align ="center">Lea Prem<h5>
 
-- Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+- Github: [Lea Prem](https://github.com/Anyanka17)
 
-- Github: [@bert-hutapea](https://github.com/berthutapea)
+- Linkedin: [Lea Prem](https://www.linkedin.com/me?trk=p_mwlite_profile_self-secondary_nav)
 
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
-
-- Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
+- Email: [Lea Prem](mailto:Prem.produktion@gmail.com)
 
 
 <h5  align ="center">George Beyrouti<h5>
@@ -235,13 +233,10 @@ This project was created using the following technologies.
 
 <h5  align ="center">Marvin Hampe<h5>
 
-- Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+- Github: [Marvin Hampe](https://github.com/MarvinHampe)
 
-- Github: [@bert-hutapea](https://github.com/berthutapea)
 
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
-
-- Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
+- Email: [Marvin Hampe](mailto:viewsfamily6@gmail.com)
 
 
 <h5  align ="center">Klaus Stender<h5>
