@@ -98,10 +98,11 @@ li.story-readtime {
   width: 100%;
   margin-top: 0.5rem !important;
   font-family: "IBM Plex Serif", sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   position: relative;
   line-height: 32px;
   margin-bottom: 2rem;
+  color: wheat !important;
 }
 
 .story-banner-img {
@@ -121,7 +122,15 @@ li.story-readtime {
 
 .story-content a {
   font-weight: bold;
-  color: black;
+  color: rgb(56, 162, 170) !important;
+  text-decoration: none;
+  padding: 0 4px;
+}
+
+.story-content td {
+  font-weight: bold;
+  color: wheat !important;
+  text-decoration: none;
   padding: 0 4px;
 }
 
@@ -153,9 +162,9 @@ li.story-readtime {
 .story-content .content {
   width: 92.5%;
   margin: 0 auto;
-  padding: 50px 50px;
-  color: whitesmoke;
-  font-size: 2rem;
+  padding: 30px 30px;
+  color: whitesmoke !important;
+  font-size: 1rem;
   }
 
 .bottom-sec-item {
@@ -367,12 +376,12 @@ h5 {
   width: 92%;
   margin: 0 auto;
   color: whitesmoke !important;
-  font: 0.9rem !important;
+  font: 0.3rem !important;
 }
 
 .content p {
   color: whitesmoke !important;
-  font: 0.9rem !important;
+  font: 0.6rem !important;
 }
 
 /* .fixed-story-options ul {
