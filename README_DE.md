@@ -3,7 +3,7 @@
 Fullstack open source blogging application made with MongoDB, Express, React & Nodejs (MERN) </h4>
 
 <h5> 
-Dieser Blog / diese Selbstlernplattform hilft Menschen, die daran interessiert sind, WEB DEVELOPMENT selbst zu erlernen, den ersten Schritt in dieses spannende Feld zu machen.</h5>
+Dieser Blog / diese Selbstlernplattform hilft Menschen, die daran interessiert sind, WEB DEVELOPMENT selbst zu erlernen, die ersten Schritte in dieses spannende Feld zu machen.</h5>
 
 
 <h5> 
