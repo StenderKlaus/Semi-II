@@ -126,13 +126,10 @@ const Home = ({ error }) => {
             </label>
         </div>     
           
-        {/* </div>
-      </div> */}
       {loading ? (
         <div className="skeleton_emp">
           {[...Array(9)].map(() => {
             return (
-              // theme dark :> default : light
               <SkeletonStory key={uuidv4()} />
             );
           })}
