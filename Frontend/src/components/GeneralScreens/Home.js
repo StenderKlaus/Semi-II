@@ -78,6 +78,7 @@ const Home = ({ error }) => {
           const { data } = await axios.get(
             `/story/getAllStories?search=${searchKey || ""}&page=${page}`
           );
+          console.log("aris test clg", data, data.data);
           setStories(data.data);
           setPages(data.pages);
           navigate({
