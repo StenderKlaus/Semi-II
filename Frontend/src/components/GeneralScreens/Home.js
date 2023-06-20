@@ -48,7 +48,7 @@ const Home = ({ error }) => {
       try {
         if (searchKey) {
           const { data } = await axios.get(
-            `/story/getAllStories?search=${searchKey}&page=${page}`
+            `https://semicolons-backend.onrender.com/story/getAllStories?search=${searchKey}&page=${page}`
           );
           setStories(data.data);
           setPages(data.pages);
@@ -59,7 +59,7 @@ const Home = ({ error }) => {
           });
         } else if (categories.length > 0) {
           const { data } = await axios.get(
-            `/story/getAllPostCat?search=${categories[0].value}&page=${page}`
+            `https://semicolons-backend.onrender.com/story/getAllPostCat?search=${categories[0].value}&page=${page}`
           );
           setStories(data.data);
           setPages(data.pages);
@@ -74,7 +74,7 @@ const Home = ({ error }) => {
           console.log("here fired else");
 
           const { data } = await axios.get(
-            `/story/getAllStories?search=${searchKey || ""}&page=${page}`
+            `https://semicolons-backend.onrender.com/story/getAllStories?search=${searchKey || ""}&page=${page}`
           );
           console.log("aris test clg", data, data.data);
           setStories(data.data);
