@@ -98,7 +98,7 @@ const Header = () => {
 
               <Link to="/readList" className="readList-link">
                 <BsBookmarks />
-                <span id="readListLength">{activeUser.readListLength ? activeUser.readListLength : 0}</span>
+                <span id="readListLength">{activeUser?.readListLength || "0"}</span>
               </Link>
               <div className="header-profile-wrapper ">
                 {loading ? (
