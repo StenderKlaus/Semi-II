@@ -42,8 +42,6 @@ const Home = ({ error }) => {
     { value: "exercises", label: "Exercises" },
   ];
 
-  console.log(error);
-
   useEffect(() => {
     const getStories = async () => {
       setLoading(true);
@@ -89,6 +87,7 @@ const Home = ({ error }) => {
         // console.log("Home rerendered");
         setLoading(false);
       } catch (error) {
+        console.log(error, error.message);
         setLoading(true);
       }
     };
