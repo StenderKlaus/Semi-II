@@ -12,7 +12,7 @@ const ForgotPasswordScreen = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("/auth/forgotpassword", { email });
+      const { data } = await axios.post("https://semicolons-backend.onrender.com/auth/forgotpassword", { email });
 
       setSuccess(data.message);
     } catch (error) {

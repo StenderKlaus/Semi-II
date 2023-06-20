@@ -13,7 +13,7 @@ const LoginScreen = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("/auth/login", { email, password });
+      const { data } = await axios.post("https://semicolons-backend.onrender.com/auth/login", { email, password });
       localStorage.setItem("authToken", data.token);
 
       setTimeout(() => {

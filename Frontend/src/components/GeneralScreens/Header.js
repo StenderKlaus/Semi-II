@@ -98,13 +98,13 @@ const Header = () => {
 
               <Link to="/readList" className="readList-link">
                 <BsBookmarks />
-                <span id="readListLength">{activeUser.readListLength}</span>
+                <span id="readListLength">{activeUser?.readListLength || "0"}</span>
               </Link>
               <div className="header-profile-wrapper ">
                 {loading ? (
                   <SkeletonElement type="minsize-avatar" />
                 ) : (
-                  <img src={`${activeUser.photo}`} alt={activeUser.username} />
+                  <img src={`${activeUser?.photo}` || null} alt={activeUser?.username || "0"} />
                 )}
 
                 <div className="sub-profile-wrap  ">

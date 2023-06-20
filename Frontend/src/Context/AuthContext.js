@@ -18,7 +18,7 @@ const AuthContextProvider = props => {
 
     const controlAuth = async () => {
       try {
-        const { data } = await axios.get("/auth/private", config);
+        const { data } = await axios.get("https://semicolons-backend.onrender.com/auth/private", config);
         setActiveUser(data.user)
       }
       catch (error) {

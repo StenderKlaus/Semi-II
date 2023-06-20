@@ -25,7 +25,7 @@ const RegisterScreen = () => {
     }
 
     try {
-      const { data } = await axios.post("/auth/register", {
+      const { data } = await axios.post("https://semicolons-backend.onrender.com/auth/register", {
         username,
         email,
         password,
