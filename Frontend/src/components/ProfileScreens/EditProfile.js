@@ -27,7 +27,7 @@ const EditProfile = () => {
     console.log(activeUser);
     try {
       const { data } = await axios.post(
-        `/user/${activeUser._id}/editProfile`,
+        `https://semicolons-backend.onrender.com/user/${activeUser._id}/editProfile`,
         formdata,
         config
       );

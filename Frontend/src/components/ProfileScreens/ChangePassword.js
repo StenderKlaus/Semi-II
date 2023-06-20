@@ -29,7 +29,7 @@ const ChangePassword = () => {
 
     try {
       const { data } = await axios.put(
-        "/user/changePassword",
+        "https://semicolons-backend.onrender.com/user/changePassword",
         {
           newPassword,
           oldPassword,

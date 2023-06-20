@@ -50,7 +50,7 @@ const EditStory = () => {
     const getStoryInfo = async () => {
       setLoading(true);
       try {
-        const { data } = await axios.get(`/story/editStory/${slug}`, config);
+        const { data } = await axios.get(`https://semicolons-backend.onrender.com/story/editStory/${slug}`, config);
         setStory(data.data);
         setTitle(data.data.title);
         setContent(data.data.content);
@@ -81,7 +81,7 @@ const EditStory = () => {
     console.log(previousImage);
 
     try {
-      const response = await axios.put(`/story/${slug}/edit`, formdata, {
+      const response = await axios.put(`https://semicolons-backend.onrender.com/story/${slug}/edit`, formdata, {
         ...config,
         headers: {
           ...config.headers,

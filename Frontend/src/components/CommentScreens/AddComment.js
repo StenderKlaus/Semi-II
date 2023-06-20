@@ -28,7 +28,7 @@ const AddComment = ({
     e.preventDefault();
     try {
       await axios.post(
-        `/comment/${slug}/addComment`,
+        `https://semicolons-backend.onrender.com/comment/${slug}/addComment`,
         { content, star },
         {
           headers: {

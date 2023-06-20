@@ -75,7 +75,7 @@ const AddStory = () => {
     formdata.append("content", content);
 
     try {
-      const response = await axios.post("/story/addstory", formdata, {
+      const response = await axios.post("https://semicolons-backend.onrender.com/story/addstory", formdata, {
         ...config,
         headers: {
           ...config.headers,
