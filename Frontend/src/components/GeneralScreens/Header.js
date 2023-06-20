@@ -104,7 +104,7 @@ const Header = () => {
                 {loading ? (
                   <SkeletonElement type="minsize-avatar" />
                 ) : (
-                  <img src={`${activeUser.photo}`} alt={activeUser.username} />
+                  <img src={`${activeUser?.photo}` || null} alt={activeUser?.username || "0"} />
                 )}
 
                 <div className="sub-profile-wrap  ">
