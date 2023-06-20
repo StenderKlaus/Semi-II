@@ -73,16 +73,16 @@ const ReadListPage = () => {
           </div>
 
           <div className="readList-story-wrapper">
-            {readList.length !== 0 ? (
+            {readList?.length !== 0 ? (
               <>
-                {readList.map((story) => {
+                {readList?.map((story) => { if (story) {
                   return (
                     <ReadListStoryItem
                       key={story._id}
                       story={story}
                       editDate={editDate}
                     />
-                  );
+                  );}
                 })}
               </>
             ) : (
