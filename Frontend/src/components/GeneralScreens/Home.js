@@ -99,6 +99,21 @@ const Home = ({ error }) => {
     setPage(1);
   }, [searchKey, categories]);
 
+  // useEffect (() => {
+  //  const getAllStories = async () => {
+  //   try {
+  //     const { data } = await axios.get(`https://semicolons-backend.onrender.com/story/getAllStories`)
+  //     setStories(data.data);
+  //     setPages(data.pages);
+  //     navigate({pathname: '/', search: `${page > 1 ? `page=${page}` : ""}`});
+  //   } catch (error) {
+  //     console.log(error, error.message);
+  //   }
+  // };
+  // getAllStories()
+  // },[search, page, navigate])
+
+
   return (
     <div className="Inclusive-home-page">
 
