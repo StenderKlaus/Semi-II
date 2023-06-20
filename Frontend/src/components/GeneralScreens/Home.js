@@ -65,6 +65,8 @@ const Home = ({ error }) => {
           );
           setStories(data.data);
           setPages(data.pages);
+          console.log(data);
+          console.log(data.data);
           console.log("else if fired");
           navigate({
             pathname: "/",
