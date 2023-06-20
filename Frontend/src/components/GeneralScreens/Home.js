@@ -108,12 +108,12 @@ const Home = ({ error }) => {
                 setCategories([]);
                 navigate("/");
               }}
-              class="fa-solid fa-angle-left"
+              className="fa-solid fa-angle-left"
             ></i>
       </div>
 
       {/* <div className="bigCatHome">
-        <div class="categoryHome"> */}
+        <div className="categoryHome"> */}
 
         <div className="home_select_div">
           <h6  className="home_cat_select_p" >Search all Posts by a relevant category: </h6>

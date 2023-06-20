@@ -47,7 +47,7 @@ const ReadListPage = () => {
       ) : (
         <div className="Inclusive-readList-page">
           <Link to={"/"}>
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </Link>
           <h2>Reading List </h2>
 

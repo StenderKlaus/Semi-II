@@ -31,7 +31,7 @@ const LoginScreen = () => {
     <div className="Inclusive-login-page">
       <div className="login-big-wrapper">
         <Link to="/" className="back_home">
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>{" "}
         <div className="section-wrapper">
           <div className="top-suggest_register">

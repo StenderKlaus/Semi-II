@@ -45,7 +45,7 @@ const ResetPasswordScreen = () => {
     <div className="Inclusive-resetPassword-page">
       <form onSubmit={resetPasswordHandler} className="resetpassword-form">
         <Link to={"/"}>
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>
         <h3>Reset Password</h3>
 

@@ -49,7 +49,7 @@ const RegisterScreen = () => {
     <div className="Inclusive-register-page">
       <div className="register-big-wrapper">
         <Link to="/" className="back_home">
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>
         <div className="section-wrapper">
           <div className="top-suggest_login">

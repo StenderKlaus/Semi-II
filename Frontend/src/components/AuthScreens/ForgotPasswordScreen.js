@@ -28,7 +28,7 @@ const ForgotPasswordScreen = () => {
     <div className="Inclusive-forgotPassword-page">
       <div className="forgotPassword-big-wrapper">
         <Link to="/" className="back_home">
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>
         <form onSubmit={forgotPasswordHandler}>
           <div className="top-forgotpassword-explain">

@@ -59,7 +59,7 @@ const Profile = () => {
       ) : (
         <div className="Inclusive_profile_page">
           <Link to={"/"}>
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </Link>
           <div className="profile-top-wrap">
             <span>Membership Information</span>

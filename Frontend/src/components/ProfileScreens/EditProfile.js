@@ -62,7 +62,7 @@ const EditProfile = () => {
         <div className="Inclusive-editprofile-page">
           <div className="editProfileDiv">
             <Link to={"/"}>
-              <i class="fa-solid fa-angle-left"></i>
+              <i className="fa-solid fa-angle-left"></i>
             </Link>
             <form onSubmit={handleSubmit}>
               {error && <div className="error_msg">{error}</div>}

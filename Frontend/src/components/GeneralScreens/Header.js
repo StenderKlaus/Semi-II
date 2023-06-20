@@ -35,13 +35,13 @@ const Header = () => {
           <img className="logo2" src="logoneu.png" alt="Logo" />
         </Link>
 
-        <div class="dropdownContainer">
-          <div class="dropdown">
-            <button class="dropbtn">
+        <div className="dropdownContainer">
+          <div className="dropdown">
+            <button className="dropbtn">
               Cheat sheets
-              <i class="fa-solid fa-chevron-down"></i>
+              <i className="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a
                 href="https://livecoding-examples-html.vercel.app/"
                 rel="noreferrer"

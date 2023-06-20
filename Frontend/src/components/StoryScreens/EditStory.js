@@ -115,7 +115,7 @@ const EditStory = () => {
       ) : (
         <div className="Inclusive-editStory-page ">
           <Link to={"/"}>
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </Link>
           <form onSubmit={handleSubmit} className="editStory-form">
             {error && <div className="error_msg">{error}</div>}

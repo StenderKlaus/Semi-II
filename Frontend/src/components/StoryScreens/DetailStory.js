@@ -155,7 +155,7 @@ const DetailStory = () => {
           <div className="Inclusive-detailStory-page">
             <div className="top_detail_wrapper">
               <Link to={"/"}>
-                <i class="fa-solid fa-angle-left"></i>
+                <i className="fa-solid fa-angle-left"></i>
               </Link>
               <h5>{story.title}</h5>
 
@@ -223,8 +223,8 @@ const DetailStory = () => {
             <div className="story-categories-section">
               <span>Categories: </span>
               <span className="categorieSpan">
-                {story?.categorie?.map((category) => (
-                  <button onClick={(e) => klickCategorie(e, category)}>
+                {story?.categorie?.map((category, index) => (
+                  <button key={index + 1} onClick={(e) => klickCategorie(e, category)}>
                     {category}
                   </button>
                 ))}
