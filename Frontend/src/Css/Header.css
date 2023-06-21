@@ -27,6 +27,12 @@ header .logo {
   color: rgb(56, 162, 170);
 }
 
+.logo2{
+  width: 100px;
+  height: 100px;
+
+}
+
 header .logo h5 {
   font-size: 2rem;
   font-weight: bold;
