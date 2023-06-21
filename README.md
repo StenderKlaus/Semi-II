@@ -251,7 +251,8 @@ This project was created using the following technologies.
 
 
 <br>
-## License
+
+## License 
 
 MIT License
 
