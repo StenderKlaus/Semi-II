@@ -107,9 +107,6 @@ const forgotpassword  = asyncErrorWrapper( async (req,res,next) => {
    
         return next(new CustomError('Email could not be send ', 500))
     }
-
-
-
 })
 
 

@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import "../../Css/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { BsArrowBarLeft } from "react-icons/bs";
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,7 +45,7 @@ const LoginScreen = () => {
           <div className="top-login-explain">
             <h2>Login to Your Account </h2>
 
-            <p>Please Login Your Account, Thank You!</p>
+            <p>Please Login to Your Account, Thank You!</p>
           </div>
 
           <form onSubmit={loginHandler}>

@@ -4,7 +4,6 @@ import "../../Css/Profile.css";
 import { Link, useNavigate } from "react-router-dom";
 import Loader from "../GeneralScreens/Loader";
 import { AuthContext } from "../../Context/AuthContext";
-import { FiArrowLeft } from "react-icons/fi";
 
 const Profile = () => {
   const { config } = useContext(AuthContext);
@@ -76,7 +75,7 @@ const Profile = () => {
               <div>{user.email}</div>
             </li>
             <li>
-              <span> Account Created Date </span>
+              <span> Account Creation Date </span>
               <div>{editDate(user.createdAt)}</div>
             </li>
           </ul>

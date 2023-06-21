@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../../Css/ForgotPassword.css";
-import { BsArrowBarLeft } from "react-icons/bs";
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -34,8 +33,8 @@ const ForgotPasswordScreen = () => {
           <div className="top-forgotpassword-explain">
             <h3>Forgot Password</h3>
             <p>
-              Please enter the email address you register your account with. We
-              will send you reset password confirmation to this email
+              Please enter the email address you used to register your account. We
+              will send you reset password confirmation to this email.
             </p>
           </div>
 

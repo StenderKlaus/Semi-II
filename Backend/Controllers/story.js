@@ -1,6 +1,5 @@
 const asyncErrorWrapper = require("express-async-handler")
 const Story = require("../Models/story");
-// const deleteImageFile = require("../Helpers/Libraries/deleteImageFile");
 const {searchHelper, paginateHelper} =require("../Helpers/query/queryHelpers")
 const {slugify} = require("slugify");
 const multer = require("multer");
@@ -45,9 +44,6 @@ const addStory = [parser.single("image"), async  (req,res,next)=> {
     let categorie = req.body.categorie.split(',');
 
     let wordCount = content.split(/\s+/).length ; 
-    console.log("add story fired")
-
-    console.log(req.file)
 
     let readtime = Math.floor(wordCount /200)   ;
 
@@ -64,7 +60,6 @@ const addStory = [parser.single("image"), async  (req,res,next)=> {
 
 
     const newStory = await Story.create(story)
-    console.log("story created")
 
     try {
 
@@ -75,25 +70,18 @@ const addStory = [parser.single("image"), async  (req,res,next)=> {
             public_id : `storyPhoto/${newStory.author}/story`
 
         })   
-        console.log("photo result", result)
 
         await newStory.save();
         }
         res.send({ message: 'story added successfully', newStory });
-        console.log("story saved")
 
-        // return res.status(200).json({
-        //     success :true ,
-        //     message : "add story successfully ",
-        //     data: newStory
-        // })
+
     }
 
     catch(error) { 
         console.log(error)
 
         console.log(error.message)
-        // deleteImageFile(req)
 
         return next(error)
         
@@ -129,7 +117,6 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
 
 const getAllPostCat = asyncErrorWrapper( async (req,res,next) =>{
-console.log("getAllPostCat fired")
     let query = Story.find();
     query =searchHelper("categorie",query,req)
     const paginationResult =await paginateHelper(Story , query ,req)
@@ -146,8 +133,6 @@ console.log("getAllPostCat fired")
         })
 
 })
-
-
 
 
 const detailStory =asyncErrorWrapper(async(req,res,next)=>{
@@ -226,14 +211,9 @@ const editStory  =[parser.single("image"),async(req,res,next)=>{
     const {slug } = req.params ; 
 
     const {title ,categorie ,content ,image ,previousImage } = req.body;
-    console.log(previousImage);
-    console.log(image);
-    // const newImage = req.file
     
     try {        
-        console.log(req.body);
         const story = await Story.findOne({slug : slug})
-        console.log(story);
             story.title = title;
             story.categorie = categorie;
             story.content = content;
@@ -269,14 +249,13 @@ const deleteStory  =asyncErrorWrapper(async(req,res,next)=>{
     const story = await Story.findOne({slug : slug })
     await cloudinary.uploader.destroy(`storyPhoto/${story.author}/story`
     );
-    // deleteImageFile(req,story.image) ; 
 
     await story.remove()
 
     return res.status(200).
         json({
             success:true,
-            message : "Story delete succesfully "
+            message : "Story delete successfully "
     })
 
 })
@@ -292,29 +271,3 @@ module.exports ={
     editStory ,
     deleteStory
 }
-/*
-
-// define DELETE endpoint for deleting a single user post
-.delete('/delete/:id', async (req, res) => {
-    // extract post ID from request params
-    const id = req.params.id
-    try {
-      const post = await Post.findById(id)
-
-      // find post by ID and delete it
-      if (!post) {
-        res.status(404).json({ message: 'Post not found.' })
-      } else {
-        // this deletes any image uploads to cloudinary as well
-        await cloudinary.uploader.destroy(`user_posts/${post.user}/post`)
-        // this deletes the post data from mongoDB
-        await Post.deleteOne({ _id: id })
-        res.status(201).json('Post deleted.')
-      }
-    } catch (err) {
-      // respond with status 500 and err msg
-      res.status(500).json(err)
-    }
-  })
-
-  */

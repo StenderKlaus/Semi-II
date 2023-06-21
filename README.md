@@ -16,14 +16,17 @@ We filled the Story section of the Live Version of this Blog / Platform with mul
 and also with useful links to other resources that we used and found to be very helpful ourselves.</h5>
 
 <h5>
-This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the authors is provided in a later section of the readme file.</h5>
+This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the authors is provided in a later section of the readme file. or Visit the Following Link to see our Project Presentation </h5>
+
+
+<a>
+https://www.canva.com/design/DAFmV9hxfrA/Q6aLlE0pw4T5boDh9KU1kg/view?utm_content=DAFmV9hxfrA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel</a>
 
 
 A Live Version of this Blog /  Self-Learning Platform can be found under:
 
 <a>
-HERE will be the live version LINK
-</a>
+https://semifrontend.vercel.app/</a>
 
 
 
@@ -62,12 +65,12 @@ $ nodemon start (to start the frontend)
 
 In the second terminal
 
-- cd Backend and Set environment variables in config.env under ./config
+- cd Backend and Set environment variables in .env under in the main Backend Folder ./
 - Create your mongoDB connection url, which you'll use as your MONGO_URI
 - Supply the following credentials
 
 ```
-#  ---  Config.env  ---
+#  ---  .env  ---
 
 NODE_ENV = development
 PORT =5000
@@ -80,11 +83,10 @@ RESET_PASSWORD_EXPIRE = 3600000
 
 # Cloudinary
 
-cloudinary.config({ 
-CLOUD_NAME: your Cloudinary NAME
-API_KEY:  your Cloudinary API Key
-API_SECRET:  your Cloudinary API Secret
-});
+
+CLOUD_NAME= your Cloudinary NAME
+API_KEY=  your Cloudinary API Key
+API_SECRET=  your Cloudinary API Secret
 
 # Nodemailer
 
@@ -93,17 +95,6 @@ SMTP_PORT =587
 EMAIL_USERNAME = example@gmail.com
 EMAIL_PASS = your_password
 ```
-Set environment variables in .env under in the main Backend Folder ./
-
-                      #  ---  .env  ---
-
-
-
-#Cloudinary 
-
-CLOUD_NAME: your Cloudinary NAME
-API_KEY:  your Cloudinary API Key
-API_SECRET:  your Cloudinary API Secret
 
 
 
@@ -213,6 +204,9 @@ This project was created using the following technologies.
 
 <h5  align ="center">Lea Prem<h5>
 
+
+<h6>Styling & animation<h6>
+
 - Github: [Lea Prem](https://github.com/Anyanka17)
 
 - Linkedin: [Lea Prem](https://www.linkedin.com/me?trk=p_mwlite_profile_self-secondary_nav)
@@ -221,6 +215,9 @@ This project was created using the following technologies.
 
 
 <h5  align ="center">George Beyrouti<h5>
+
+<h6>Development Front /Back-end functionality<h6>
+
 
 - Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
 
@@ -233,6 +230,8 @@ This project was created using the following technologies.
 
 <h5  align ="center">Marvin Hampe<h5>
 
+<h6> Cheat-Sheets section of the website <h6>
+
 - Github: [Marvin Hampe](https://github.com/MarvinHampe)
 
 
@@ -240,6 +239,8 @@ This project was created using the following technologies.
 
 
 <h5  align ="center">Klaus Stender<h5>
+
+<h6>Development Front /Back-end functionality<h6>
 
 - Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
 

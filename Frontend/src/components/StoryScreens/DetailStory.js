@@ -5,7 +5,7 @@ import "../../Css/DetailStory.css";
 import Loader from "../GeneralScreens/Loader";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { FiEdit, FiArrowLeft } from "react-icons/fi";
+import { FiEdit } from "react-icons/fi";
 import { FaRegComment } from "react-icons/fa";
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from "react-icons/bs";
 import CommentSidebar from "../CommentScreens/CommentSidebar";
@@ -23,7 +23,6 @@ const DetailStory = () => {
   const [storyReadListStatus, setStoryReadListStatus] = useState(false);
   const navigate = useNavigate();
   const { categories, setCategories } = useContext(AuthContext);
-  // console.log(story.categorie?.split(","));
   useEffect(() => {
     const getDetailStory = async () => {
       setLoading(true);
@@ -35,7 +34,6 @@ const DetailStory = () => {
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-        console.log(slug);
         activeUser = data.user;
 
         setActiveUser(activeUser);
@@ -52,7 +50,6 @@ const DetailStory = () => {
         setLoading(false);
 
         const story_id = data.data._id;
-        console.log(data);
 
         if (activeUser.readList) {
           if (!activeUser.readList.includes(story_id)) {
@@ -301,24 +298,6 @@ const DetailStory = () => {
                     </i>
                   </li>
 
-                  {/* <li className='BsThreeDots_opt'>
-                      <i  >
-                        <BsThreeDots />
-                      </i>
-
-                      {activeUser &&
-                        story.author._id === activeUser._id ?
-                        <div className="delete_or_edit_story  ">
-                          <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
-                            <p>Edit Story</p>
-                          </Link>
-                          <div className='deleteStoryLink' onClick={handleDelete}>
-                            <p>Delete Story</p>
-                          </div>
-                        </div> : null
-                      }
-
-                    </li> */}
                 </ul>
               </div>
             )}

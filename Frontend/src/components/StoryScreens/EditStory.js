@@ -78,8 +78,6 @@ const EditStory = () => {
     formdata.append("image", image);
     formdata.append("previousImage", previousImage);
 
-    console.log(previousImage);
-
     try {
       const response = await axios.put(`https://semicolons-backend.onrender.com/story/${slug}/edit`, formdata, {
         ...config,
@@ -88,7 +86,6 @@ const EditStory = () => {
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log(response.data);
 
       setSuccess("Edit Story successfully ");
 

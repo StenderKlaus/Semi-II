@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "../../Css/Register.css";
-import { BsArrowBarLeft } from "react-icons/bs";
 
 const RegisterScreen = () => {
   const [username, setUsername] = useState("");
@@ -64,10 +63,7 @@ const RegisterScreen = () => {
           <div className="top-register-explain">
             <h2>Welcome to Semicolons Blog </h2>
 
-            <p>
-              It's easy and free to post your thinking on any topic and connect
-              with thounsands of readers.
-            </p>
+
           </div>
 
           <form onSubmit={registerHandler}>

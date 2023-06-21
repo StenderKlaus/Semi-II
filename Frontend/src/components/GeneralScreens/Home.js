@@ -21,7 +21,6 @@ const Home = ({ error }) => {
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
   const { categories, setCategories } = useContext(AuthContext);
-  // const [categories, setCategories] = useState([]);
 
   const thema = [
     { value: "html", label: "HTML" },
@@ -52,7 +51,6 @@ const Home = ({ error }) => {
           );
           setStories(data.data);
           setPages(data.pages);
-          console.log("if fired");
           navigate({
             pathname: "/",
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
@@ -63,20 +61,15 @@ const Home = ({ error }) => {
           );
           setStories(data.data);
           setPages(data.pages);
-          console.log(data);
-          console.log(data.data);
-          console.log("else if fired");
           navigate({
             pathname: "/",
             // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
           });
         } else {
-          console.log("here fired else");
 
           const { data } = await axios.get(
             `https://semicolons-backend.onrender.com/story/getAllStories?search=${searchKey || ""}&page=${page}`
           );
-          console.log("aris test clg", data, data.data);
           setStories(data.data);
           setPages(data.pages);
           navigate({
@@ -84,7 +77,6 @@ const Home = ({ error }) => {
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
         }
-        // console.log("Home rerendered");
         setLoading(false);
       } catch (error) {
         console.log(error, error.message);
@@ -92,27 +84,11 @@ const Home = ({ error }) => {
       }
     };
     getStories();
-    // console.log("input search fired");
   }, [setLoading, categories, search, page, navigate]);
 
   useEffect(() => {
     setPage(1);
   }, [searchKey, categories]);
-
-  // useEffect (() => {
-  //  const getAllStories = async () => {
-  //   try {
-  //     const { data } = await axios.get(`https://semicolons-backend.onrender.com/story/getAllStories`)
-  //     setStories(data.data);
-  //     setPages(data.pages);
-  //     navigate({pathname: '/', search: `${page > 1 ? `page=${page}` : ""}`});
-  //   } catch (error) {
-  //     console.log(error, error.message);
-  //   }
-  // };
-  // getAllStories()
-  // },[search, page, navigate])
-
 
   return (
     <div className="Inclusive-home-page">

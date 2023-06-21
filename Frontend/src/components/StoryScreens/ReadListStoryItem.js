@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
-import { BsThreeDots, BsBookmarkFill } from 'react-icons/bs'
+import { BsBookmarkFill } from 'react-icons/bs'
 
 const ReadListStoryItem = ({ story, editDate }) => {
 
@@ -54,7 +54,7 @@ const ReadListStoryItem = ({ story, editDate }) => {
                             -
                         </span>
                         <span>
-                            {story.readtime} min read
+                            {story.readtime} min readtime
                         </span>
                     </a>
 
