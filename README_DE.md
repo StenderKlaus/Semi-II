@@ -22,6 +22,8 @@ Eine Präsentations-Version dieses Blogs / dieser Selbstlernplattform finden Sie
 
 [Presentation ](https://www.canva.com/design/DAFmV9hxfrA/Q6aLlE0pw4T5boDh9KU1kg/view?utm_content=DAFmV9hxfrA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
+<br>
+
 Eine Live-Version dieses Blogs / dieser Selbstlernplattform finden Sie unter:
 
 [Live Website](https://semifrontend.vercel.app/)
@@ -63,12 +65,12 @@ $ nodemon start (to start the frontend)
 
 Im zweiten Terminal
 
-- cd Backend (Enter) und ersetzen/ergänzen der Umgebungsvariablen in config.env unter ./config
+- cd Backend (Enter) und ersetzen/ergänzen der Umgebungsvariablen in .env unter "Backend" im Hauptverzeichnis ./
 - Erstellen Sie Ihre MongoDB-Verbindungsurl, die Sie als MONGO_URI verwenden werden
 - Geben Sie die folgenden Anmeldedaten ein
 
 ```
-#  ---  Config.env  ---
+#  ---  .env  ---
 
 NODE_ENV = development
 PORT =5000
@@ -81,11 +83,11 @@ RESET_PASSWORD_EXPIRE = 3600000
 
 # Cloudinary
 
-cloudinary.config({ 
-CLOUD_NAME: your Cloudinary NAME
-API_KEY:  your Cloudinary API Key
-API_SECRET:  your Cloudinary API Secret
-});
+
+CLOUD_NAME = your Cloudinary NAME
+API_KEY =  your Cloudinary API Key
+API_SECRET =  your Cloudinary API Secret
+
 
 # Nodemailer
 
@@ -94,21 +96,7 @@ SMTP_PORT =587
 EMAIL_USERNAME = example@gmail.com
 EMAIL_PASS = your_password
 ```
-Setzen von Umgebungsvariablen in .env unter im Haupt-Backend-Ordner./
 
-                      #  ---  .env  ---
-
-
-
-#Cloudinary 
-
-CLOUD_NAME: your Cloudinary NAME
-API_KEY:  your Cloudinary API Key
-API_SECRET:  your Cloudinary API Secret
-
-
-
-```
 # --- Terminal ---
 
 $ npm install (to install backend-side dependencies)
@@ -214,16 +202,20 @@ Dieses Projekt wurde unter Verwendung der folgenden Technologien erstellt:
 
 <h5  align ="center">Lea Prem<h5>
 
-- Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+<h6>Styling & animation<h6>
 
-- Github: [@bert-hutapea](https://github.com/berthutapea)
+- Github: [Lea Prem](https://github.com/Anyanka17)
 
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
+- Linkedin: [Lea Prem](https://www.linkedin.com/me?trk=p_mwlite_profile_self-secondary_nav)
 
-- Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
+- Email: [Lea Prem](mailto:Prem.produktion@gmail.com)
+
 
 
 <h5  align ="center">George Beyrouti<h5>
+
+<h6>Development of Front /Back-end functionality<h6>
+
 
 - Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
 
@@ -236,22 +228,22 @@ Dieses Projekt wurde unter Verwendung der folgenden Technologien erstellt:
 
 <h5  align ="center">Marvin Hampe<h5>
 
-- Portfolio: [berthutapea](https://berthutapea.vercel.app/)
+<h6> Cheat-Sheets section of the website <h6>
 
-- Github: [@bert-hutapea](https://github.com/berthutapea)
+- Github: [Marvin Hampe](https://github.com/MarvinHampe)
 
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/gilberthutapea/)
-
-- Email: [berthutapea@gmail.com](mailto:berthutapea@gmail.com)
+- Email: [Marvin Hampe](mailto:viewsfamily6@gmail.com)
 
 
 <h5  align ="center">Klaus Stender<h5>
+
+<h6>Development of Front /Back-end functionality<h6>
 
 - Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
 
 - Github: [StenderKlaus](https://github.com/StenderKlaus)
 
-- Linkedin: [@gilbert-hutapea](https://www.linkedin.com/in/klaus-stender-7ba879266/)
+- Linkedin: [StenderKlaus](https://www.linkedin.com/in/klaus-stender-7ba879266/)
 
 - Email: [stender.klaus@yahoo.de](mailto:stender.klaus@yahoo.de)
 

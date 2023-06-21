@@ -96,9 +96,6 @@ EMAIL_USERNAME = example@gmail.com
 EMAIL_PASS = your_password
 ```
 
-
-
-```
 # --- Terminal ---
 
 $ npm install (to install backend-side dependencies)
