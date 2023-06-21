@@ -18,12 +18,13 @@ Diese wurde mit nützlichen Links zu anderen Ressourcen, die wir selbst genutzt 
 <h5>
 Dieser Blog / Diese Lernplattform wurde von einem Team von Entwicklern unter Verwendung moderner agiler Methoden und Werkzeuge erstellt. Weitere Informationen über die Autoren finden Sie in einem späteren Abschnitt der Readme-Datei.</h5>
 
+Eine Präsentations-Version dieses Blogs / dieser Selbstlernplattform finden Sie unter:
+
+[Presentation ](https://www.canva.com/design/DAFmV9hxfrA/Q6aLlE0pw4T5boDh9KU1kg/view?utm_content=DAFmV9hxfrA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
 Eine Live-Version dieses Blogs / dieser Selbstlernplattform finden Sie unter:
 
-<a>
-HIER ist die Live-Version zu sehen LINK
-</a>
+[Live Website](https://semifrontend.vercel.app/)
 
 
 
