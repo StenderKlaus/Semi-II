@@ -18,16 +18,14 @@ and also with useful links to other resources that we used and found to be very 
 <h5>
 This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the authors is provided in a later section of the readme file. or Visit the Following Link to see our Project Presentation </h5>
 
+[Presentation ](https://www.canva.com/design/DAFmV9hxfrA/Q6aLlE0pw4T5boDh9KU1kg/view?utm_content=DAFmV9hxfrA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 
-<a>
-https://www.canva.com/design/DAFmV9hxfrA/Q6aLlE0pw4T5boDh9KU1kg/view?utm_content=DAFmV9hxfrA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel</a>
+<br>
+
+<h5>>A Live Version of this Blog /  Self-Learning Platform can be found under:</h5
 
 
-A Live Version of this Blog /  Self-Learning Platform can be found under:
-
-<a>
-https://semifrontend.vercel.app/</a>
-
+[Live Website](https://semifrontend.vercel.app/)
 
 
 <br>
@@ -216,7 +214,7 @@ This project was created using the following technologies.
 
 <h5  align ="center">George Beyrouti<h5>
 
-<h6>Development Front /Back-end functionality<h6>
+<h6>Development of Front /Back-end functionality<h6>
 
 
 - Portfolio: [George Beyrouti](https://react-portfolio-george-beyrouti.vercel.app/)
@@ -240,7 +238,7 @@ This project was created using the following technologies.
 
 <h5  align ="center">Klaus Stender<h5>
 
-<h6>Development Front /Back-end functionality<h6>
+<h6>Development of Front /Back-end functionality<h6>
 
 - Portfolio: [StenderKlaus](https://react-portfolio-ii.vercel.app/)
 
