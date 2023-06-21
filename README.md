@@ -15,6 +15,8 @@ But instead browsing the extensive list of the most used tags and commands throu
 We filled the Story section of the Live Version of this Blog / Platform with multiple Posts that contain tips and suggestions that will help guide Future Web Developers on their journey of Self-Learning.
 and also with useful links to other resources that we used and found to be very helpful ourselves.</h5>
 
+<br>
+
 <h5>
 This Blog / Learning-Platform was built by a Team of Developers using Modern Agile Methods and Tools. More information about the authors is provided in a later section of the readme file. or Visit the Following Link to see our Project Presentation </h5>
 
@@ -22,7 +24,7 @@ This Blog / Learning-Platform was built by a Team of Developers using Modern Agi
 
 <br>
 
-<h5>>A Live Version of this Blog /  Self-Learning Platform can be found under:</h5
+<h5> A Live Version of this Blog /  Self-Learning Platform can be found under:</h5
 
 
 [Live Website](https://semifrontend.vercel.app/)
