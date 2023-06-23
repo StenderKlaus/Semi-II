@@ -104,7 +104,7 @@ body {
     width: 380px;
   }
   .bigCatHome {
-    display: none;
+    display: flex;
   }
   /* .categoryHome {
     max-width: 674px;
