@@ -289,3 +289,93 @@ header .logo h5 {
   font-size: 30px;
   color: white;
 }
+
+@media only screen and (max-width: 1280px) {
+  header .averager {
+    width: 90%; 
+    padding: 0 1rem;
+  }
+
+  header .logo h5 {
+    font-size: 1.6rem; 
+  }
+
+  header .logo2 {
+    width: 80px; 
+    height: 80px;
+  }
+
+  .search-form {
+    width: 100%; 
+    margin-top: 1rem; 
+  }
+
+  .search-form input {
+    width: 100%; 
+  }
+
+  .header_options div.auth_options {
+    height: auto; 
+  }
+
+  .header-profile-wrapper {
+    height: auto; 
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  header .averager {
+    width: 90%; 
+    padding: 0 1rem;
+  }
+
+  header .logo h5 {
+    font-size: 1.6rem; 
+  }
+
+  header .logo2 {
+    width: 80px; 
+    height: 80px;
+  }
+
+  .search-form {
+    width: 100%; 
+    margin-top: 1rem; 
+  }
+
+  .search-form input {
+    width: 100%; 
+  }
+
+  .header_options div.auth_options {
+    height: auto; 
+  }
+
+  .header-profile-wrapper {
+    height: auto; 
+  }
+
+  .header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 2px 2.4rem;
+}
+}
+
+
+@media only screen and (max-width: 393px) {
+  .header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 2px 1.4rem;
+}
+}
+
+
+@media only screen and (max-width: 540px) {
+  header .logo h5 {
+    font-size: 1.4rem; 
+  }
+
+  header .logo2 {
+    width: 60px; 
+    height: 60px;
+  }
+}
