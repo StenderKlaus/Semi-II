@@ -2,10 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import Loader from "../GeneralScreens/Loader";
 import { useNavigate, Link } from "react-router-dom";
-import { FiArrowLeft } from "react-icons/fi";
 import { AuthContext } from "../../Context/AuthContext";
 import { AiFillLock } from "react-icons/ai";
-import { BsThreeDots } from "react-icons/bs";
 import ReadListStoryItem from "../StoryScreens/ReadListStoryItem";
 
 import "../../Css/ReadListPage.css";
@@ -21,7 +19,7 @@ const ReadListPage = () => {
       setLoading(true);
 
       try {
-        const { data } = await (await axios.get(`/user/readList`, config)).data;
+        const { data } = await (await axios.get(`https://semicolons-backend.onrender.com/user/readList`, config)).data;
         setReadList(data);
         setLoading(false);
       } catch (error) {
@@ -47,7 +45,7 @@ const ReadListPage = () => {
       ) : (
         <div className="Inclusive-readList-page">
           <Link to={"/"}>
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </Link>
           <h2>Reading List </h2>
 
@@ -67,22 +65,20 @@ const ReadListPage = () => {
               </div>
             </div>
 
-            {/* <i className='BsThreeDots-icon'>
-                            < BsThreeDots />
-                        </i> */}
+
           </div>
 
           <div className="readList-story-wrapper">
-            {readList.length !== 0 ? (
+            {readList?.length !== 0 ? (
               <>
-                {readList.map((story) => {
+                {readList?.map((story) => { if (story) {
                   return (
                     <ReadListStoryItem
                       key={story._id}
                       story={story}
                       editDate={editDate}
                     />
-                  );
+                  );}
                 })}
               </>
             ) : (

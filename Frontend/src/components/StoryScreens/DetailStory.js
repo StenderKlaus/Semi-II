@@ -5,7 +5,7 @@ import "../../Css/DetailStory.css";
 import Loader from "../GeneralScreens/Loader";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { FiEdit, FiArrowLeft } from "react-icons/fi";
+import { FiEdit } from "react-icons/fi";
 import { FaRegComment } from "react-icons/fa";
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from "react-icons/bs";
 import CommentSidebar from "../CommentScreens/CommentSidebar";
@@ -23,19 +23,17 @@ const DetailStory = () => {
   const [storyReadListStatus, setStoryReadListStatus] = useState(false);
   const navigate = useNavigate();
   const { categories, setCategories } = useContext(AuthContext);
-  // console.log(story.categorie?.split(","));
   useEffect(() => {
     const getDetailStory = async () => {
       setLoading(true);
       var activeUser = {};
       try {
-        const { data } = await axios.get("/auth/private", {
+        const { data } = await axios.get("https://semicolons-backend.onrender.com/auth/private", {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         });
-        console.log(slug);
         activeUser = data.user;
 
         setActiveUser(activeUser);
@@ -44,7 +42,7 @@ const DetailStory = () => {
       }
 
       try {
-        const { data } = await axios.post(`/story/${slug}`, { activeUser });
+        const { data } = await axios.post(`https://semicolons-backend.onrender.com/story/${slug}`, { activeUser });
         setStory(data.data);
         setLikeStatus(data.likeStatus);
         setLikeCount(data.data.likeCount);
@@ -52,7 +50,6 @@ const DetailStory = () => {
         setLoading(false);
 
         const story_id = data.data._id;
-        console.log(data);
 
         if (activeUser.readList) {
           if (!activeUser.readList.includes(story_id)) {
@@ -77,7 +74,7 @@ const DetailStory = () => {
 
     try {
       const { data } = await axios.post(
-        `/story/${slug}/like`,
+        `https://semicolons-backend.onrender.com/story/${slug}/like`,
         { activeUser },
         {
           headers: {
@@ -99,7 +96,7 @@ const DetailStory = () => {
   const handleDelete = async () => {
     if (window.confirm("Do you want to delete this post")) {
       try {
-        await axios.delete(`/story/${slug}/delete`, {
+        await axios.delete(`https://semicolons-backend.onrender.com/story/${slug}/delete`, {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -124,7 +121,7 @@ const DetailStory = () => {
   const addStoryToReadList = async () => {
     try {
       const { data } = await axios.post(
-        `/user/${slug}/addStoryToReadList`,
+        `https://semicolons-backend.onrender.com/user/${slug}/addStoryToReadList`,
         { activeUser },
         {
           headers: {
@@ -155,7 +152,7 @@ const DetailStory = () => {
           <div className="Inclusive-detailStory-page">
             <div className="top_detail_wrapper">
               <Link to={"/"}>
-                <i class="fa-solid fa-angle-left"></i>
+                <i className="fa-solid fa-angle-left"></i>
               </Link>
               <h5>{story.title}</h5>
 
@@ -223,8 +220,8 @@ const DetailStory = () => {
             <div className="story-categories-section">
               <span>Categories: </span>
               <span className="categorieSpan">
-                {story?.categorie?.map((category) => (
-                  <button onClick={(e) => klickCategorie(e, category)}>
+                {story?.categorie?.map((category, index) => (
+                  <button key={index + 1} onClick={(e) => klickCategorie(e, category)}>
                     {category}
                   </button>
                 ))}
@@ -301,24 +298,6 @@ const DetailStory = () => {
                     </i>
                   </li>
 
-                  {/* <li className='BsThreeDots_opt'>
-                      <i  >
-                        <BsThreeDots />
-                      </i>
-
-                      {activeUser &&
-                        story.author._id === activeUser._id ?
-                        <div className="delete_or_edit_story  ">
-                          <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
-                            <p>Edit Story</p>
-                          </Link>
-                          <div className='deleteStoryLink' onClick={handleDelete}>
-                            <p>Delete Story</p>
-                          </div>
-                        </div> : null
-                      }
-
-                    </li> */}
                 </ul>
               </div>
             )}

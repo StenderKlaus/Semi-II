@@ -25,7 +25,7 @@ const ResetPasswordScreen = () => {
 
     try {
       const { data } = await axios.put(
-        `/auth/resetpassword?resetPasswordToken=${token}`,
+        `https://semicolons-backend.onrender.com/auth/resetpassword?resetPasswordToken=${token}`,
         {
           password,
         }
@@ -45,7 +45,7 @@ const ResetPasswordScreen = () => {
     <div className="Inclusive-resetPassword-page">
       <form onSubmit={resetPasswordHandler} className="resetpassword-form">
         <Link to={"/"}>
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>
         <h3>Reset Password</h3>
 

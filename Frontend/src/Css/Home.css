@@ -186,7 +186,7 @@ body {
 .story-createdAt {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(255, 255, 255);
-  margin: 2rem;
+  margin: 1rem;
   padding-bottom: 15px;
 }
 
@@ -208,4 +208,24 @@ body {
 
 .pagination button:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+  .home_select_div {
+    width: 90%;
+  }
+
+  .story-card-wrapper {
+    width: 90%;
+  }
+
+  .story-card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .arrowleft {
+    display: none;
+  }
 }

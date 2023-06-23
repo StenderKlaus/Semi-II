@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import "../../Css/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { BsArrowBarLeft } from "react-icons/bs";
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +12,7 @@ const LoginScreen = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("/auth/login", { email, password });
+      const { data } = await axios.post("https://semicolons-backend.onrender.com/auth/login", { email, password });
       localStorage.setItem("authToken", data.token);
 
       setTimeout(() => {
@@ -31,7 +30,7 @@ const LoginScreen = () => {
     <div className="Inclusive-login-page">
       <div className="login-big-wrapper">
         <Link to="/" className="back_home">
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>{" "}
         <div className="section-wrapper">
           <div className="top-suggest_register">
@@ -46,7 +45,7 @@ const LoginScreen = () => {
           <div className="top-login-explain">
             <h2>Login to Your Account </h2>
 
-            <p>Please Login Your Account, Thank You!</p>
+            <p>Please Login to Your Account, Thank You!</p>
           </div>
 
           <form onSubmit={loginHandler}>

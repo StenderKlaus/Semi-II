@@ -28,7 +28,7 @@ const AddComment = ({
     e.preventDefault();
     try {
       await axios.post(
-        `/comment/${slug}/addComment`,
+        `https://semicolons-backend.onrender.com/comment/${slug}/addComment`,
         { content, star },
         {
           headers: {
@@ -80,11 +80,6 @@ const AddComment = ({
           <BsShieldCheck />
           <MdClose onClick={() => setSidebarShowStatus(false)}
             className="MdClose"/>
-          {/* <IoAdd
-            onClick={() => setSidebarShowStatus(false)}
-            className="ıoAddIcon"
-            style={{fill='rgb: fffffff'}}
-          /> */}
         </div>
       </div>
 
@@ -117,7 +112,6 @@ const AddComment = ({
               name="content"
               onKeyUp={(e) => {
                 setContent(e.target.innerHTML);
-                console.log(e.target.innerHTML);
               }}
               onFocus={() => setShowStatus(true)}
             ></div>

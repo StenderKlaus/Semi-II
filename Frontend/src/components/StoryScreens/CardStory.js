@@ -36,8 +36,8 @@ const Story = ({ story }) => {
                     }
                     </h5>
                     <span className="story-categories">
-                        {story.categorie.map((category)=>(
-                            <span>{`${category} `}</span>
+                        {story.categorie.map((category, index)=>(
+                            <span key={index + 1} >{`${category} `}</span>
                         ))}
                     </span>
 

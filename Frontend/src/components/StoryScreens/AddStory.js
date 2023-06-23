@@ -6,7 +6,6 @@ import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { AuthContext } from "../../Context/AuthContext";
 import { AiOutlineUpload } from "react-icons/ai";
-import { FiArrowLeft } from "react-icons/fi";
 import "../../Css/AddStory.css";
 import Select from "react-select";
 
@@ -50,21 +49,10 @@ const AddStory = () => {
     { value: "exercises", label: "Exercises" },
   ];
 
-  console.log(title);
-  console.log(content);
-  console.log(content);
-
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(categories.map((category) => category.value));
-    // const formdata = {
-    //     "title": title,
-    //     "content": content,
-    //     "image": image,
-    //     "categorie": categories.map((category) => ` ${category.value}`)
-    // }
     const formdata = new FormData();
     formdata.append("title", title);
     formdata.append(
@@ -75,14 +63,13 @@ const AddStory = () => {
     formdata.append("content", content);
 
     try {
-      const response = await axios.post("/story/addstory", formdata, {
+      const response = await axios.post("https://semicolons-backend.onrender.com/story/addstory", formdata, {
         ...config,
         headers: {
           ...config.headers,
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log(response.data);
 
       setSuccess("Add story successfully ");
       clearInputs();
@@ -90,7 +77,7 @@ const AddStory = () => {
       setTimeout(() => {
         setSuccess("");
         navigate("/");
-      }, 4000);
+      }, 3000);
     } catch (error) {
       if (!categories) {
         setError("Please select at least one post category");
@@ -105,13 +92,13 @@ const AddStory = () => {
   return (
     <div className="Inclusive-addStory-page ">
       <Link to={"/"}>
-        <i class="fa-solid fa-angle-left"></i>
+        <i className="fa-solid fa-angle-left"></i>
       </Link>
       <form onSubmit={handleSubmit} className="addStory-form">
         {error && <div className="error_msg">{error}</div>}
         {success && (
           <div className="success_msg">
-            <span>{success}</span>! You will be redirected in 4 seconds
+            <span>{success}</span>! You will be redirected in 3 seconds
           </div>
         )}
 

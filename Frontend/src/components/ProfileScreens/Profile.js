@@ -4,7 +4,6 @@ import "../../Css/Profile.css";
 import { Link, useNavigate } from "react-router-dom";
 import Loader from "../GeneralScreens/Loader";
 import { AuthContext } from "../../Context/AuthContext";
-import { FiArrowLeft } from "react-icons/fi";
 
 const Profile = () => {
   const { config } = useContext(AuthContext);
@@ -39,7 +38,7 @@ const Profile = () => {
       setLoading(true);
 
       try {
-        const { data } = await axios.get("/user/profile", config);
+        const { data } = await axios.get("https://semicolons-backend.onrender.com/user/profile", config);
 
         setUser(data.data);
 
@@ -59,12 +58,12 @@ const Profile = () => {
       ) : (
         <div className="Inclusive_profile_page">
           <Link to={"/"}>
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </Link>
           <div className="profile-top-wrap">
             <span>Membership Information</span>
 
-            <a href="#!">Close Account</a>
+            {/* <a href="#!">Close Account</a> */}
           </div>
           <ul>
             <li>
@@ -76,7 +75,7 @@ const Profile = () => {
               <div>{user.email}</div>
             </li>
             <li>
-              <span> Account Created Date </span>
+              <span> Account Creation Date </span>
               <div>{editDate(user.createdAt)}</div>
             </li>
           </ul>

@@ -50,7 +50,7 @@ const EditStory = () => {
     const getStoryInfo = async () => {
       setLoading(true);
       try {
-        const { data } = await axios.get(`/story/editStory/${slug}`, config);
+        const { data } = await axios.get(`https://semicolons-backend.onrender.com/story/editStory/${slug}`, config);
         setStory(data.data);
         setTitle(data.data.title);
         setContent(data.data.content);
@@ -78,17 +78,14 @@ const EditStory = () => {
     formdata.append("image", image);
     formdata.append("previousImage", previousImage);
 
-    console.log(previousImage);
-
     try {
-      const response = await axios.put(`/story/${slug}/edit`, formdata, {
+      const response = await axios.put(`https://semicolons-backend.onrender.com/story/${slug}/edit`, formdata, {
         ...config,
         headers: {
           ...config.headers,
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log(response.data);
 
       setSuccess("Edit Story successfully ");
 
@@ -115,7 +112,7 @@ const EditStory = () => {
       ) : (
         <div className="Inclusive-editStory-page ">
           <Link to={"/"}>
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
           </Link>
           <form onSubmit={handleSubmit} className="editStory-form">
             {error && <div className="error_msg">{error}</div>}

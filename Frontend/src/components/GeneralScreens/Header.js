@@ -35,13 +35,13 @@ const Header = () => {
           <img className="logo2" src="logoneu.png" alt="Logo" />
         </Link>
 
-        <div class="dropdownContainer">
-          <div class="dropdown">
-            <button class="dropbtn">
+        <div className="dropdownContainer">
+          <div className="dropdown">
+            <button className="dropbtn">
               Cheat sheets
-              <i class="fa-solid fa-chevron-down"></i>
+              <i className="fa-solid fa-chevron-down"></i>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a
                 href="https://livecoding-examples-html.vercel.app/"
                 rel="noreferrer"
@@ -98,13 +98,13 @@ const Header = () => {
 
               <Link to="/readList" className="readList-link">
                 <BsBookmarks />
-                <span id="readListLength">{activeUser.readListLength}</span>
+                <span id="readListLength">{activeUser?.readListLength || "0"}</span>
               </Link>
               <div className="header-profile-wrapper ">
                 {loading ? (
                   <SkeletonElement type="minsize-avatar" />
                 ) : (
-                  <img src={`${activeUser.photo}`} alt={activeUser.username} />
+                  <img src={`${activeUser?.photo}` || null} alt={activeUser?.username || "0"} />
                 )}
 
                 <div className="sub-profile-wrap  ">

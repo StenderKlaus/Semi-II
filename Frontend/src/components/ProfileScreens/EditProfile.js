@@ -24,10 +24,9 @@ const EditProfile = () => {
     formdata.append("username", username);
     formdata.append("email", email);
     formdata.append("photo", photo);
-    console.log(activeUser);
     try {
       const { data } = await axios.post(
-        `/user/${activeUser._id}/editProfile`,
+        `https://semicolons-backend.onrender.com/user/${activeUser._id}/editProfile`,
         formdata,
         config
       );
@@ -62,7 +61,7 @@ const EditProfile = () => {
         <div className="Inclusive-editprofile-page">
           <div className="editProfileDiv">
             <Link to={"/"}>
-              <i class="fa-solid fa-angle-left"></i>
+              <i className="fa-solid fa-angle-left"></i>
             </Link>
             <form onSubmit={handleSubmit}>
               {error && <div className="error_msg">{error}</div>}

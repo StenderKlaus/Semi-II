@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../../Css/ForgotPassword.css";
-import { BsArrowBarLeft } from "react-icons/bs";
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -12,7 +11,7 @@ const ForgotPasswordScreen = () => {
     e.preventDefault();
 
     try {
-      const { data } = await axios.post("/auth/forgotpassword", { email });
+      const { data } = await axios.post("https://semicolons-backend.onrender.com/auth/forgotpassword", { email });
 
       setSuccess(data.message);
     } catch (error) {
@@ -28,14 +27,14 @@ const ForgotPasswordScreen = () => {
     <div className="Inclusive-forgotPassword-page">
       <div className="forgotPassword-big-wrapper">
         <Link to="/" className="back_home">
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>
         <form onSubmit={forgotPasswordHandler}>
           <div className="top-forgotpassword-explain">
             <h3>Forgot Password</h3>
             <p>
-              Please enter the email address you register your account with. We
-              will send you reset password confirmation to this email
+              Please enter the email address you used to register your account. We
+              will send you reset password confirmation to this email.
             </p>
           </div>
 

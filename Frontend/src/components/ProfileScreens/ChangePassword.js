@@ -29,7 +29,7 @@ const ChangePassword = () => {
 
     try {
       const { data } = await axios.put(
-        "/user/changePassword",
+        "https://semicolons-backend.onrender.com/user/changePassword",
         {
           newPassword,
           oldPassword,
@@ -58,7 +58,7 @@ const ChangePassword = () => {
     <div className="Inclusive-changePass-page">
       <div className="formDiv">
         <Link to="/" className="back_home">
-          <i class="fa-solid fa-angle-left"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </Link>
         <form onSubmit={handleSubmit}>
           {error && <div className="error_msg">{error}</div>}

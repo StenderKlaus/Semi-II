@@ -21,7 +21,6 @@ const Home = ({ error }) => {
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
   const { categories, setCategories } = useContext(AuthContext);
-  // const [categories, setCategories] = useState([]);
 
   const thema = [
     { value: "html", label: "HTML" },
@@ -42,39 +41,34 @@ const Home = ({ error }) => {
     { value: "exercises", label: "Exercises" },
   ];
 
-  console.log(error);
-
   useEffect(() => {
     const getStories = async () => {
       setLoading(true);
       try {
         if (searchKey) {
           const { data } = await axios.get(
-            `/story/getAllStories?search=${searchKey}&page=${page}`
+            `https://semicolons-backend.onrender.com/story/getAllStories?search=${searchKey}&page=${page}`
           );
           setStories(data.data);
           setPages(data.pages);
-          console.log("if fired");
           navigate({
             pathname: "/",
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
           });
         } else if (categories.length > 0) {
           const { data } = await axios.get(
-            `/story/getAllPostCat?search=${categories[0].value}&page=${page}`
+            `https://semicolons-backend.onrender.com/story/getAllPostCat?search=${categories[0].value}&page=${page}`
           );
           setStories(data.data);
           setPages(data.pages);
-          console.log("else if fired");
           navigate({
             pathname: "/",
             // search: `?cat=${categories[0].value}${page > 1 ? `&page=${page}` : ""}`,
           });
         } else {
-          console.log("here fired else");
 
           const { data } = await axios.get(
-            `/story/getAllStories?search=${searchKey || ""}&page=${page}`
+            `https://semicolons-backend.onrender.com/story/getAllStories?search=${searchKey || ""}&page=${page}`
           );
           setStories(data.data);
           setPages(data.pages);
@@ -83,14 +77,13 @@ const Home = ({ error }) => {
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
         }
-        // console.log("Home rerendered");
         setLoading(false);
       } catch (error) {
+        console.log(error, error.message);
         setLoading(true);
       }
     };
     getStories();
-    // console.log("input search fired");
   }, [setLoading, categories, search, page, navigate]);
 
   useEffect(() => {
@@ -106,12 +99,12 @@ const Home = ({ error }) => {
                 setCategories([]);
                 navigate("/");
               }}
-              class="fa-solid fa-angle-left"
+              className="fa-solid fa-angle-left"
             ></i>
       </div>
 
       {/* <div className="bigCatHome">
-        <div class="categoryHome"> */}
+        <div className="categoryHome"> */}
 
         <div className="home_select_div">
           <h6  className="home_cat_select_p" >Search all Posts by a relevant category: </h6>
@@ -126,13 +119,10 @@ const Home = ({ error }) => {
             </label>
         </div>     
           
-        {/* </div>
-      </div> */}
       {loading ? (
         <div className="skeleton_emp">
           {[...Array(9)].map(() => {
             return (
-              // theme dark :> default : light
               <SkeletonStory key={uuidv4()} />
             );
           })}
@@ -140,8 +130,8 @@ const Home = ({ error }) => {
       ) : (
         <div>
           <div className="story-card-wrapper">
-            {stories.length !== 0 ? (
-              stories.map((story) => {
+            {stories?.length !== 0 ? (
+              stories?.map((story) => {
                 return <CardStory key={uuidv4()} story={story} />;
               })
             ) : (
