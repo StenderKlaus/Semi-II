@@ -399,13 +399,6 @@ header .logo h5 {
 }
 }
 
-
-@media only screen and (max-width: 361px) {
-.header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
-    padding: 0px 0.2rem;
-}
-}
-
 @media only screen and (max-width: 332px) {
 .header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
     padding: 2px 0rem;
