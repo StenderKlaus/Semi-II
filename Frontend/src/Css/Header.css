@@ -369,7 +369,7 @@ header .logo h5 {
 }
 
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 570px) {
   header .logo h5 {
     font-size: 1.4rem; 
   }
@@ -379,3 +379,40 @@ header .logo h5 {
     height: 60px;
   }
 }
+
+
+@media only screen and (max-width: 440px) {
+ .header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+  padding: 2px -1.6rem;
+}
+}
+
+@media only screen and (max-width: 540px) {
+.header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 2px 1.4rem;
+}
+}
+
+@media only screen and (max-width: 469px) {
+.header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 2px 0.4rem;
+}
+}
+
+@media only screen and (max-width: 398px) {
+.header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 2px 1rem;
+}
+}
+
+@media only screen and (max-width: 361px) {
+.header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 0px 0.2rem;
+}
+}
+
+@media only screen and (max-width: 332px) {
+.header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
+    padding: 2px 0rem;
+}}
+
