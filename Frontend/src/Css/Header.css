@@ -359,6 +359,10 @@ header .logo h5 {
   .header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
     padding: 2px 2.4rem;
 }
+
+.dropbtn {
+  width: 115px;
+}
 }
 
 
@@ -395,7 +399,12 @@ header .logo h5 {
 
 @media only screen and (max-width: 469px) {
 .header_options div.noAuth_options a, .header_options div.auth_options a.addStory-link {
-    padding: 2px 0.4rem;
+    padding: 1px 0.1rem;
+    margin-left: 0.2rem;
+}
+
+.dropbtn .fa-chevron-down {
+  font-size: 20px;
 }
 }
 
