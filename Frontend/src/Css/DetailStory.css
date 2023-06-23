@@ -20,6 +20,28 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  /* .Inclusive-detailStory-page {
+    width: 90%;
+  } */
+
+  .top_detail_wrapper {
+    width: 90%;
+  }
+
+  .story-content {
+    width: 90%;
+  }
+
+  .story-content .content {
+    width: 90%;
+  }
+
+  li.story-author-info span {
+    font: 0.9rem !important;
+  }
+}
+
 .top_detail_wrapper {
   width: 100%;
   height: auto;
@@ -165,7 +187,7 @@ li.story-readtime {
   padding: 30px 30px;
   color: whitesmoke !important;
   font-size: 1rem;
-  }
+}
 
 .bottom-sec-item {
   display: flex;
@@ -195,7 +217,7 @@ li.story-readtime {
 .comment-info-wrap {
   display: flex;
   align-items: center;
-  color: whitesmoke
+  color: whitesmoke;
 }
 
 .comment-info-wrap i {
@@ -285,8 +307,6 @@ li.story-readtime {
 
 .delete_or_edit_story a {
   text-decoration: none;
-
-
 }
 
 .top_story_transactions {
@@ -298,7 +318,6 @@ li.story-readtime {
 .top_story_transactions a {
   margin-right: 20px;
   color: black;
-  
 }
 
 .top_story_transactions span {
@@ -308,10 +327,10 @@ li.story-readtime {
 #CommentFieldEmp {
   position: fixed;
   right: -440px;
-  top:0;
+  top: 0;
 }
 .Inclusive-comment-sidebar.hidden {
- display: hidden;
+  display: hidden;
 }
 h5 {
   border-top: 4px dotted rgba(102, 102, 102, 0.3);
@@ -333,13 +352,13 @@ h5 {
   margin: 0 auto;
 }
 
-.story-general-info .story-createdAt, 
+.story-general-info .story-createdAt,
 .story-general-info .story-readtime,
-.story-general-info b{
+.story-general-info b {
   color: whitesmoke;
 }
 
-.story-general-info .story-createdAt{
+.story-general-info .story-createdAt {
   margin: 0 !important;
   padding: 0 !important;
 }
