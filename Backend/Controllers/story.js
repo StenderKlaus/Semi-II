@@ -45,7 +45,7 @@ const addStory = [parser.single("image"), async  (req,res,next)=> {
 
     let wordCount = content.split(/\s+/).length ; 
 
-    let readtime = Math.floor(wordCount /200)   ;
+    let readtime = Math.floor(wordCount /50) + 1;
 
     const story =  {
         title,
