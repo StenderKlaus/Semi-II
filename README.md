@@ -153,7 +153,7 @@ This project was created using the following technologies.
 
 ####  Backend 
 
-- [Node js](https://nodejs.org/en/) -A runtime environment to help build fast server applications using JS.
+- [Node js](https://nodejs.org/en/) -A runtime environment to help build fast server applications using JS
 - [Express js](https://www.npmjs.com/package/express) -The server for handling and routing HTTP requests.
 - [Mongoose](https://mongoosejs.com/) - For modeling and mapping MongoDB data to JavaScript.
 - [express-async-handler](https://www.npmjs.com/package/express-async-handler) - Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers.
