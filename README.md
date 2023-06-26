@@ -173,45 +173,7 @@ This project was created using the following technologies.
  
  ##  Screenshots 
 
- <h5> Take a look the following screenshots to have a better idea of how everything look like on our Blog </h5>
-
-
-![1](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/01home-no-login%20.jpg)
----- -
-![2](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/02home-login.jpg)
---- - 
-![3](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/03sign-up.jpg)
---- - 
-![4](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/04login.jpg)
---- - 
-![5](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/05forgot-pass.jpg)
---- - 
-![6](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/06profile-info.jpg)
---- - 
-![7](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/07edit-profile.jpg)
---- - 
-![8](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/08change-password.jpg)
---- - 
-![9](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/09add-story.jpg)
---- - 
-![10](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/10edit-story.jpg)
---- - 
-![11](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/11editstory-done.jpg)
---- - 
-![12](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/12detail-story-no-login.jpg)
---- - 
-![13](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/13detailstory-loggedIn-noAuth.jpg)
---- - 
-![14](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/14detailstory-auth.jpg)
---- - 
-![15](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/15comments.jpg)
---- - 
-![16](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/16reading-list.jpg)
---- - 
-![17](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/17not-found.jpg)
---- - 
-![18](https://github.com/StenderKlaus/Semi-II/blob/main/Screenshots/18cheatsheet.jpg)
---- - 
+ <h5>To take a look & have a better idea of how everything look like on our Blog go to the screenshots Folder in the Root of this Repository.  </h5>
 
 
 ## Authors
