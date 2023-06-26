@@ -222,7 +222,7 @@ const DetailStory = () => {
               <span className="categorieSpan">
                 {story?.categorie?.map((category, index) => (
                   <button key={index + 1} onClick={(e) => klickCategorie(e, category)}>
-                    {category}
+                    {category.split(',')}
                   </button>
                 ))}
               </span>
